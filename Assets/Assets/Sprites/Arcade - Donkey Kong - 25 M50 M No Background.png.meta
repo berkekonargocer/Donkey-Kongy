@@ -1,0 +1,3667 @@
+fileFormatVersion: 2
+guid: 5b287de30096c8848a282ddb21273858
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 432
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de047d914ef465740a44da1125f909be
+      internalID: 42266695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 432
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bb57c4339b95a4c8976132119cf003
+      internalID: 1043826900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399f64a04be02934fb331ae600246a94
+      internalID: 873141368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 432
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb7643950e913e458c60b874443025d
+      internalID: -1424862703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 432
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd094b8083143f43ac34f6a9d0ffa10
+      internalID: 1777751953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 433
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0392ce745734d4c9efe81d7741682a
+      internalID: 380520730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 432
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3fb20e889f40145b6cf41cb58ce958
+      internalID: 1344532304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 432
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a573a56355a5f43ab641cba90bcf70
+      internalID: -1499724158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 432
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65b14f4de04c7a41ba1983fb89dc703
+      internalID: -690604272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_9
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 432
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615a9389d82b4c84b9763e4e5e19effb
+      internalID: -1431563367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 432
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e237ffacb8c26b4d9f1aae5098a96a3
+      internalID: -954779667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_11
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 432
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6affd6aded4264287bb782d0ea11a0
+      internalID: -1795152253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_12
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 432
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7714162b91574c847b0962b92a296499
+      internalID: 1346200091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_13
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 432
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c197d0a8773b04aab3fb28007823fa
+      internalID: 1892842766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 432
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f11c9e89ae94954390bae51c491c786
+      internalID: 203984510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 433
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b299e3a8a49e0ff40a1cc714354234ef
+      internalID: 110003294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 432
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd466f0d2c351f408c7b9a35f1e3fd9
+      internalID: -850309463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 432
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3920928c1776c24ba52e5957c2572d4
+      internalID: 1553675259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_18
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 432
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902146362334d1e4d96079acffddf497
+      internalID: 730665649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 432
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178b5875e908f7f49bae4366de7cecb3
+      internalID: 1434262411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_20
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 432
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6715041e82b3b4eb5a9f12855bdf6c
+      internalID: 1222645441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 432
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614b1f7e710ce774aabfa4a1a3f3fbf8
+      internalID: -938603415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_22
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 432
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d81f9cdc65caca4fb6c8479dfceb5ad
+      internalID: 117317479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 432
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbde82c04a18b1f4b96089da58915678
+      internalID: -433166817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_24
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 432
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3cf88b4073f3a449f686a7b61374d7
+      internalID: 1307183834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_25
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 432
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7212fdd120e30b4bac210aa7cb69f98
+      internalID: 385449469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_26
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 432
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4da6aa7e1df48f41a69efe6a7c09dc0
+      internalID: -1776476798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 432
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82cd5aa734b62f4cbabaa0c8a6c7ff1
+      internalID: -1851103782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_28
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 432
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8089a84b182d98b4fb8339b1dd212640
+      internalID: -1574990017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_29
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 432
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5335b7c3375114281136f5d6985613
+      internalID: -1143364395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_30
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 384
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb386c5eae9412448cb65d4da69a7e8
+      internalID: -493835341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_31
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 384
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0a17ad351cfc0468423f01674b3c3d
+      internalID: 614207339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8f1004a44bc5c44a1d8e13df8b3f5f
+      internalID: 788010134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_33
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 384
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5924225a1ce885b4a870b893d41c3eed
+      internalID: -587119841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_34
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 384
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572dd6a2f55b36c45b137b98691a7c91
+      internalID: -315541103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_35
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 384
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530b3ab648e29f9408c7862c630f00f7
+      internalID: 2072110027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_36
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 384
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e95f76614653c646b452335d5fdd6d2
+      internalID: -1633142295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_37
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 384
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138864548b68c84488fbec4298587ddb
+      internalID: 1538137852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_38
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 384
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea427d1c3ba59140a09b74061def4ba
+      internalID: -1037043455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_39
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 384
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0521937a5b16774d857fe36b8d39880
+      internalID: 53439414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_40
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 384
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35066f20d6244e14a9c7fe402d854a7a
+      internalID: -1457464774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_41
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 384
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ff5853d2a3cf04281efdd7b35e4c7f
+      internalID: -686382456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_42
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 384
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59f038219d8dfe4c993019dd4dae4d2
+      internalID: -1100060218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_43
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 384
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1513eedd4dd89964e8f0562ea5afde76
+      internalID: -742423899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_44
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 347
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e967f7b5fdbe9c4a899502b46a6216a
+      internalID: -482426938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_45
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 347
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf56f968381f4147baaad0d787a6b30
+      internalID: -1452653710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_46
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 347
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d477c496a05e0ba45ab6ae44bd2b5ae8
+      internalID: -480979615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_47
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845365fb262907f4ea9c7abb6992e3c0
+      internalID: 807126634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_48
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 369
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c345b5c35e82c469f2440ac261098b
+      internalID: -1700891320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_49
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08730d0306b0b2d498e2649116a4a404
+      internalID: 1264245300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_50
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b16f2ce5e329b240887cc71a3986569
+      internalID: 1104128359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_51
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce31bc87be564e43ab51e75ff006b56
+      internalID: 1223134557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_52
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc42d10213a03c449446e03aa1221a2
+      internalID: -106250152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_53
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc1295e933c91e4fb9ef4e486fce5ba
+      internalID: -701808108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_54
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ede7c0f62360c844b3829ec7f4f0563
+      internalID: -2052134565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_55
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570fbe1ccb26f994f87bd92147e3c011
+      internalID: -595804326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_56
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 369
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52a8d495b441b847a544b9fe2abcc67
+      internalID: -761510949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_57
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 356
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a48132d059712c46aa012dd90e79ba6
+      internalID: 1415742706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_58
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 357
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d6bff03f01d1748a4fa5238b965952
+      internalID: -110322394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 356
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195f5bb1e6c4b5f438028b83fd097aea
+      internalID: -228039205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_60
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 353
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91fda47bd6ffb440b2961eb11756030
+      internalID: 49275411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_61
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 353
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193af3f7c523d194f85e9e7505301389
+      internalID: 1054070474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_62
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 352
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c405d22bf0b4f754ab114129d7949fe6
+      internalID: -822026284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_63
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 353
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ae5a8730fcb94449bfda9417eedaad
+      internalID: -1496180841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_64
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 353
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48233704627e8146800df0e64026492
+      internalID: -1771992646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_65
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 357
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06285d63aa95de4aaedfb1bb3e5f2e4
+      internalID: 405993337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_66
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 357
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fc4dd20b295954aaae5598ace15e0c
+      internalID: 1503399744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_67
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 357
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6527c5fbdc029334aa23ea8a56a19e12
+      internalID: -1919078820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_68
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 357
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ff232c3863f7b4dae9c14411e2e099
+      internalID: -1818355692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_69
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 357
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744c8d5417e84c14189224bee8f42ee2
+      internalID: 742365833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_70
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 356
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332afd74be8cd714b8e04211cd5a6568
+      internalID: 1598227143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_71
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb378bab4491e749813edf8c7bc88fb
+      internalID: 814161140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_72
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 357
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41125b0b3fae8234db89b9041de240e7
+      internalID: -265050641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_73
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf9503ae2e102644bfd384665fd1a04
+      internalID: 80946358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_74
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a09d92f80684eb43b4347382488f34c
+      internalID: -477656234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_75
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0f715a221f1b047af1c20247e15dc3
+      internalID: -123998778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_76
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a3b128011b3d04390a0229a15ec57f
+      internalID: -1883258290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_77
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee3dd3b5f85f9a4a9de1ef17ed89df1
+      internalID: -1580957475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_78
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b087b62130b6f4b8e3e5782956f835
+      internalID: 549845597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_79
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355fc08fa1f2ff94595d4041a5655721
+      internalID: 1018455670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_80
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 357
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651f7450be6816242bf2d595a310a488
+      internalID: 50875037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_81
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 354
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efa904801953dd4db8ae20d650a4443
+      internalID: -1186259579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_82
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 356
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd04bb8fed065944a45913b0cba2992
+      internalID: 1739853699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_83
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 357
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd97bda3addbcb42bb7da17c11dd646
+      internalID: -364193726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_84
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 359
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b347554406bd204c90123698f6b007f
+      internalID: -1284323279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_85
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 362
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6f49a6a4224c9478f4e24964f21613
+      internalID: 521295087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_86
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 344
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465b479fb6a88d74d83b35dd94267dd6
+      internalID: -1008381393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_87
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 344
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92e365498d76434eb8f5753b3e0d694
+      internalID: -1704679018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_88
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 353
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7963a3c4f3dc5a4a96cf43a43d820da
+      internalID: 1035778286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_89
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 353
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2514d224ecaa2e0488a73c19a5ee9f78
+      internalID: 431714870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_90
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 353
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c534331d3e89b74dafa365277bbe185
+      internalID: 999934441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_91
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639f30668c7411c4c8181692adda10d7
+      internalID: 1636226320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_92
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 345
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4839639d7727af94781a4b2a5cc15aa6
+      internalID: 1248248229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_93
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975cf536b535b7f4ab2dc7366e28dc54
+      internalID: -106203574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_94
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b774c97217e56794db47c4b0772b59ae
+      internalID: -1151737160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_95
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 345
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd1a619af8358545a40a417cebbce0d
+      internalID: -264607110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_96
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf1f72ea84d50e48ba57b82ca607610
+      internalID: -26291734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_97
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917fc9b2d0125564e8a35f86231a44eb
+      internalID: -1152668580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_98
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c719b6d4989c94641a7a3c4654446be6
+      internalID: -824008731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_99
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e385d16c219376343ab529574eed5fad
+      internalID: 639034943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_100
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 345
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017b63277a419f44f9e4cc92e2d55c07
+      internalID: 886347050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_101
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 304
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08a049eeabffb84cb792f8dca74e17e
+      internalID: 378926636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_102
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 304
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41eff33fd10569440b199b874b25b409
+      internalID: 753316293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_103
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 304
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e6168fd9b12d44cad3388e8b873899
+      internalID: 1554157507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_104
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 304
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e758bf5c588c4d74fb67f303ef792b72
+      internalID: 1381550246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_105
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 304
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f246cbb67eb08c94aaa2c2633a493d84
+      internalID: 1757806757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_106
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c7e02d3202208498d2403567286515
+      internalID: 1563108936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_107
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 304
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b5aaa1d25a63141a88bf1887c366a1
+      internalID: 988486061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_108
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb676b5fcab9df40b2f74e12ef418a3
+      internalID: 1051038769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_109
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 304
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e1a68a2c17b3c4e9a29d1c679d2d33
+      internalID: -281940926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_110
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 304
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b354a33e48da7248a250951b6e96bef
+      internalID: 1112785223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_111
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200b8880c0af96845bac8880616565d7
+      internalID: 814257209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_112
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724cf9935d05cfd4385465a7391ad0f4
+      internalID: -7951806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_113
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a28488d8a57ed4eb67389bb00f76bf
+      internalID: -585556574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_114
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91299b0d0b602eb47b3918c861f88796
+      internalID: -58622952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_115
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 307
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2116c21a452cf479ccc9f8ec43be47
+      internalID: 605474331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_116
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 307
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb3ded790fc20d4c9f2c525b1ff7c54
+      internalID: 404643567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_117
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 304
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381daf79a1ac1f343800dd1daab07689
+      internalID: -2073465864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_118
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 304
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54336a9f7a4d6040b1e9e521958df71
+      internalID: 1798697655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_119
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 304
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d607a3a95bb86a4e9a640ab38c38fc9
+      internalID: -827842046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_120
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 304
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061034ae94762cf4cb22c110eaa5fbff
+      internalID: -1364975941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_121
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 304
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569839c599b1bf847a5bd70f7afe1d9a
+      internalID: -712108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_122
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c468632fa8501d4886a8b2d125ec252
+      internalID: -383081194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_123
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61d07ecf0902b442be9f555e361cc5e
+      internalID: -33560846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_124
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 304
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35ea6a2d0709a141aff86a2d9df7030
+      internalID: 781256818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_125
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 304
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b380b4e4d84cd4e98b210ca7b57beb
+      internalID: -2015880203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_126
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e6435dc5881c943af1c3b404d7c18f
+      internalID: 1015834041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_127
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4742f63fda86f349a165f7752c07aa6
+      internalID: -174275840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_128
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf2764df3e749647ad9c70aa19a8362
+      internalID: -1095775376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_129
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 307
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630e66edeb54f3c47a350f5de7685c3f
+      internalID: 1716538757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_130
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 307
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dbf28dae3160746a20d471a8ecca65
+      internalID: -160189735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_131
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 307
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e6913880b8c914bbb5a94dd26102c6
+      internalID: -513555124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_132
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 308
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51af9abe00290244a61a9b8fb58b3d4
+      internalID: -1583939933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_133
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 304
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3385ac8fa8d6f4f45a90491550066aae
+      internalID: -519429847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_134
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 304
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781d4a13630660a40abe65a2b3938000
+      internalID: -595750098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_135
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 307
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8423cda11b08b804ea053269eebfa3b9
+      internalID: 132513537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_136
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 307
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28c3fbd7c6c27f4290c3d2aed755bd8
+      internalID: -619004918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_137
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 307
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0db8f018faada47ada3e068bfdaf66
+      internalID: -1166335026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 225
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1310a2d5e64b0f543acced8844b171c4
+      internalID: -2140773888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_139
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 40
+        width: 225
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ed38cba0480404d90904dcac2afdc0
+      internalID: -1059658999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_140
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 40
+        width: 225
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0baf8b669244544b07cc23caf584d8
+      internalID: 506258258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_141
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 40
+        width: 225
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0dab5aaac85a84d9fb42f4a2cd6461
+      internalID: 491088048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78c1f1402e007446a065c854ab347e6
+      internalID: -1749193608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_143
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 24
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a460f1ec1e3ff4fac3b757b174da74
+      internalID: -695096181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_144
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 24
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cc21c0498b5fe49a8721d8b9b5a0ac
+      internalID: -750779929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_145
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 24
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fb93b4685d0914699082ddf7353ce4
+      internalID: -755548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_146
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04499ae8b74dbbc47bba2cb6eb867491
+      internalID: -1496263786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_147
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b4b602c7a3c2f479996be9ed25f78d
+      internalID: 1645212435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_148
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 8
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ad5a58ff7c6e047974d30c6afb1aa0
+      internalID: -1967591936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_149
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5f263d829251a49bc0e4c0d3a8e33c
+      internalID: -1733500980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_150
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 8
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01abad1f91124742bf99ee4defffa4d
+      internalID: 1768532386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_151
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbaa8907f6110145b19728a8011b989
+      internalID: -1057553801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_152
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e395fc29cd3846743aabe78a45decddf
+      internalID: 1434731529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_153
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8da125f5743644ba82de5965f4f735
+      internalID: -1888942122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_154
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 72
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713032a2ba2e8474bb2ecc127bdea8b7
+      internalID: -2071204280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_155
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1847b3963c6fb57419d80b58f570de2e
+      internalID: 256447844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_156
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969c16d844133bd4e8d046c9f0845f4a
+      internalID: 528445368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_157
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 46
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c76d288d056b374496be29d0c5b9188
+      internalID: -1990641639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_158
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16ac7f81428cff488abed5ccf61afe4
+      internalID: -902820981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Donkey Kong - 25 M50 M No Background_159
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 0
+        width: 77
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95845bb53d7c19b4a95475ed97dfc6da
+      internalID: -2000489715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Arcade - Donkey Kong - 25 M50 M No Background_52: -106250152
+      Arcade - Donkey Kong - 25 M50 M No Background_85: 521295087
+      Arcade - Donkey Kong - 25 M50 M No Background_158: -902820981
+      Arcade - Donkey Kong - 25 M50 M No Background_104: 1381550246
+      Arcade - Donkey Kong - 25 M50 M No Background_61: 1054070474
+      Arcade - Donkey Kong - 25 M50 M No Background_71: 814161140
+      Arcade - Donkey Kong - 25 M50 M No Background_102: 753316293
+      Arcade - Donkey Kong - 25 M50 M No Background_39: 53439414
+      Arcade - Donkey Kong - 25 M50 M No Background_47: 807126634
+      Arcade - Donkey Kong - 25 M50 M No Background_1: 1043826900
+      Arcade - Donkey Kong - 25 M50 M No Background_145: -755548
+      Arcade - Donkey Kong - 25 M50 M No Background_46: -480979615
+      Arcade - Donkey Kong - 25 M50 M No Background_129: 1716538757
+      Arcade - Donkey Kong - 25 M50 M No Background_66: 1503399744
+      Arcade - Donkey Kong - 25 M50 M No Background_153: -1888942122
+      Arcade - Donkey Kong - 25 M50 M No Background_149: -1733500980
+      Arcade - Donkey Kong - 25 M50 M No Background_12: 1346200091
+      Arcade - Donkey Kong - 25 M50 M No Background_93: -106203574
+      Arcade - Donkey Kong - 25 M50 M No Background_130: -160189735
+      Arcade - Donkey Kong - 25 M50 M No Background_91: 1636226320
+      Arcade - Donkey Kong - 25 M50 M No Background_116: 404643567
+      Arcade - Donkey Kong - 25 M50 M No Background_119: -827842046
+      Arcade - Donkey Kong - 25 M50 M No Background_135: 132513537
+      Arcade - Donkey Kong - 25 M50 M No Background_26: -1776476798
+      Arcade - Donkey Kong - 25 M50 M No Background_57: 1415742706
+      Arcade - Donkey Kong - 25 M50 M No Background_118: 1798697655
+      Arcade - Donkey Kong - 25 M50 M No Background_49: 1264245300
+      Arcade - Donkey Kong - 25 M50 M No Background_56: -761510949
+      Arcade - Donkey Kong - 25 M50 M No Background_40: -1457464774
+      Arcade - Donkey Kong - 25 M50 M No Background_44: -482426938
+      Arcade - Donkey Kong - 25 M50 M No Background_114: -58622952
+      Arcade - Donkey Kong - 25 M50 M No Background_20: 1222645441
+      Arcade - Donkey Kong - 25 M50 M No Background_43: -742423899
+      Arcade - Donkey Kong - 25 M50 M No Background_31: 614207339
+      Arcade - Donkey Kong - 25 M50 M No Background_134: -595750098
+      Arcade - Donkey Kong - 25 M50 M No Background_41: -686382456
+      Arcade - Donkey Kong - 25 M50 M No Background_5: 380520730
+      Arcade - Donkey Kong - 25 M50 M No Background_16: -850309463
+      Arcade - Donkey Kong - 25 M50 M No Background_27: -1851103782
+      Arcade - Donkey Kong - 25 M50 M No Background_84: -1284323279
+      Arcade - Donkey Kong - 25 M50 M No Background_138: -2140773888
+      Arcade - Donkey Kong - 25 M50 M No Background_156: 528445368
+      Arcade - Donkey Kong - 25 M50 M No Background_9: -1431563367
+      Arcade - Donkey Kong - 25 M50 M No Background_75: -123998778
+      Arcade - Donkey Kong - 25 M50 M No Background_94: -1151737160
+      Arcade - Donkey Kong - 25 M50 M No Background_72: -265050641
+      Arcade - Donkey Kong - 25 M50 M No Background_33: -587119841
+      Arcade - Donkey Kong - 25 M50 M No Background_107: 988486061
+      Arcade - Donkey Kong - 25 M50 M No Background_148: -1967591936
+      Arcade - Donkey Kong - 25 M50 M No Background_99: 639034943
+      Arcade - Donkey Kong - 25 M50 M No Background_38: -1037043455
+      Arcade - Donkey Kong - 25 M50 M No Background_62: -822026284
+      Arcade - Donkey Kong - 25 M50 M No Background_150: 1768532386
+      Arcade - Donkey Kong - 25 M50 M No Background_112: -7951806
+      Arcade - Donkey Kong - 25 M50 M No Background_152: 1434731529
+      Arcade - Donkey Kong - 25 M50 M No Background_65: 405993337
+      Arcade - Donkey Kong - 25 M50 M No Background_109: -281940926
+      Arcade - Donkey Kong - 25 M50 M No Background_2: 873141368
+      Arcade - Donkey Kong - 25 M50 M No Background_137: -1166335026
+      Arcade - Donkey Kong - 25 M50 M No Background_18: 730665649
+      Arcade - Donkey Kong - 25 M50 M No Background_77: -1580957475
+      Arcade - Donkey Kong - 25 M50 M No Background_147: 1645212435
+      Arcade - Donkey Kong - 25 M50 M No Background_86: -1008381393
+      Arcade - Donkey Kong - 25 M50 M No Background_132: -1583939933
+      Arcade - Donkey Kong - 25 M50 M No Background_101: 378926636
+      Arcade - Donkey Kong - 25 M50 M No Background_37: 1538137852
+      Arcade - Donkey Kong - 25 M50 M No Background_73: 80946358
+      Arcade - Donkey Kong - 25 M50 M No Background_105: 1757806757
+      Arcade - Donkey Kong - 25 M50 M No Background_122: -383081194
+      Arcade - Donkey Kong - 25 M50 M No Background_74: -477656234
+      Arcade - Donkey Kong - 25 M50 M No Background_8: -690604272
+      Arcade - Donkey Kong - 25 M50 M No Background_60: 49275411
+      Arcade - Donkey Kong - 25 M50 M No Background_154: -2071204280
+      Arcade - Donkey Kong - 25 M50 M No Background_127: -174275840
+      Arcade - Donkey Kong - 25 M50 M No Background_97: -1152668580
+      Arcade - Donkey Kong - 25 M50 M No Background_51: 1223134557
+      Arcade - Donkey Kong - 25 M50 M No Background_92: 1248248229
+      Arcade - Donkey Kong - 25 M50 M No Background_126: 1015834041
+      Arcade - Donkey Kong - 25 M50 M No Background_48: -1700891320
+      Arcade - Donkey Kong - 25 M50 M No Background_159: -2000489715
+      Arcade - Donkey Kong - 25 M50 M No Background_50: 1104128359
+      Arcade - Donkey Kong - 25 M50 M No Background_32: 788010134
+      Arcade - Donkey Kong - 25 M50 M No Background_34: -315541103
+      Arcade - Donkey Kong - 25 M50 M No Background_95: -264607110
+      Arcade - Donkey Kong - 25 M50 M No Background_11: -1795152253
+      Arcade - Donkey Kong - 25 M50 M No Background_80: 50875037
+      Arcade - Donkey Kong - 25 M50 M No Background_63: -1496180841
+      Arcade - Donkey Kong - 25 M50 M No Background_124: 781256818
+      Arcade - Donkey Kong - 25 M50 M No Background_82: 1739853699
+      Arcade - Donkey Kong - 25 M50 M No Background_55: -595804326
+      Arcade - Donkey Kong - 25 M50 M No Background_143: -695096181
+      Arcade - Donkey Kong - 25 M50 M No Background_141: 491088048
+      Arcade - Donkey Kong - 25 M50 M No Background_128: -1095775376
+      Arcade - Donkey Kong - 25 M50 M No Background_155: 256447844
+      Arcade - Donkey Kong - 25 M50 M No Background_10: -954779667
+      Arcade - Donkey Kong - 25 M50 M No Background_70: 1598227143
+      Arcade - Donkey Kong - 25 M50 M No Background_110: 1112785223
+      Arcade - Donkey Kong - 25 M50 M No Background_111: 814257209
+      Arcade - Donkey Kong - 25 M50 M No Background_24: 1307183834
+      Arcade - Donkey Kong - 25 M50 M No Background_140: 506258258
+      Arcade - Donkey Kong - 25 M50 M No Background_35: 2072110027
+      Arcade - Donkey Kong - 25 M50 M No Background_136: -619004918
+      Arcade - Donkey Kong - 25 M50 M No Background_115: 605474331
+      Arcade - Donkey Kong - 25 M50 M No Background_151: -1057553801
+      Arcade - Donkey Kong - 25 M50 M No Background_45: -1452653710
+      Arcade - Donkey Kong - 25 M50 M No Background_81: -1186259579
+      Arcade - Donkey Kong - 25 M50 M No Background_133: -519429847
+      Arcade - Donkey Kong - 25 M50 M No Background_90: 999934441
+      Arcade - Donkey Kong - 25 M50 M No Background_36: -1633142295
+      Arcade - Donkey Kong - 25 M50 M No Background_113: -585556574
+      Arcade - Donkey Kong - 25 M50 M No Background_4: 1777751953
+      Arcade - Donkey Kong - 25 M50 M No Background_25: 385449469
+      Arcade - Donkey Kong - 25 M50 M No Background_58: -110322394
+      Arcade - Donkey Kong - 25 M50 M No Background_78: 549845597
+      Arcade - Donkey Kong - 25 M50 M No Background_6: 1344532304
+      Arcade - Donkey Kong - 25 M50 M No Background_120: -1364975941
+      Arcade - Donkey Kong - 25 M50 M No Background_76: -1883258290
+      Arcade - Donkey Kong - 25 M50 M No Background_139: -1059658999
+      Arcade - Donkey Kong - 25 M50 M No Background_125: -2015880203
+      Arcade - Donkey Kong - 25 M50 M No Background_117: -2073465864
+      Arcade - Donkey Kong - 25 M50 M No Background_131: -513555124
+      Arcade - Donkey Kong - 25 M50 M No Background_14: 203984510
+      Arcade - Donkey Kong - 25 M50 M No Background_123: -33560846
+      Arcade - Donkey Kong - 25 M50 M No Background_21: -938603415
+      Arcade - Donkey Kong - 25 M50 M No Background_87: -1704679018
+      Arcade - Donkey Kong - 25 M50 M No Background_29: -1143364395
+      Arcade - Donkey Kong - 25 M50 M No Background_30: -493835341
+      Arcade - Donkey Kong - 25 M50 M No Background_89: 431714870
+      Arcade - Donkey Kong - 25 M50 M No Background_142: -1749193608
+      Arcade - Donkey Kong - 25 M50 M No Background_19: 1434262411
+      Arcade - Donkey Kong - 25 M50 M No Background_15: 110003294
+      Arcade - Donkey Kong - 25 M50 M No Background_13: 1892842766
+      Arcade - Donkey Kong - 25 M50 M No Background_22: 117317479
+      Arcade - Donkey Kong - 25 M50 M No Background_28: -1574990017
+      Arcade - Donkey Kong - 25 M50 M No Background_100: 886347050
+      Arcade - Donkey Kong - 25 M50 M No Background_108: 1051038769
+      Arcade - Donkey Kong - 25 M50 M No Background_42: -1100060218
+      Arcade - Donkey Kong - 25 M50 M No Background_7: -1499724158
+      Arcade - Donkey Kong - 25 M50 M No Background_3: -1424862703
+      Arcade - Donkey Kong - 25 M50 M No Background_23: -433166817
+      Arcade - Donkey Kong - 25 M50 M No Background_68: -1818355692
+      Arcade - Donkey Kong - 25 M50 M No Background_144: -750779929
+      Arcade - Donkey Kong - 25 M50 M No Background_83: -364193726
+      Arcade - Donkey Kong - 25 M50 M No Background_17: 1553675259
+      Arcade - Donkey Kong - 25 M50 M No Background_69: 742365833
+      Arcade - Donkey Kong - 25 M50 M No Background_88: 1035778286
+      Arcade - Donkey Kong - 25 M50 M No Background_103: 1554157507
+      Arcade - Donkey Kong - 25 M50 M No Background_0: 42266695
+      Arcade - Donkey Kong - 25 M50 M No Background_59: -228039205
+      Arcade - Donkey Kong - 25 M50 M No Background_79: 1018455670
+      Arcade - Donkey Kong - 25 M50 M No Background_64: -1771992646
+      Arcade - Donkey Kong - 25 M50 M No Background_106: 1563108936
+      Arcade - Donkey Kong - 25 M50 M No Background_98: -824008731
+      Arcade - Donkey Kong - 25 M50 M No Background_157: -1990641639
+      Arcade - Donkey Kong - 25 M50 M No Background_121: -712108
+      Arcade - Donkey Kong - 25 M50 M No Background_67: -1919078820
+      Arcade - Donkey Kong - 25 M50 M No Background_53: -701808108
+      Arcade - Donkey Kong - 25 M50 M No Background_96: -26291734
+      Arcade - Donkey Kong - 25 M50 M No Background_54: -2052134565
+      Arcade - Donkey Kong - 25 M50 M No Background_146: -1496263786
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
