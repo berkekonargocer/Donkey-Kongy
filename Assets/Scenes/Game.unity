@@ -773,11 +773,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9075088360959870032, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
   m_PrefabInstance: {fileID: 386353828}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &426904237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 402800984347609375, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+  m_PrefabInstance: {fileID: 1981134720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &426904238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
   m_PrefabInstance: {fileID: 1981134720}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &426904241
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426904237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &484009606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1796,11 +1821,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a8d07d7e8ce5940bdf75da176d8086, type: 3}
+--- !u!1 &1115690932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 402800984347609375, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+  m_PrefabInstance: {fileID: 216149177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1115690933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
   m_PrefabInstance: {fileID: 216149177}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1115690936
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115690932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1129606913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burning Oil Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1906552234142163463, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1798697655, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     - target: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2652,11 +2706,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9075088360959870032, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
   m_PrefabInstance: {fileID: 1603067431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1603959993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 402800984347609375, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+  m_PrefabInstance: {fileID: 1359655679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1603959994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
   m_PrefabInstance: {fileID: 1359655679}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1603959997
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603959993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1618795856
 GameObject:
   m_ObjectHideFlags: 0
