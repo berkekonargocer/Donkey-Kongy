@@ -36,7 +36,7 @@ namespace Nojumpo
 
         private void Awake()
         {
-            _backgroundTransform = gameObject.transform;
+            SetComponents();
         }
 
         #endregion
@@ -64,6 +64,11 @@ namespace Nojumpo
 
 
         #region Custom Private Methods
+
+        private void SetComponents()
+        {
+            _backgroundTransform = gameObject.transform;
+        }
 
         private void VerticalScroll()
         {
