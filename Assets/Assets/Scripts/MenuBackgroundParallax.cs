@@ -20,9 +20,9 @@ namespace Nojumpo
         private float _lastScrollingSpeed;
 
         private Vector3 _scrollDirection = Vector3.down;
+        private Vector3 _positionAfterReset = new Vector3(0f, 16.58f, 0f);
 
         private const float BOTTOM_LIMIT_POSITION = -11.55f;
-        private Vector3 _resetPosition = new Vector3(0f, 16.58f, 0f);
 
         #endregion
 
@@ -32,34 +32,11 @@ namespace Nojumpo
 
         #region Unity Methods
 
-        #region OnEnable
-
-        private void OnEnable()
-        {
-
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-
-        }
-
-        #endregion
-
-        #region Awake and Start
+        #region Awake
 
         private void Awake()
         {
             _backgroundTransform = gameObject.transform;
-        }
-
-        private void Start()
-        {
-
         }
 
         #endregion
@@ -101,14 +78,8 @@ namespace Nojumpo
 
         private void ResetPosition()
         {
-            _backgroundTransform.position = _resetPosition;
+            _backgroundTransform.position = _positionAfterReset;
         }
-
-        #endregion
-
-        #region Custom Public Methods
-
-
 
         #endregion
     }
