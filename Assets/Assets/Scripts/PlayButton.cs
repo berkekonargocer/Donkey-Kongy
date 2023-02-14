@@ -1,21 +1,18 @@
 using UnityEngine;
+using DG.Tweening;
 
 namespace Nojumpo
 {
     public class PlayButton : MonoBehaviour
     {
-        #region Fields
-
-        #region Components
-
-        private Transform _playButton;
-
-        #endregion
+        #region Field
 
         #region Animation Settings
 
-        [SerializeField] private float _animationSpeed;
+        [SerializeField] private float _animationDuration;
         [SerializeField] private float _endScale;
+
+        private Vector3 _initialScaleVector;
         private Vector3 _endScaleVector;
 
         #endregion
@@ -42,7 +39,7 @@ namespace Nojumpo
 
         private void SetComponents()
         {
-            _playButton = GetComponent<Transform>();
+            _initialScaleVector = transform.localScale;
             _endScaleVector = Vector3.one * _endScale;
         }
 
@@ -52,13 +49,12 @@ namespace Nojumpo
 
         public void ShrinkTheButton()
         {
-
-            //_playButton.transform.localScale = 
+            transform.DOScale(_endScaleVector, _animationDuration);
         }
 
         public void ResetButtonScale()
         {
-
+            transform.DOScale(_initialScaleVector, _animationDuration);
         }
 
         #endregion
