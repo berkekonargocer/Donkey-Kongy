@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yo Mammamia what is this in the early morning
+  m_text: Yo Mammamia what is happening
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -5042,10 +5042,8 @@ PlayableDirector:
     value: {fileID: 193974291}
   - key: {fileID: -2066688628989475524, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 193974287}
-  - key: {fileID: -126102456196776624, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 606016722}
-  - key: {fileID: 7810754116009215189, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 389158223}
+  - key: {fileID: -3100305887725236633, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1618795858
