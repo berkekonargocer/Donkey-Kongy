@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+using Nojumpo.Managers;
 using UnityEngine;
 
 namespace Nojumpo
@@ -8,64 +7,16 @@ namespace Nojumpo
     {
         #region Fields
 
-
-
-        #endregion
-
-        #region Unity Methods
-
-        #region OnEnable
-
-        private void OnEnable()
-        {
-
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-
-        }
-
-        #endregion
-
-        #region Awake and Start
-
-        private void Awake()
-        {
-
-        }
-
-        private void Start()
-        {
-
-        }
-
-        #endregion
-
-        #region Update
-
-        private void Update()
-        {
-
-        }
-
-        #endregion
-
-        #endregion
-
-        #region Custom Private Methods
-
-
+        [SerializeField] private Dialogue_Dialogue[] _dialogues;
 
         #endregion
 
         #region Custom Public Methods
 
-
+        public void StartDialogue(int dialogueNumber)
+        {
+            Dialogue_Manager.Instance.OpenDialogue(_dialogues[dialogueNumber]);
+        }
 
         #endregion
     }
