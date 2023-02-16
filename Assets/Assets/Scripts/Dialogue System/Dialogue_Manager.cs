@@ -16,8 +16,8 @@ namespace Nojumpo.Managers
 
         #region Fields
 
-        #region Components
-        [Header("Components")]
+        #region Dialogue UI
+        [Header("Dialogue UI")]
 
         [SerializeField] private Image _characterAvatar;
         [SerializeField] private TextMeshProUGUI _characterNameText;
@@ -25,8 +25,8 @@ namespace Nojumpo.Managers
 
         #endregion
 
-        #region Settings
-
+        #region Dialogue
+        
         private Dialogue_Dialogue _currentDialogue;
         private int _activeMessage = 0;
 
