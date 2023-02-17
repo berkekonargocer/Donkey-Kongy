@@ -30,6 +30,8 @@ namespace Nojumpo.Managers
         private Dialogue_Dialogue _currentDialogue;
         private int _activeMessage = 0;
 
+        public static bool IsDialogueActive { get; private set; } = false;
+
         #endregion
 
         #endregion
@@ -65,6 +67,18 @@ namespace Nojumpo.Managers
             }
         }
 
+        private void DisplayMessage()
+        {
+            Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
+            _dialogueText.text = messageToDisplay.message;
+
+            Dialogue_Character characterToDisplay = _currentDialogue.dialogueCharacters[messageToDisplay.characterId];
+            _characterNameText.text = characterToDisplay.characterName;
+            _characterAvatar.sprite = characterToDisplay.characterSprite;
+
+            IsDialogueActive = true;
+        }
+
         #endregion
 
         #region Custom Public Methods
@@ -74,7 +88,21 @@ namespace Nojumpo.Managers
             _currentDialogue= dialogue;
             _activeMessage = 0;
 
-            Debug.Log($"Started the convesation! the message count is: {dialogue.dialogueMessages.Length}");
+            DisplayMessage();
+        }
+
+        public void NextMessage()
+        {
+            _activeMessage++;
+            if (_activeMessage < _currentDialogue.dialogueMessages.Length)
+            {
+                DisplayMessage();
+            }
+            else
+            {
+                // end the conversation
+                IsDialogueActive = false;
+            }
         }
 
         #endregion
