@@ -8,5 +8,6 @@ namespace Nojumpo
     {
         public string characterName;
         public Sprite characterSprite;
+        public AudioClip[] talkingSFX;
     }
 }

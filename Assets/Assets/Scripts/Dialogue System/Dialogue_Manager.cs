@@ -1,9 +1,11 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Nojumpo.Managers
 {
+    [RequireComponent(typeof(AudioSource))]
     public class Dialogue_Manager : MonoBehaviour
     {
         #region Instance
@@ -26,7 +28,8 @@ namespace Nojumpo.Managers
         #endregion
 
         #region Dialogue
-        
+
+        private AudioSource _dialogueAudio;
         private Dialogue_Dialogue _currentDialogue;
         private int _activeMessage = 0;
 
@@ -45,6 +48,7 @@ namespace Nojumpo.Managers
         private void Awake()
         {
             InitializeSingleton();
+            SetComponents();
         }
 
         #endregion
@@ -67,16 +71,41 @@ namespace Nojumpo.Managers
             }
         }
 
-        private void DisplayMessage()
+        private void SetComponents()
+        {
+            _dialogueAudio = GetComponent<AudioSource>();
+        }
+
+        private void DisplayMessage(float typeSpeed)
         {
             Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
-            _dialogueText.text = messageToDisplay.message;
+            //_dialogueText.text = messageToDisplay.message;
+
+
 
             Dialogue_Character characterToDisplay = _currentDialogue.dialogueCharacters[messageToDisplay.characterId];
             _characterNameText.text = characterToDisplay.characterName;
             _characterAvatar.sprite = characterToDisplay.characterSprite;
 
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(characterToDisplay, messageToDisplay.message, typeSpeed));
+
             IsDialogueActive = true;
+        }
+
+        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float typeSpeed)
+        {
+            _dialogueText.text = "";
+
+            foreach (char letter in sentence.ToCharArray())
+            {
+                _dialogueText.text += letter;
+                _dialogueAudio.Stop();
+                int randomClip = Random.Range(0, dialogueCharacter.talkingSFX.Length);
+                _dialogueAudio.clip = dialogueCharacter.talkingSFX[randomClip];
+                _dialogueAudio.Play();
+                yield return new WaitForSeconds(typeSpeed);
+            }
         }
 
         #endregion
@@ -85,24 +114,28 @@ namespace Nojumpo.Managers
 
         public void OpenDialogue(Dialogue_Dialogue dialogue)
         {
-            _currentDialogue= dialogue;
+            _currentDialogue = dialogue;
             _activeMessage = 0;
 
-            DisplayMessage();
+            DisplayMessage(0.05f);
         }
 
-        public void NextMessage()
+        public void NextMessage(float typeSpeed)
         {
             _activeMessage++;
             if (_activeMessage < _currentDialogue.dialogueMessages.Length)
             {
-                DisplayMessage();
+                DisplayMessage(typeSpeed);
             }
             else
             {
-                // end the conversation
-                IsDialogueActive = false;
+                EndDialogue();
             }
+        }
+
+        public void EndDialogue()
+        {
+            IsDialogueActive = false;
         }
 
         #endregion

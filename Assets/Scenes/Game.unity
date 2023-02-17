@@ -378,10 +378,13 @@ MonoBehaviour:
     dialogueCharacters:
     - characterName: 
       characterSprite: {fileID: 0}
+      talkingSFX: []
     - characterName: 
       characterSprite: {fileID: 0}
+      talkingSFX: []
     - characterName: 
       characterSprite: {fileID: 0}
+      talkingSFX: []
 --- !u!1001 &144573243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1012,6 +1015,7 @@ GameObject:
   - component: {fileID: 307542000}
   - component: {fileID: 307541999}
   - component: {fileID: 307542001}
+  - component: {fileID: 307542002}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -1070,15 +1074,111 @@ MonoBehaviour:
         - m_Target: {fileID: 307541999}
           m_TargetAssemblyTypeName: Nojumpo.Managers.Dialogue_Manager, Assembly-CSharp
           m_MethodName: NextMessage
-          m_Mode: 1
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 0.05
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!82 &307542002
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307541998}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &317210699
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,7 +5298,6 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 01684ff823b2ae84db6e33955da7300a, type: 2}
-    - {fileID: 11400000, guid: dc702ae5eedfb0b4bbf575db6f605954, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -5209,20 +5308,6 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1618795856}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5250,8 +5335,24 @@ MonoBehaviour:
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: -690604272, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: ffd82408581049849930937d3933a318, type: 3}
+      - {fileID: 8300000, guid: 63a589b1ef2b9bc42b0795b8146b1e7c, type: 3}
+      - {fileID: 8300000, guid: 8963407f92b82ef48a5c25d0e6c08998, type: 3}
+      - {fileID: 8300000, guid: 3e2b8ab4c7ea16f47b2cb2f44378936a, type: 3}
+      - {fileID: 8300000, guid: f47723169ce12144299f832b487825e7, type: 3}
+      - {fileID: 8300000, guid: 6654fa08cefe98a40977e2e79cb6fc7e, type: 3}
+      - {fileID: 8300000, guid: 76ac4a0403885104e8c8f27c4f5a14ef, type: 3}
     - characterName: Kongey Donk
       characterSprite: {fileID: -315541103, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: 1f87ba5565925cd47b70fa2c8f896ef7, type: 3}
+      - {fileID: 8300000, guid: fd8826c6b50302444b93ef72974cd63c, type: 3}
+      - {fileID: 8300000, guid: d0d2a95cac260dc48bfc3289c075c5a8, type: 3}
+      - {fileID: 8300000, guid: d472260c29aacc2459ece5c190c9c0c4, type: 3}
+      - {fileID: 8300000, guid: 9d24f2608c5340d49a32a3b6cdec7bfa, type: 3}
+      - {fileID: 8300000, guid: 3cb97c5a93be67645b4d7332001b4c93, type: 3}
+      - {fileID: 8300000, guid: dda43529195209e4f9210d141d38f9e7, type: 3}
 --- !u!1 &1658283599
 GameObject:
   m_ObjectHideFlags: 0
