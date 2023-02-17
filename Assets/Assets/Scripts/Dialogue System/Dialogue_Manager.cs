@@ -79,9 +79,6 @@ namespace Nojumpo.Managers
         private void DisplayMessage(float typeSpeed)
         {
             Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
-            //_dialogueText.text = messageToDisplay.message;
-
-
 
             Dialogue_Character characterToDisplay = _currentDialogue.dialogueCharacters[messageToDisplay.characterId];
             _characterNameText.text = characterToDisplay.characterName;
