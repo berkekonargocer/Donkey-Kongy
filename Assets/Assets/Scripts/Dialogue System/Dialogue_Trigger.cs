@@ -7,7 +7,7 @@ namespace Nojumpo
     {
         #region Fields
 
-        [SerializeField] private Dialogue_Dialogue[] _dialogues;
+        [SerializeField] private Dialogue_Dialogue[] _dialoguesToTrigger;
 
         #endregion
 
@@ -15,7 +15,7 @@ namespace Nojumpo
 
         public void StartDialogue(int dialogueNumber)
         {
-            Dialogue_Manager.Instance.OpenDialogue(_dialogues[dialogueNumber]);
+            Dialogue_Manager.Instance.OpenDialogue(_dialoguesToTrigger[dialogueNumber]);
         }
 
         #endregion

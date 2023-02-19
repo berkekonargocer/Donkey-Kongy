@@ -76,7 +76,7 @@ namespace Nojumpo.Managers
             _dialogueAudio = GetComponent<AudioSource>();
         }
 
-        private void DisplayMessage(float typeSpeed)
+        private void DisplayMessage()
         {
             Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
 
@@ -85,12 +85,12 @@ namespace Nojumpo.Managers
             _characterAvatar.sprite = characterToDisplay.characterSprite;
 
             StopAllCoroutines();
-            StartCoroutine(TypeSentence(characterToDisplay, messageToDisplay.message, typeSpeed));
+            StartCoroutine(TypeSentence(characterToDisplay, messageToDisplay.message, messageToDisplay.waitTimeBetweenChars));
 
             IsDialogueActive = true;
         }
 
-        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float typeSpeed)
+        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float waitTimeBetweenChars)
         {
             _dialogueText.text = "";
 
@@ -101,7 +101,7 @@ namespace Nojumpo.Managers
                 int randomClip = Random.Range(0, dialogueCharacter.talkingSFX.Length);
                 _dialogueAudio.clip = dialogueCharacter.talkingSFX[randomClip];
                 _dialogueAudio.Play();
-                yield return new WaitForSeconds(typeSpeed);
+                yield return new WaitForSeconds(waitTimeBetweenChars);
             }
         }
 
@@ -114,15 +114,15 @@ namespace Nojumpo.Managers
             _currentDialogue = dialogue;
             _activeMessage = 0;
 
-            DisplayMessage(0.05f);
+            DisplayMessage();
         }
 
-        public void NextMessage(float typeSpeed)
+        public void NextMessage()
         {
             _activeMessage++;
             if (_activeMessage < _currentDialogue.dialogueMessages.Length)
             {
-                DisplayMessage(typeSpeed);
+                DisplayMessage();
             }
             else
             {

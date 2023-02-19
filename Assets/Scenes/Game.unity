@@ -372,19 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c772b338c6cf96c4dbe633ea73e1f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogues:
-  - dialogueName: Viby Nario Reached to Princess
-    dialogueMessages: []
-    dialogueCharacters:
-    - characterName: 
-      characterSprite: {fileID: 0}
-      talkingSFX: []
-    - characterName: 
-      characterSprite: {fileID: 0}
-      talkingSFX: []
-    - characterName: 
-      characterSprite: {fileID: 0}
-      talkingSFX: []
+  _dialoguesToTrigger: []
 --- !u!1001 &144573243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -22.57576, y: 25}
+  m_AnchoredPosition: {x: -22.575806, y: 25}
   m_SizeDelta: {x: 334.84848, y: 1079}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &193974289
@@ -1074,7 +1062,7 @@ MonoBehaviour:
         - m_Target: {fileID: 307541999}
           m_TargetAssemblyTypeName: Nojumpo.Managers.Dialogue_Manager, Assembly-CSharp
           m_MethodName: NextMessage
-          m_Mode: 4
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5325,17 +5313,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c772b338c6cf96c4dbe633ea73e1f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogues:
+  _dialoguesToTrigger:
   - dialogueName: Beginning Dialogue
     dialogueMessages:
     - characterId: 0
-      message: Yo mammamia what is happening the early morning!
+      message: Yo mammamia what is happening in the early morning!
+      waitTimeBetweenChars: 0.05
     - characterId: 0
-      message: 'Can''t i finish my morning vibing in peace.. '
+      message: Can't i finish my morning vibing in peace..
+      waitTimeBetweenChars: 0.05
     - characterId: 0
       message: Yo Kongey, i thought we have figured this out
+      waitTimeBetweenChars: 0.05
     - characterId: 1
       message: We were bros before her Nario..
+      waitTimeBetweenChars: 0.08
+    - characterId: 1
+      message: You say we still are but we can't even spend time together
+      waitTimeBetweenChars: 0.06
+    - characterId: 2
+      message: Yes because i don't want him to spend any time with a stupid monkey
+      waitTimeBetweenChars: 0.05
+    - characterId: 2
+      message: 'Yet, he has to pay attention to me
+
+        RIGHT NARIO!'
+      waitTimeBetweenChars: 0.04
+    - characterId: 2
+      message: "Also why are you dancing? \nweren't you supposed to be sad?"
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: 'I am sad
+
+        but can''t stop while watching Nario vibe like
+        that'
+      waitTimeBetweenChars: 0.06
+    - characterId: 2
+      message: Uh whatever
+      waitTimeBetweenChars: 0.07
+    - characterId: 2
+      message: Nario! don't you dare to forget to bring my umbrella along with my
+        handbag and be quick!!
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: No Nario! i will take her far away from us just go!
+      waitTimeBetweenChars: 0.05
+    - characterId: 0
+      message: Ah, here we go again..
+      waitTimeBetweenChars: 0.09
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: -690604272, guid: 5b287de30096c8848a282ddb21273858, type: 3}
@@ -5357,6 +5382,16 @@ MonoBehaviour:
       - {fileID: 8300000, guid: 9d24f2608c5340d49a32a3b6cdec7bfa, type: 3}
       - {fileID: 8300000, guid: 3cb97c5a93be67645b4d7332001b4c93, type: 3}
       - {fileID: 8300000, guid: dda43529195209e4f9210d141d38f9e7, type: 3}
+    - characterName: Princess
+      characterSprite: {fileID: -480979615, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: 4fdb558588c44dd4b83d5df3e75c68b4, type: 3}
+      - {fileID: 8300000, guid: bf5b7b4875e3df6448ce1a965ba7ec68, type: 3}
+      - {fileID: 8300000, guid: 901f26190851e584ab75f47863da881e, type: 3}
+      - {fileID: 8300000, guid: 7db163b38c677624e92dae56a263e4ec, type: 3}
+      - {fileID: 8300000, guid: 3ffe8c6617530ac419cdc07cb4392656, type: 3}
+      - {fileID: 8300000, guid: 1cf9a6ddb38d6f04ba2a5da6be9d761b, type: 3}
+      - {fileID: 8300000, guid: 89660ff3c1fc8b049a351304289ece82, type: 3}
 --- !u!1 &1658283599
 GameObject:
   m_ObjectHideFlags: 0
