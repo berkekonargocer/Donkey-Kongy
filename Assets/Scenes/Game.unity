@@ -5329,9 +5329,13 @@ MonoBehaviour:
   - dialogueName: Beginning Dialogue
     dialogueMessages:
     - characterId: 0
-      message: Yo mammamia what is happening in this early of the morning
+      message: Yo mammamia what is happening the early morning!
+    - characterId: 0
+      message: 'Can''t i finish my morning vibing in peace.. '
+    - characterId: 0
+      message: Yo Kongey, i thought we have figured this out
     - characterId: 1
-      message: No Nario GET AWAY!
+      message: We were bros before her Nario..
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: -690604272, guid: 5b287de30096c8848a282ddb21273858, type: 3}
