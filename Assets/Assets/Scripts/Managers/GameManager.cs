@@ -43,7 +43,7 @@ namespace Nojumpo.Managers
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.KeypadEnter) && !_sceneSkipped)
+            if (Input.GetKeyDown(KeyCode.Escape) && !_sceneSkipped)
             {
                 SkipCutscene();
             }
