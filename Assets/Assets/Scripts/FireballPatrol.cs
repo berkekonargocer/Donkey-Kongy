@@ -1,5 +1,4 @@
-using System;
-using UnityEditor;
+using System.Collections;
 using UnityEngine;
 
 namespace Nojumpo
@@ -12,17 +11,37 @@ namespace Nojumpo
         [Header("Movement Settings")]
 
         [SerializeField] private float _moveSpeed = 2f;
+        [SerializeField] private float _jumpVelocity = 12.0f;
 
-        private Transform _groundDetectionPosition;
-        RaycastHit[] _groundDetectionRay = new RaycastHit[1];
-        RaycastHit[] _wallDetectionRay = new RaycastHit[1];
+        private Rigidbody2D _fireballRigidbody2D;
+
+        private Vector3 _movementVector = Vector3.zero;
+
+        private bool _isMovingRight = false;
+
+        #endregion
+
+        #region Grounded Check and Wall Detection Settings
+
+        [Header("Grounded Check and Wall Detection Settings")]
+        [SerializeField] private float _nextStepGroundDetectionRayDistance = 0.8f;
+        [SerializeField] private float _wallDetectionRayDistance = 0.5f;
+        [SerializeField] private float _isGroundedCheckRayDistance = 0.5f;
+
+        private Transform _nextStepGroundDetectionPosition;
+        private Transform _isGroundedDetectionPosition;
+
+        RaycastHit2D[] _nextStepGroundDetectionRay = new RaycastHit2D[1];
+        RaycastHit2D[] _wallDetectionRay = new RaycastHit2D[1];
+        RaycastHit2D[] _isGroundedDetectionSphereRay = new RaycastHit2D[1];
 
         #endregion
 
         #region Layer Settings
         [Header("Layer Settings")]
 
-        [SerializeField] private LayerMask _playerLayer;
+        [SerializeField] private LayerMask _groundLayer;
+        [SerializeField] private LayerMask _ignoreWallDetectionRay;
 
         #endregion
 
@@ -32,59 +51,25 @@ namespace Nojumpo
 
         #region Unity Methods
 
-        #region OnEnable
 
-        private void OnEnable()
-        {
-
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-
-        }
-
-        #endregion
-
-        #region Awake and Start
+        #region Awake 
 
         private void Awake()
         {
             SetComponents();
-        }
 
-        private void Start()
-        {
-
+            // Starts disabled and gets activated in the timeline with ActivateFireballPatrol() method
+            enabled = false;
         }
 
         #endregion
 
-        #region Update and Fixed Update
-
-        private void Update()
-        {
-            Debug.DrawRay(_groundDetectionPosition.position, Vector3.down, Color.green, 1f);
-            Debug.DrawLine(transform.position, transform.right + new Vector3(-0.4f, 0f, 0f), Color.red, 1f);
-        }
+        #region Fixed Update
 
         private void FixedUpdate()
         {
-            var groundLayerMask = ~0;
-
-            var wallLayerMask = ~_playerLayer;
-
-            int groundedHit = Physics.RaycastNonAlloc(_groundDetectionPosition.position, Vector3.down, _groundDetectionRay, Mathf.Infinity, groundLayerMask);
-            int wallHit = Physics.RaycastNonAlloc(transform.position, transform.right, _wallDetectionRay, 0.6f, wallLayerMask);
-
-            if (groundedHit == 0 || wallHit != 0)
-            {
-                // turn the fireball
-            }
+            NextStepGroundAndWallDetectionRays();
+            HandleMovement();
         }
 
         #endregion
@@ -96,14 +81,82 @@ namespace Nojumpo
 
         private void SetComponents()
         {
-            _groundDetectionPosition = transform.GetChild(0).transform;
+            _nextStepGroundDetectionPosition = transform.GetChild(0).transform;
+            _isGroundedDetectionPosition = transform.GetChild(1).transform;
+        }
+
+        private void AddRigidbody2D()
+        {
+            _fireballRigidbody2D = gameObject.AddComponent<Rigidbody2D>();
+            _fireballRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+            _fireballRigidbody2D.gravityScale = 4.0f;
+            _fireballRigidbody2D.mass = 25.0f;
+        }
+
+        private void HandleMovement()
+        {
+            _movementVector = (transform.right * _moveSpeed * Time.deltaTime);
+
+            if (IsGrounded() == true)
+            {
+                HandleJump();
+            }
+
+            _fireballRigidbody2D.velocity = _movementVector;
+        }
+
+        private void HandleJump()
+        {
+            _movementVector.y = _jumpVelocity;
+        }
+
+        private bool IsGrounded()
+        {
+
+            int groundedHit = Physics2D.RaycastNonAlloc(_isGroundedDetectionPosition.position, Vector2.down, _isGroundedDetectionSphereRay, _isGroundedCheckRayDistance, _groundLayer);
+
+            if (groundedHit != 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void NextStepGroundAndWallDetectionRays()
+        {
+            var groundLayerMask = ~0;
+            var wallLayerMask = ~_ignoreWallDetectionRay;
+
+            int groundedHit = Physics2D.RaycastNonAlloc(_nextStepGroundDetectionPosition.position, Vector2.down, _nextStepGroundDetectionRay, _nextStepGroundDetectionRayDistance, groundLayerMask);
+            int wallHit = Physics2D.RaycastNonAlloc(transform.position, transform.right, _wallDetectionRay, _wallDetectionRayDistance, wallLayerMask);
+
+            if (groundedHit != 1 || wallHit == 1)
+            {
+                if (_isMovingRight)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                    _isMovingRight = false;
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    _isMovingRight = true;
+                }
+            }
         }
 
         #endregion
 
         #region Custom Public Methods
 
-
+        public void ActivateFireballPatrol()
+        {
+            AddRigidbody2D();
+            enabled = true;
+        }
 
         #endregion
 
@@ -111,9 +164,10 @@ namespace Nojumpo
 
         private void OnDrawGizmos()
         {
-            //Gizmos.color = Color.green;
-            //Gizmos.DrawRay(_groundDetectionPosition.position, Vector3.down);
-            //Gizmos.DrawRay(transform.position, transform.right + new Vector3(-0.4f, 0f, 0f));
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(_nextStepGroundDetectionPosition.position, Vector2.down);
+            Gizmos.DrawRay(transform.position, transform.right); // Not exactly the same distance! -0.5f
+            Gizmos.DrawRay(_isGroundedDetectionPosition.position, new Vector2(0, -_isGroundedCheckRayDistance));
         }
 
         #endregion
