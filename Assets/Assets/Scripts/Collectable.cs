@@ -1,14 +1,27 @@
 using UnityEngine;
 using Nojumpo.Interfaces;
+using System;
 
 namespace Nojumpo
 {
-    public class Collectible : MonoBehaviour, ICollectible
+    public class Collectable : MonoBehaviour, ICollectable
     {
         #region Fields
 
+        #region Collect Event
+
+        public static Action<GameObject> CollectEvent;
+
+        #endregion
+
+        #region Sound Effects Settings
+        [Header("Sound Effects Settings")]
+
         [SerializeField] private AudioSource _collectAudioSource;
         [SerializeField] private AudioClip _collectSFXAudio;
+
+        #endregion
+
 
         #endregion
 
@@ -20,6 +33,7 @@ namespace Nojumpo
 
         private void OnEnable()
         {
+            CollectEvent += PlayCollectAudio;
 
         }
 
@@ -29,7 +43,7 @@ namespace Nojumpo
 
         private void OnDisable()
         {
-
+            CollectEvent -= PlayCollectAudio;
         }
 
         #endregion
@@ -62,7 +76,11 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-
+        private void PlayCollectAudio(GameObject gameObject)
+        {
+            _collectAudioSource.clip = _collectSFXAudio;
+            _collectAudioSource.Play();
+        }
 
         #endregion
 
@@ -70,10 +88,7 @@ namespace Nojumpo
 
         public void Collect()
         {
-            _collectAudioSource.clip = _collectSFXAudio;
-            _collectAudioSource.Play();
-            // Show object in the UI
-            Destroy(gameObject);
+            CollectEvent.Invoke(gameObject);
         }
 
         #endregion

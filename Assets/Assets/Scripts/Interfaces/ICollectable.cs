@@ -1,6 +1,6 @@
 namespace Nojumpo.Interfaces
 {
-    public interface ICollectible
+    public interface ICollectable
     {
         public void Collect();
     }
