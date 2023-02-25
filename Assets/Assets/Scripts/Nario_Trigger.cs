@@ -12,7 +12,7 @@ namespace Nojumpo
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();
-            }           
+            }
         }
 
         #endregion

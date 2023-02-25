@@ -1,6 +1,6 @@
-using UnityEngine;
+using DG.Tweening;
 using Nojumpo.Interfaces;
-using System;
+using UnityEngine;
 
 namespace Nojumpo
 {
@@ -8,9 +8,13 @@ namespace Nojumpo
     {
         #region Fields
 
-        #region Collect Event
+        #region Animation Settings
+        [Header("Animation Settings")]
 
-        public static Action<GameObject> CollectEvent;
+        [SerializeField] private GameObject _uiPositionObject;
+        [SerializeField] private float _animationSpeed = 50.0f;
+        [SerializeField] private float _endAnimationAfterSeconds = 2.0f;
+        private Vector3 _smoothDampVelocity = Vector3.zero;
 
         #endregion
 
@@ -33,7 +37,6 @@ namespace Nojumpo
 
         private void OnEnable()
         {
-            CollectEvent += PlayCollectAudio;
 
         }
 
@@ -43,7 +46,7 @@ namespace Nojumpo
 
         private void OnDisable()
         {
-            CollectEvent -= PlayCollectAudio;
+
         }
 
         #endregion
@@ -76,10 +79,17 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void PlayCollectAudio(GameObject gameObject)
+        private void PlayCollectAudio()
         {
             _collectAudioSource.clip = _collectSFXAudio;
             _collectAudioSource.Play();
+        }
+
+        private void PlayCollectAnimation()
+        {
+            transform.parent = _uiPositionObject.transform;
+
+            gameObject.transform.DOLocalMove(Vector3.zero, 2.5f);
         }
 
         #endregion
@@ -88,7 +98,8 @@ namespace Nojumpo
 
         public void Collect()
         {
-            CollectEvent.Invoke(gameObject);
+            PlayCollectAudio();
+            PlayCollectAnimation();
         }
 
         #endregion
