@@ -105,8 +105,9 @@ namespace Nojumpo
             _movementVector = (transform.right * _moveInput.x).normalized;
             _movementVector *= _playerMovementSettings.MovementSpeed;
 
-            // character controller move
+            HandleJump();
 
+            // character controller move
         }
 
         private void HandleJump()
