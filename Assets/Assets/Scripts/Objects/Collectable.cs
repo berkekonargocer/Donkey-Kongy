@@ -26,55 +26,8 @@ namespace Nojumpo
 
         #endregion
 
-
         #endregion
 
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
-        private void OnEnable()
-        {
-
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-
-        }
-
-        #endregion
-
-        #region Awake and Start
-
-        private void Awake()
-        {
-
-        }
-
-        private void Start()
-        {
-
-        }
-
-        #endregion
-
-        #region Update
-
-        private void Update()
-        {
-
-        }
-
-        #endregion
-
-        #endregion
 
 
         #region Custom Private Methods
