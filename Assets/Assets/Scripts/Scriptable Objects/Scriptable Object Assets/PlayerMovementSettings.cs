@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nojumpo.ScriptableObjects
@@ -8,7 +7,7 @@ namespace Nojumpo.ScriptableObjects
     {
         #region Fields
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
 
         [TextArea]
         [SerializeField] private string _developerDescription;
@@ -19,7 +18,7 @@ namespace Nojumpo.ScriptableObjects
         public float MovementSpeed { get { return _movementSpeed; } private set { _movementSpeed = value; } }
 
         [SerializeField] private float _jumpVelocity = 10.0f;
-        public float JumpVelocity { get { return _jumpVelocity;} private set { _jumpVelocity = value; } }
+        public float JumpVelocity { get { return _jumpVelocity; } private set { _jumpVelocity = value; } }
 
         //[SerializeField] private float _movementAcceleration = 5.0f;
         //public float MovementAcceleration { get { return _movementAcceleration; } private set { _movementAcceleration = value; } }

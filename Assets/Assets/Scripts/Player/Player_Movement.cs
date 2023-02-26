@@ -199,10 +199,14 @@ namespace Nojumpo
         {
             Gizmos.color = Color.green;
 
+            #region Grounded Check
+
             for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
             {
                 Gizmos.DrawRay(_groundedCheckRaycastPositions[i].position, new Vector2(0, -0.025f));
-            }
+            } 
+
+            #endregion
         }
     }
 }

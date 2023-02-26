@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e4a1ddd70e60294287ba9151ecdd874, type: 3}
-  m_Name: Nario
+  m_Script: {fileID: 11500000, guid: 457e2f6b1d1721646b90f9c20abef3ef, type: 3}
+  m_Name: Handbag
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _movementSpeed: 7
-  _jumpVelocity: 8.5

@@ -1,12 +1,16 @@
 using DG.Tweening;
 using Nojumpo.Interfaces;
 using UnityEngine;
+using Nojumpo.ScriptableObjects;
 
 namespace Nojumpo
 {
     public class Collectable : MonoBehaviour, ICollectable
     {
         #region Fields
+
+        [SerializeField] private ItemType _itemType;
+        public ItemType ItemType { get { return _itemType; } }
 
         #region Animation Settings
         [Header("Animation Settings")]
@@ -23,6 +27,11 @@ namespace Nojumpo
 
         [SerializeField] private AudioSource _collectAudioSource;
         [SerializeField] private AudioClip _collectSFXAudio;
+
+        #endregion
+
+
+        #region 
 
         #endregion
 

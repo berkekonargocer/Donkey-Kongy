@@ -4373,6 +4373,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2067051338689557857, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2317524708189327032, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -4389,9 +4393,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4279628192308192506, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5764198079277694498, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_Name
       value: Viby Nario
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764198079277694498, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050903089251856343, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6926042709848247024, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_RootOrder
@@ -4436,6 +4452,10 @@ PrefabInstance:
     - target: {fileID: 6926042709848247024, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764363160511856810, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_Mass
@@ -6646,6 +6666,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 782330353}
     m_Modifications:
     - target: {fileID: 1742863646, guid: ede0668d84707dc48ab64ce1b9635bfe, type: 3}
+      propertyPath: _itemName
+      value: Umbrella
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742863646, guid: ede0668d84707dc48ab64ce1b9635bfe, type: 3}
+      propertyPath: _itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c147c955e8cfbd4d9335fdd63b06103, type: 2}
+    - target: {fileID: 1742863646, guid: ede0668d84707dc48ab64ce1b9635bfe, type: 3}
       propertyPath: _uiPositionObject
       value: 
       objectReference: {fileID: 587894783}
@@ -7982,6 +8010,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4056030718430099220, guid: 923959f152346dd4591da80d1fcd0aa6, type: 3}
+      propertyPath: _itemName
+      value: Handbag
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056030718430099220, guid: 923959f152346dd4591da80d1fcd0aa6, type: 3}
+      propertyPath: _itemType
+      value: 
+      objectReference: {fileID: 11400000, guid: e13cc7380aa294448a0ed454effefe73, type: 2}
     - target: {fileID: 4056030718430099220, guid: 923959f152346dd4591da80d1fcd0aa6, type: 3}
       propertyPath: _uiPositionObject
       value: 
