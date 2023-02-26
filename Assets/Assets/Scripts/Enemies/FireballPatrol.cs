@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace Nojumpo
@@ -50,7 +49,6 @@ namespace Nojumpo
 
 
         #region Unity Methods
-
 
         #region Awake 
 

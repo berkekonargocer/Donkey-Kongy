@@ -42,41 +42,17 @@ namespace Nojumpo
 
         #endregion
 
-
         #endregion
 
 
 
         #region Unity Methods
 
-        #region OnEnable
-
-        private void OnEnable()
-        {
-
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-
-        }
-
-        #endregion
-
-        #region Awake and Start
+        #region Awake
 
         private void Awake()
         {
             SetComponents();
-        }
-
-        private void Start()
-        {
-
         }
 
         #endregion
@@ -161,7 +137,7 @@ namespace Nojumpo
             }
             else
             {
-                _movementVector += Physics2D.gravity * 2 *  Time.deltaTime;
+                _movementVector += Physics2D.gravity * 2 * Time.deltaTime;
             }
 
             if (IsGrounded)
@@ -189,12 +165,6 @@ namespace Nojumpo
 
         #endregion
 
-        #region Custom Public Methods
-
-
-
-        #endregion
-
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
@@ -204,7 +174,7 @@ namespace Nojumpo
             for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
             {
                 Gizmos.DrawRay(_groundedCheckRaycastPositions[i].position, new Vector2(0, -0.025f));
-            } 
+            }
 
             #endregion
         }
