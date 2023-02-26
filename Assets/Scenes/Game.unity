@@ -4567,6 +4567,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
+--- !u!114 &1149954542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149954534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c815461eac245204d93516509b696fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerCollisionCheckSettings: {fileID: 11400000, guid: 2be74b5330476ce4580c0e33049640ed, type: 2}
 --- !u!1001 &1163591932
 PrefabInstance:
   m_ObjectHideFlags: 0

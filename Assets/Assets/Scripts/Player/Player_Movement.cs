@@ -11,27 +11,14 @@ namespace Nojumpo
         #region Movement Settings
         [Header("Movement Settings")]
 
-        [SerializeField] private PlayerMovementSettings _playerMovementSettings;
+        [SerializeField] private MovementSettings _playerMovementSettings;
 
         [SerializeField] private LayerMask _groundLayer;
 
+        private CollisionCheckSettings _playerCollisionCheckSettings;
         private Rigidbody2D _playerRigidbody2D;
 
         Vector2 _movementVector = Vector2.zero;
-
-        public bool IsGrounded { get; private set; } = true;
-
-        #region Collision Check Settings
-        [Header("Collision Check Settings")]
-
-        [SerializeField] private float _colliderXSizeOffset = 0.1f;
-        [SerializeField] private float _colliderYSizeOffset = 2f;
-
-        private CapsuleCollider2D _playerCollider;
-
-        Collider2D[] _collisionCheckResults = new Collider2D[4];
-
-        #endregion
 
         #endregion
 
@@ -59,7 +46,7 @@ namespace Nojumpo
 
         #endregion
 
-        #region Update
+        #region Update and Fixed Update
 
         private void Update()
         {
@@ -69,8 +56,7 @@ namespace Nojumpo
         }
 
         private void FixedUpdate()
-        {
-            CheckCollision();
+        {            
             ApplyPlayerMovement();
         }
 
@@ -83,8 +69,8 @@ namespace Nojumpo
 
         private void SetComponents()
         {
+            _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
-            _playerCollider = GetComponent<CapsuleCollider2D>();
         }
 
         #region Input Methods
@@ -128,37 +114,22 @@ namespace Nojumpo
 
         private void HandlePlayerJump()
         {
-            if (IsGrounded && _jumpInput)
+            if (!_playerCollisionCheckSettings.IsGrounded)
+            {
+                _movementVector += Physics2D.gravity * 2.25f * Time.deltaTime;
+                _jumpInput = false;
+                return;
+            }
+
+            if (_playerCollisionCheckSettings.IsGrounded && _jumpInput)
             {
                 _jumpInput = false;
                 _movementVector = Vector2.up * _playerMovementSettings.JumpVelocity;
             }
-            else
-            {
-                _movementVector += Physics2D.gravity * 2 * Time.deltaTime;
-            }
 
-            if (IsGrounded)
+            if (_playerCollisionCheckSettings.IsGrounded)
             {
                 _movementVector.y = Mathf.Max(_movementVector.y, -1f);
-            }
-        }
-
-        private void CheckCollision()
-        {
-            Vector2 collisionBoxSize = _playerCollider.bounds.size;
-            collisionBoxSize.x /= _colliderXSizeOffset;
-            collisionBoxSize.y += _colliderYSizeOffset;
-
-            int collisionCheckHits = Physics2D.OverlapBoxNonAlloc(transform.position, collisionBoxSize, 0.0f, _collisionCheckResults);
-
-            if (collisionCheckHits >= 1)
-            {
-                IsGrounded = true;
-            }
-            else
-            {
-                IsGrounded = false;
             }
         }
 
