@@ -19,15 +19,17 @@ namespace Nojumpo
 
         Vector2 _movementVector = Vector2.zero;
 
-        #region Grounded Check Settings
-
         public bool IsGrounded { get; private set; } = true;
 
-        private Transform[] _groundedCheckRaycastPositions = new Transform[3];
+        #region Collision Check Settings
+        [Header("Collision Check Settings")]
 
-        RaycastHit2D[] _groundedResults = new RaycastHit2D[3];
+        [SerializeField] private float _colliderXSizeOffset = 0.1f;
+        [SerializeField] private float _colliderYSizeOffset = 2f;
 
-        private int _groundedRayHits;
+        private CapsuleCollider2D _playerCollider;
+
+        Collider2D[] _collisionCheckResults = new Collider2D[4];
 
         #endregion
 
@@ -68,7 +70,7 @@ namespace Nojumpo
 
         private void FixedUpdate()
         {
-            IsGroundedCheck();
+            CheckCollision();
             ApplyPlayerMovement();
         }
 
@@ -82,11 +84,7 @@ namespace Nojumpo
         private void SetComponents()
         {
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
-
-            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
-            {
-                _groundedCheckRaycastPositions[i] = transform.GetChild(0).GetChild(i).transform;
-            }
+            _playerCollider = GetComponent<CapsuleCollider2D>();
         }
 
         #region Input Methods
@@ -146,14 +144,15 @@ namespace Nojumpo
             }
         }
 
-        private void IsGroundedCheck()
+        private void CheckCollision()
         {
-            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
-            {
-                _groundedRayHits = Physics2D.RaycastNonAlloc(_groundedCheckRaycastPositions[i].position, Vector2.down, _groundedResults, 0.025f, _groundLayer);
-            }
+            Vector2 collisionBoxSize = _playerCollider.bounds.size;
+            collisionBoxSize.x /= _colliderXSizeOffset;
+            collisionBoxSize.y += _colliderYSizeOffset;
 
-            if (_groundedRayHits >= 1)
+            int collisionCheckHits = Physics2D.OverlapBoxNonAlloc(transform.position, collisionBoxSize, 0.0f, _collisionCheckResults);
+
+            if (collisionCheckHits >= 1)
             {
                 IsGrounded = true;
             }
@@ -170,11 +169,6 @@ namespace Nojumpo
             Gizmos.color = Color.green;
 
             #region Grounded Check
-
-            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
-            {
-                Gizmos.DrawRay(_groundedCheckRaycastPositions[i].position, new Vector2(0, -0.025f));
-            }
 
             #endregion
         }
