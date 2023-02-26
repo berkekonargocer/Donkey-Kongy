@@ -13,9 +13,33 @@ namespace Nojumpo
 
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
 
+        [SerializeField] private LayerMask _groundLayer;
+
+        private Rigidbody2D _playerRigidbody2D;
+
         Vector2 _movementVector = Vector2.zero;
 
-        public bool IsGrounded { get; private set; }
+        #region Jump Settings
+
+        public bool IsJumping { get; private set; } = false;
+
+        public float JumpTimeRemaining { get; private set; } = 0.0f;
+
+        #endregion
+
+        #region Grounded Check Settings
+
+        public bool IsGrounded { get; private set; } = true;
+
+        private Transform[] _groundedCheckRaycastPositions = new Transform[3];
+
+        RaycastHit2D[] _groundedResults = new RaycastHit2D[3];
+
+        private int _groundedRayHits;
+
+        private Vector3 currentVelocityReference = Vector3.zero;
+
+        #endregion
 
         #endregion
 
@@ -57,7 +81,7 @@ namespace Nojumpo
 
         private void Awake()
         {
-
+            SetComponents();
         }
 
         private void Start()
@@ -71,6 +95,7 @@ namespace Nojumpo
 
         private void FixedUpdate()
         {
+            IsGroundedCheck();
             HandlePlayerMovement();
         }
 
@@ -80,6 +105,16 @@ namespace Nojumpo
 
 
         #region Custom Private Methods
+
+        private void SetComponents()
+        {
+            _playerRigidbody2D = GetComponent<Rigidbody2D>();
+
+            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
+            {
+                _groundedCheckRaycastPositions[i] = transform.GetChild(0).GetChild(i).transform;
+            }
+        }
 
         #region Input Methods
 
@@ -105,14 +140,82 @@ namespace Nojumpo
             _movementVector = (transform.right * _moveInput.x).normalized;
             _movementVector *= _playerMovementSettings.MovementSpeed;
 
+            if (!IsGrounded)
+            {
+                HandleGravity();
+            }
+
             HandleJump();
 
-            // character controller move
+            _playerRigidbody2D.velocity = Vector3.MoveTowards(_playerRigidbody2D.velocity, _movementVector, _playerMovementSettings.MovementAcceleration);
         }
 
         private void HandleJump()
         {
+            bool triggeredJumpThisFrame = false;
 
+            if (_jumpInput)
+            {
+                _jumpInput = false;
+
+                bool triggerJump = true;
+
+                if (!IsGrounded && !IsJumping)
+                    triggerJump = false;
+
+                if (triggerJump)
+                {
+                    triggeredJumpThisFrame = true;
+                    JumpTimeRemaining += _playerMovementSettings.JumpTime;
+                    IsJumping = true;
+                }
+            }
+
+            if (IsJumping)
+            {
+                if (!triggeredJumpThisFrame)
+                {
+                    JumpTimeRemaining -= Time.deltaTime;
+                }
+
+                if (JumpTimeRemaining <= 0)
+                {
+                    IsJumping = false;
+                }
+                else
+                {
+                    _movementVector.y = _playerMovementSettings.JumpVelocity;
+                }
+            }
+        }
+
+        private void IsGroundedCheck()
+        {
+            if (JumpTimeRemaining > 0)
+            {
+                IsGrounded = false;
+            }
+
+            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
+            {
+                _groundedRayHits = Physics2D.RaycastNonAlloc(_groundedCheckRaycastPositions[i].position, Vector2.down, _groundedResults, 0.025f, _groundLayer);
+            }
+
+            if (_groundedRayHits >= 1)
+            {
+                IsGrounded = true;
+                JumpTimeRemaining = 0.0f;
+            }
+            else
+            {
+                IsGrounded = false;
+            }
+        }
+
+        protected void HandleGravity()
+        {
+            Vector2 gravity = Vector2.down * _playerMovementSettings.Gravity;
+            _movementVector += gravity;
         }
 
         #endregion
@@ -122,5 +225,15 @@ namespace Nojumpo
 
 
         #endregion
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+
+            for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
+            {
+                Gizmos.DrawRay(_groundedCheckRaycastPositions[i].position, new Vector2(0, -0.025f));
+            }
+        }
     }
 }
