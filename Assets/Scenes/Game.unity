@@ -4438,12 +4438,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792961473987742101, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}
+      propertyPath: m_GravityScale
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19af67342a4ce1b47b81a3929808b256, type: 3}

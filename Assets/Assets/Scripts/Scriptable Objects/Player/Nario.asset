@@ -14,7 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _developerDescription: 
   _movementSpeed: 5
-  _jumpVelocity: 4
-  _movementAcceleration: 25
-  _jumpTime: 0.35
-  _gravity: 7
+  _jumpVelocity: 7

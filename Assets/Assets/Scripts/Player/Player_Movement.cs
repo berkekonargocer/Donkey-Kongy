@@ -19,14 +19,6 @@ namespace Nojumpo
 
         Vector2 _movementVector = Vector2.zero;
 
-        #region Jump Settings
-
-        public bool IsJumping { get; private set; } = false;
-
-        public float JumpTimeRemaining { get; private set; } = 0.0f;
-
-        #endregion
-
         #region Grounded Check Settings
 
         public bool IsGrounded { get; private set; } = true;
@@ -36,8 +28,6 @@ namespace Nojumpo
         RaycastHit2D[] _groundedResults = new RaycastHit2D[3];
 
         private int _groundedRayHits;
-
-        private Vector3 currentVelocityReference = Vector3.zero;
 
         #endregion
 
@@ -93,10 +83,17 @@ namespace Nojumpo
 
         #region Update
 
+        private void Update()
+        {
+            HandlePlayerJump();
+            HandlePlayerMovement();
+
+        }
+
         private void FixedUpdate()
         {
             IsGroundedCheck();
-            HandlePlayerMovement();
+            ApplyPlayerMovement();
         }
 
         #endregion
@@ -135,67 +132,46 @@ namespace Nojumpo
 
         #endregion
 
-        private void HandlePlayerMovement()
+        private void ApplyPlayerMovement()
         {
-            _movementVector = (transform.right * _moveInput.x).normalized;
-            _movementVector *= _playerMovementSettings.MovementSpeed;
-
-            if (!IsGrounded)
-            {
-                HandleGravity();
-            }
-
-            HandleJump();
-
-            _playerRigidbody2D.velocity = Vector3.MoveTowards(_playerRigidbody2D.velocity, _movementVector, _playerMovementSettings.MovementAcceleration);
+            _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _movementVector * Time.fixedDeltaTime);
         }
 
-        private void HandleJump()
+        private void HandlePlayerMovement()
         {
-            bool triggeredJumpThisFrame = false;
+            _movementVector.x = _moveInput.x;
+            _movementVector.x *= _playerMovementSettings.MovementSpeed;
 
-            if (_jumpInput)
+            if (_movementVector.x > 0)
+            {
+                transform.eulerAngles = Vector3.zero;
+            }
+            else if (_movementVector.x < 0)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+        }
+
+        private void HandlePlayerJump()
+        {
+            if (IsGrounded && _jumpInput)
             {
                 _jumpInput = false;
-
-                bool triggerJump = true;
-
-                if (!IsGrounded && !IsJumping)
-                    triggerJump = false;
-
-                if (triggerJump)
-                {
-                    triggeredJumpThisFrame = true;
-                    JumpTimeRemaining += _playerMovementSettings.JumpTime;
-                    IsJumping = true;
-                }
+                _movementVector = Vector2.up * _playerMovementSettings.JumpVelocity;
+            }
+            else
+            {
+                _movementVector += Physics2D.gravity * 2 *  Time.deltaTime;
             }
 
-            if (IsJumping)
+            if (IsGrounded)
             {
-                if (!triggeredJumpThisFrame)
-                {
-                    JumpTimeRemaining -= Time.deltaTime;
-                }
-
-                if (JumpTimeRemaining <= 0)
-                {
-                    IsJumping = false;
-                }
-                else
-                {
-                    _movementVector.y = _playerMovementSettings.JumpVelocity;
-                }
+                _movementVector.y = Mathf.Max(_movementVector.y, -1f);
             }
         }
 
         private void IsGroundedCheck()
         {
-            if (JumpTimeRemaining > 0)
-            {
-                IsGrounded = false;
-            }
-
             for (int i = 0; i < _groundedCheckRaycastPositions.Length; i++)
             {
                 _groundedRayHits = Physics2D.RaycastNonAlloc(_groundedCheckRaycastPositions[i].position, Vector2.down, _groundedResults, 0.025f, _groundLayer);
@@ -204,18 +180,11 @@ namespace Nojumpo
             if (_groundedRayHits >= 1)
             {
                 IsGrounded = true;
-                JumpTimeRemaining = 0.0f;
             }
             else
             {
                 IsGrounded = false;
             }
-        }
-
-        protected void HandleGravity()
-        {
-            Vector2 gravity = Vector2.down * _playerMovementSettings.Gravity;
-            _movementVector += gravity;
         }
 
         #endregion
