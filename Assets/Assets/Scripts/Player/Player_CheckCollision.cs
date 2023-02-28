@@ -71,7 +71,7 @@ namespace Nojumpo
 
                 if (hit.layer == _groundLayer)
                 {
-                    _isGrounded = hit.transform.position.y + 0.42f < transform.position.y;
+                    _isGrounded = hit.transform.position.y < transform.position.y;
                     Physics2D.IgnoreCollision(_playerCollider2D, _collisionCheckResults[i], !_isGrounded);
                 }
                 else

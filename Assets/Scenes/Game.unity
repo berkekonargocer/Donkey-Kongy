@@ -1304,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ladder to Climb to First Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 2101773445985715272, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5103704605846793562, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
       propertyPath: m_Size.y
       value: 1.2
@@ -1532,6 +1536,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -1911,6 +1919,10 @@ PrefabInstance:
     - target: {fileID: 2101773445985715272, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
       propertyPath: m_Name
       value: Princess Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101773445985715272, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5103704605846793562, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
       propertyPath: m_Size.y
@@ -3096,6 +3108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -3173,6 +3189,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -3676,6 +3696,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -4993,6 +5017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -5221,6 +5249,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Second Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -5498,6 +5530,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -5849,6 +5885,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
@@ -6486,6 +6526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ladder to Climb to Third Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 2101773445985715272, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5103704605846793562, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
       propertyPath: m_Size.y
       value: 1.2
@@ -6919,6 +6963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -6996,6 +7044,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
