@@ -16,9 +16,7 @@ namespace Nojumpo
         [Header("Animation Settings")]
 
         [SerializeField] private GameObject _uiPositionObject;
-        [SerializeField] private float _animationSpeed = 50.0f;
-        [SerializeField] private float _endAnimationAfterSeconds = 2.0f;
-        private Vector3 _smoothDampVelocity = Vector3.zero;
+        [SerializeField] private float _animationTime = 2.5f;
 
         #endregion
 
@@ -27,11 +25,6 @@ namespace Nojumpo
 
         [SerializeField] private AudioSource _collectAudioSource;
         [SerializeField] private AudioClip _collectSFXAudio;
-
-        #endregion
-
-
-        #region 
 
         #endregion
 
@@ -51,7 +44,7 @@ namespace Nojumpo
         {
             transform.parent = _uiPositionObject.transform;
 
-            gameObject.transform.DOLocalMove(Vector3.zero, 2.5f);
+            gameObject.transform.DOLocalMove(Vector3.zero, _animationTime);
         }
 
         #endregion
