@@ -13,8 +13,6 @@ namespace Nojumpo
 
         [SerializeField] private MovementSettings _playerMovementSettings;
 
-        [SerializeField] private LayerMask _groundLayer;
-
         private CollisionCheckSettings _playerCollisionCheckSettings;
         private Rigidbody2D _playerRigidbody2D;
 
@@ -27,7 +25,6 @@ namespace Nojumpo
         private Vector2 _moveInput = Vector2.zero;
 
         private bool _jumpInput = false;
-        private bool _skipCutsceneInput = false;
 
         #endregion
 
@@ -56,7 +53,7 @@ namespace Nojumpo
         }
 
         private void FixedUpdate()
-        {            
+        {
             ApplyPlayerMovement();
         }
 
@@ -66,12 +63,6 @@ namespace Nojumpo
 
 
         #region Custom Private Methods
-
-        private void SetComponents()
-        {
-            _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
-            _playerRigidbody2D = GetComponent<Rigidbody2D>();
-        }
 
         #region Input Methods
 
@@ -83,18 +74,14 @@ namespace Nojumpo
         private void OnJump(InputValue inputValue)
         {
             _jumpInput = inputValue.isPressed;
-        }
-
-        private void OnSkip(InputValue inputValue)
-        {
-            _skipCutsceneInput = inputValue.isPressed;
-        }
+        } 
 
         #endregion
 
-        private void ApplyPlayerMovement()
+        private void SetComponents()
         {
-            _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _movementVector * Time.fixedDeltaTime);
+            _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
+            _playerRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         private void HandlePlayerMovement()
@@ -116,8 +103,7 @@ namespace Nojumpo
         {
             if (!_playerCollisionCheckSettings.IsGrounded)
             {
-                _movementVector += Physics2D.gravity * 2.25f * Time.deltaTime;
-                _jumpInput = false;
+                ApplyGravity();
                 return;
             }
 
@@ -129,19 +115,21 @@ namespace Nojumpo
 
             if (_playerCollisionCheckSettings.IsGrounded)
             {
-                _movementVector.y = Mathf.Max(_movementVector.y, -1f);
+                _movementVector.y = Mathf.Max(_movementVector.y, -0.5f);
             }
         }
 
-        #endregion
-
-        private void OnDrawGizmos()
+        private void ApplyPlayerMovement()
         {
-            Gizmos.color = Color.green;
-
-            #region Grounded Check
-
-            #endregion
+            _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _movementVector * Time.fixedDeltaTime);
         }
+
+        private void ApplyGravity()
+        {
+            _movementVector += Physics2D.gravity * 2.25f * Time.deltaTime;
+            _jumpInput = false;
+        }
+
+        #endregion
     }
 }

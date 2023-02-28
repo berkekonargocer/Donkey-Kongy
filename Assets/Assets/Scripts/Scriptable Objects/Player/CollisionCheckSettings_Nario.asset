@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: CollisionCheckSettings_Nario
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
   _colliderXSizeOffset: 2
-  _colliderYSizeOffset: 0.1
-  _isGrounded: 0
+  _colliderYSizeOffset: 0.2
+  _isGrounded: 1
