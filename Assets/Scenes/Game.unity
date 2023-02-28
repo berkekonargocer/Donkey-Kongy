@@ -4534,9 +4534,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMovementSettings: {fileID: 11400000, guid: 6c8ff8216d8484c45932759139d2337f, type: 2}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &1149954541
 MonoBehaviour:
   m_ObjectHideFlags: 0

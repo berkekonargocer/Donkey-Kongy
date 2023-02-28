@@ -18,6 +18,8 @@ namespace Nojumpo
 
         Collider2D[] _collisionCheckResults = new Collider2D[4];
 
+        private bool _isGrounded = true;
+
         #endregion
 
         #endregion
@@ -61,21 +63,24 @@ namespace Nojumpo
             collisionBoxSize.x /= _playerCollisionCheckSettings.ColliderXSizeOffset;
             collisionBoxSize.y += _playerCollisionCheckSettings.ColliderYSizeOffset;
 
-            int collisionCheckHits = Physics2D.OverlapBoxNonAlloc(transform.position, collisionBoxSize, 0.0f, _collisionCheckResults);
+            int collisionCheckHits = Physics2D.OverlapBoxNonAlloc(transform.position, collisionBoxSize, 0.0f, _collisionCheckResults);          
 
             for (int i = 0; i < collisionCheckHits; i++)
             {
                 GameObject hit = _collisionCheckResults[i].gameObject;
 
-                if (hit.layer == _groundLayer && hit.transform.position.y < transform.position.y)
+                if (hit.layer == _groundLayer)
                 {
-                    _playerCollisionCheckSettings.IsGrounded = true;
+                    _isGrounded = hit.transform.position.y + 0.42f < transform.position.y;
+                    Physics2D.IgnoreCollision(_playerCollider2D, _collisionCheckResults[i], !_isGrounded);
                 }
                 else
                 {
-                    _playerCollisionCheckSettings.IsGrounded = false;
+                    _isGrounded = false;
                 }
             }
+
+            _playerCollisionCheckSettings.IsGrounded = _isGrounded;
         }
 
         #endregion
