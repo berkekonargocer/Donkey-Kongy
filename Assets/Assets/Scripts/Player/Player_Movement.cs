@@ -74,7 +74,7 @@ namespace Nojumpo
         private void OnJump(InputValue inputValue)
         {
             _jumpInput = inputValue.isPressed;
-        } 
+        }
 
         #endregion
 
@@ -89,6 +89,12 @@ namespace Nojumpo
             _movementVector.x = _moveInput.x;
             _movementVector.x *= _playerMovementSettings.MovementSpeed;
 
+            if (_playerCollisionCheckSettings.IsClimbing)
+            {
+                _movementVector.y = _moveInput.y;
+                _movementVector.y *= _playerMovementSettings.MovementSpeed;
+            }
+
             if (_movementVector.x > 0)
             {
                 transform.eulerAngles = Vector3.zero;
@@ -101,6 +107,14 @@ namespace Nojumpo
 
         private void HandlePlayerJump()
         {
+            if (_playerCollisionCheckSettings.IsClimbing)
+            {
+                _playerRigidbody2D.gravityScale = 0.0f;
+                return;
+            }
+
+            _playerRigidbody2D.gravityScale = 15.0f;
+
             if (!_playerCollisionCheckSettings.IsGrounded)
             {
                 ApplyGravity();

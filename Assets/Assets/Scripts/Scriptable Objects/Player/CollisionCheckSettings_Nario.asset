@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CollisionCheckSettings_Nario
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _colliderXSizeOffset: 2
-  _colliderYSizeOffset: 0.2
+  _colliderXSizeOffset: 2.5
+  _colliderYSizeOffset: 0.3
   _isGrounded: 1
+  _isClimbing: 0

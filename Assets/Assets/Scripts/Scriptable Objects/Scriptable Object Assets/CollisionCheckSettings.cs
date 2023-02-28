@@ -23,6 +23,9 @@ namespace Nojumpo.ScriptableObjects
         [SerializeField] private bool _isGrounded = true;
         public bool IsGrounded { get { return _isGrounded; } set { _isGrounded = value; } }
 
+        [SerializeField] private bool _isClimbing = false;
+        public bool IsClimbing { get { return _isClimbing; } set { _isClimbing = value; } }
+
         #endregion
     }
 }
