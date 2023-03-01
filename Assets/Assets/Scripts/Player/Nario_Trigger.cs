@@ -12,7 +12,6 @@ namespace Nojumpo
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();
-                CollectedItems.ItemsCollection.Add(collectable.ItemType, (Collectable)collectable);
             }
         }
 

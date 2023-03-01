@@ -6,6 +6,6 @@ namespace Nojumpo
 {
     public class CollectedItems : MonoBehaviour
     {
-        public static Dictionary<ItemType, Collectable> ItemsCollection = new Dictionary<ItemType, Collectable>();
+        public static List<ItemType> ItemsCollection = new List<ItemType>();
     }
 }

@@ -1,10 +1,11 @@
+using Nojumpo.Interfaces;
 using Nojumpo.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Nojumpo
 {
-    public class Player_Movement : MonoBehaviour
+    public class Player_Controller : MonoBehaviour
     {
         #region Fields
 
@@ -13,10 +14,9 @@ namespace Nojumpo
 
         [SerializeField] private MovementSettings _playerMovementSettings;
 
+        private IMoveVelocity2D _playerMoveVelocity;
         private CollisionCheckSettings _playerCollisionCheckSettings;
         private Rigidbody2D _playerRigidbody2D;
-
-        Vector2 _movementVector = Vector2.zero;
 
         #endregion
 
@@ -43,18 +43,12 @@ namespace Nojumpo
 
         #endregion
 
-        #region Update and Fixed Update
+        #region Update
 
         private void Update()
         {
             HandlePlayerJump();
             HandlePlayerMovement();
-
-        }
-
-        private void FixedUpdate()
-        {
-            ApplyPlayerMovement();
         }
 
         #endregion
@@ -80,26 +74,27 @@ namespace Nojumpo
 
         private void SetComponents()
         {
+            _playerMoveVelocity = GetComponent<IMoveVelocity2D>();
             _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         private void HandlePlayerMovement()
         {
-            _movementVector.x = _moveInput.x;
-            _movementVector.x *= _playerMovementSettings.MovementSpeed;
+            _playerMoveVelocity.SetVelocityX(_moveInput.x);
+            _playerMoveVelocity.MultiplyVelocityX(_playerMovementSettings.MovementSpeed);
 
             if (_playerCollisionCheckSettings.IsClimbing)
             {
-                _movementVector.y = _moveInput.y;
-                _movementVector.y *= _playerMovementSettings.MovementSpeed;
+                _playerMoveVelocity.SetVelocityY(_moveInput.y);
+                _playerMoveVelocity.MultiplyVelocityY(_playerMovementSettings.MovementSpeed);
             }
 
-            if (_movementVector.x > 0)
+            if (_playerMoveVelocity.GetVelocity().x > 0)
             {
                 transform.eulerAngles = Vector3.zero;
             }
-            else if (_movementVector.x < 0)
+            else if (_playerMoveVelocity.GetVelocity().x < 0)
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
@@ -124,23 +119,18 @@ namespace Nojumpo
             if (_playerCollisionCheckSettings.IsGrounded && _jumpInput)
             {
                 _jumpInput = false;
-                _movementVector = Vector2.up * _playerMovementSettings.JumpVelocity;
+                _playerMoveVelocity.SetVelocity(Vector2.up * _playerMovementSettings.JumpVelocity);
             }
 
             if (_playerCollisionCheckSettings.IsGrounded)
             {
-                _movementVector.y = Mathf.Max(_movementVector.y, -0.5f);
+                _playerMoveVelocity.SetVelocityY(Mathf.Max(_playerMoveVelocity.GetVelocity().y, -0.5f));
             }
-        }
-
-        private void ApplyPlayerMovement()
-        {
-            _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _movementVector * Time.fixedDeltaTime);
         }
 
         private void ApplyGravity()
         {
-            _movementVector += Physics2D.gravity * 2.25f * Time.deltaTime;
+            _playerMoveVelocity.VelocityPlusEquals(Physics2D.gravity * 2.25f * Time.deltaTime);
             _jumpInput = false;
         }
 

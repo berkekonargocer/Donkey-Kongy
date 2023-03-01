@@ -43,7 +43,6 @@ namespace Nojumpo
         private void PlayCollectAnimation()
         {
             transform.parent = _uiPositionObject.transform;
-
             gameObject.transform.DOLocalMove(Vector3.zero, _animationTime);
         }
 
@@ -53,6 +52,7 @@ namespace Nojumpo
 
         public void Collect()
         {
+            CollectedItems.ItemsCollection.Add(_itemType);
             PlayCollectAudio();
             PlayCollectAnimation();
         }
