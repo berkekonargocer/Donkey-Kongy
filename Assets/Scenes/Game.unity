@@ -427,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -4741,6 +4745,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedec56d26d03ae4a851eff4a4d677da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1149954547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149954534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492766e59bd495f42835866f7c57d44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovementSettings: {fileID: 11400000, guid: 6c8ff8216d8484c45932759139d2337f, type: 2}
+  _climbingSprite: {fileID: -1424862703, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  _jumpingSprite: {fileID: 1892842766, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  _runningSprites:
+  - {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  - {fileID: 873141368, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  - {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  - {fileID: 1043826900, guid: 5b287de30096c8848a282ddb21273858, type: 3}
 --- !u!1001 &1163591932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7836,6 +7860,10 @@ PrefabInstance:
     - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Name
       value: Platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974763163122012656, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Size.x

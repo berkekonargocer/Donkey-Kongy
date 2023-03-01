@@ -15,5 +15,5 @@ MonoBehaviour:
   _developerDescription: 
   _colliderXSizeOffset: 2.5
   _colliderYSizeOffset: 0.3
-  _isGrounded: 1
+  _isGrounded: 0
   _isClimbing: 0
