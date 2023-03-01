@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 2317524708189327032}
   - component: {fileID: 7792961473987742101}
   - component: {fileID: 1809942680956866002}
+  - component: {fileID: 5202249242875917188}
   m_Layer: 6
   m_Name: Viby Nario
   m_TagString: Player
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -186,6 +187,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.65, y: 1}
   m_Direction: 0
+--- !u!95 &5202249242875917188
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764198079277694498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56e99bf8392316c4680c2a063d657f4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6050903089251856343
 GameObject:
   m_ObjectHideFlags: 0

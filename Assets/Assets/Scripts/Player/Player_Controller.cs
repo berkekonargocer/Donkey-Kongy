@@ -1,5 +1,6 @@
 using Nojumpo.Interfaces;
 using Nojumpo.ScriptableObjects;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,12 @@ namespace Nojumpo
     {
         #region Fields
 
+        #region Events
+
+        public static Action OnPlayerDie;
+
+        #endregion
+
         #region Movement Settings
         [Header("Movement Settings")]
 
@@ -17,6 +24,12 @@ namespace Nojumpo
         private IMoveVelocity2D _playerMoveVelocity;
         private CollisionCheckSettings _playerCollisionCheckSettings;
         private Rigidbody2D _playerRigidbody2D;
+
+        #endregion
+
+        #region Animation Components
+
+        private Animator _playerAnimator;
 
         #endregion
 
@@ -33,6 +46,24 @@ namespace Nojumpo
 
 
         #region Unity Methods
+
+        #region OnEnable
+
+        private void OnEnable()
+        {
+            OnPlayerDie += PlayDyingAnimation;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable()
+        {
+            OnPlayerDie -= PlayDyingAnimation;
+        }
+
+        #endregion
 
         #region Awake
 
@@ -75,8 +106,9 @@ namespace Nojumpo
         private void SetComponents()
         {
             _playerMoveVelocity = GetComponent<IMoveVelocity2D>();
-            _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
+            _playerAnimator = GetComponent<Animator>();
+            _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
         }
 
         private void HandlePlayerMovement()
@@ -132,6 +164,11 @@ namespace Nojumpo
         {
             _playerMoveVelocity.VelocityPlusEquals(Physics2D.gravity * 2.25f * Time.deltaTime);
             _jumpInput = false;
+        }
+
+        private void PlayDyingAnimation()
+        {
+            _playerAnimator.SetBool("IsDead", true);
         }
 
         #endregion

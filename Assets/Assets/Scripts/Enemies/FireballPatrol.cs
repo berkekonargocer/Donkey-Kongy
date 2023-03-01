@@ -50,6 +50,24 @@ namespace Nojumpo
 
         #region Unity Methods
 
+        #region OnEnable
+
+        private void OnEnable()
+        {
+            Player_Controller.OnPlayerDie += StopMoving;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable()
+        {
+            Player_Controller.OnPlayerDie -= StopMoving;
+        }
+
+        #endregion
+
         #region Awake 
 
         private void Awake()
@@ -144,6 +162,11 @@ namespace Nojumpo
                     _isMovingRight = true;
                 }
             }
+        }
+
+        private void StopMoving()
+        {
+            _moveSpeed = 0.0f;
         }
 
         #endregion
