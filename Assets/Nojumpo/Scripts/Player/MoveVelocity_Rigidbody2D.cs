@@ -8,6 +8,7 @@ namespace Nojumpo
         #region Fields
 
         private Rigidbody2D _rigidbody2D;
+        private Animator _animator;
 
         private Vector2 _moveVelocity = Vector2.zero;
 
@@ -45,11 +46,14 @@ namespace Nojumpo
         private void SetComponents()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
         }
 
         private void ApplyPlayerMovement()
         {
             _rigidbody2D.MovePosition(_rigidbody2D.position + _moveVelocity * Time.fixedDeltaTime);
+            _animator.SetFloat("MoveX", _moveVelocity.x);
+            _animator.SetFloat("MoveY", _moveVelocity.y);
         }
 
         #endregion

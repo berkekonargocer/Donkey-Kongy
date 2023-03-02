@@ -12,7 +12,7 @@ namespace Nojumpo
         [Header("Collision Check Settings")]
 
         [SerializeField] private CollisionCheckSettings _playerCollisionCheckSettings;
-       
+
         private LayerMask _groundLayer;
         private LayerMask _ladderLayer;
         private LayerMask _playerLayer;
@@ -21,6 +21,12 @@ namespace Nojumpo
         Collider2D[] _collisionCheckResults = new Collider2D[4];
 
         private bool _isGrounded = true;
+
+        #endregion
+
+        #region Animator Settings
+
+        private Animator _playerAnimator;
 
         #endregion
 
@@ -56,6 +62,7 @@ namespace Nojumpo
         private void SetComponents()
         {
             _playerCollider2D = GetComponent<CapsuleCollider2D>();
+            _playerAnimator = GetComponent<Animator>();
             _groundLayer = LayerMask.NameToLayer("Ground");
             _ladderLayer = LayerMask.NameToLayer("Ladder");
             _playerLayer = LayerMask.NameToLayer("Player");
@@ -89,6 +96,8 @@ namespace Nojumpo
             }
 
             _playerCollisionCheckSettings.IsGrounded = _isGrounded;
+            _playerAnimator.SetBool("IsClimbing", _playerCollisionCheckSettings.IsClimbing);
+            _playerAnimator.SetBool("IsGrounded", _isGrounded);
         }
 
         #endregion
