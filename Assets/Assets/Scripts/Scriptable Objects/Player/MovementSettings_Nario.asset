@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MovementSettings_Nario
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _movementSpeed: 7
+  _movementSpeed: 5
   _jumpVelocity: 8.5
+  _climbingSpeedOffset: 0.25
   _collisionCheckSettings: {fileID: 11400000, guid: 2be74b5330476ce4580c0e33049640ed, type: 2}

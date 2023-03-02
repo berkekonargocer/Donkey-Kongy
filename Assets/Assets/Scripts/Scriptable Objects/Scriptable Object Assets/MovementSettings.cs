@@ -20,6 +20,9 @@ namespace Nojumpo.ScriptableObjects
         [SerializeField] private float _jumpVelocity = 10.0f;
         public float JumpVelocity { get { return _jumpVelocity; } private set { _jumpVelocity = value; } }
 
+        [SerializeField] private float _climbingSpeedOffset = 0.5f;
+        public float ClimbingSpeedOffset { get { return _climbingSpeedOffset; } private set { _climbingSpeedOffset = value; } }
+
         [SerializeField] private CollisionCheckSettings _collisionCheckSettings;
         public CollisionCheckSettings CollCheckSettings { get { return _collisionCheckSettings; } }
 

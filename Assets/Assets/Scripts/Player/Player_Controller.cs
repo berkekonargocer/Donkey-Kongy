@@ -119,7 +119,7 @@ namespace Nojumpo
             if (_playerCollisionCheckSettings.IsClimbing)
             {
                 _playerMoveVelocity.SetVelocityY(_moveInput.y);
-                _playerMoveVelocity.MultiplyVelocityY(_playerMovementSettings.MovementSpeed);
+                _playerMoveVelocity.MultiplyVelocityY(_playerMovementSettings.MovementSpeed * _playerMovementSettings.ClimbingSpeedOffset);
             }
 
             if (_playerMoveVelocity.GetVelocity().x > 0)
