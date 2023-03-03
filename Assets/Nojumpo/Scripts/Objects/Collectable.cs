@@ -43,7 +43,7 @@ namespace Nojumpo
         private void PlayCollectAnimation()
         {
             transform.parent = _uiPositionObject.transform;
-            gameObject.transform.DOLocalMove(Vector3.zero, _animationTime);
+            gameObject.transform.DOLocalMove(Vector3.zero, _animationTime).SetUpdate(true);
         }
 
         #endregion

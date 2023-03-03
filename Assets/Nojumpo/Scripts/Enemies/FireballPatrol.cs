@@ -50,24 +50,6 @@ namespace Nojumpo
 
         #region Unity Methods
 
-        #region OnEnable
-
-        private void OnEnable()
-        {
-            Player_Controller.OnPlayerDie += StopMoving;
-        }
-
-        #endregion
-
-        #region OnDisable
-
-        private void OnDisable()
-        {
-            Player_Controller.OnPlayerDie -= StopMoving;
-        }
-
-        #endregion
-
         #region Awake 
 
         private void Awake()
@@ -128,7 +110,6 @@ namespace Nojumpo
 
         private bool IsGrounded()
         {
-
             int groundedHit = Physics2D.RaycastNonAlloc(_isGroundedDetectionPosition.position, Vector2.down, _isGroundedDetectionSphereRay, _isGroundedCheckRayDistance, _groundLayer);
 
             if (groundedHit != 1)
@@ -162,11 +143,6 @@ namespace Nojumpo
                     _isMovingRight = true;
                 }
             }
-        }
-
-        private void StopMoving()
-        {
-            _moveSpeed = 0.0f;
         }
 
         #endregion

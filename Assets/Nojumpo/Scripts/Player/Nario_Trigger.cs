@@ -5,7 +5,6 @@ namespace Nojumpo
 {
     public class Nario_Trigger : MonoBehaviour
     {
-
         #region Unity Methods
 
         #region Trigger Enter

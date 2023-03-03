@@ -30,6 +30,24 @@ namespace Nojumpo.Managers
 
         #region Unity Methods
 
+        #region OnEnable
+
+        private void OnEnable()
+        {
+            Player_Controller.OnPlayerDie += SetTimeScaleToZero;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable()
+        {
+            Player_Controller.OnPlayerDie -= SetTimeScaleToZero;
+        }
+
+        #endregion
+
         #region Awake and Start
 
         private void Awake()
@@ -73,6 +91,11 @@ namespace Nojumpo.Managers
         {
             _currentDirector.time = _timeToSkipTo;
             _sceneSkipped = true;
+        }
+
+        private void SetTimeScaleToZero()
+        {
+            Time.timeScale = 0.0f;
         }
 
         #endregion

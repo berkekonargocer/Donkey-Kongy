@@ -52,6 +52,7 @@ namespace Nojumpo
         private void OnEnable()
         {
             OnPlayerDie += PlayDyingAnimation;
+            OnPlayerDie += DisableController;
         }
 
         #endregion
@@ -61,6 +62,7 @@ namespace Nojumpo
         private void OnDisable()
         {
             OnPlayerDie -= PlayDyingAnimation;
+            OnPlayerDie -= DisableController;
         }
 
         #endregion
@@ -169,6 +171,11 @@ namespace Nojumpo
         private void PlayDyingAnimation()
         {
             _playerAnimator.SetBool("IsDead", true);
+        }
+
+        private void DisableController()
+        {
+            enabled = false;
         }
 
         #endregion

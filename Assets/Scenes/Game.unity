@@ -1815,7 +1815,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -3672,6 +3672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 91292875}
     m_Modifications:
+    - target: {fileID: -251421061092482226, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1260564834851368239, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4385,7 +4389,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -4657,7 +4661,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 56e99bf8392316c4680c2a063d657f4a, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -4765,6 +4769,8 @@ MonoBehaviour:
   - {fileID: 873141368, guid: 5b287de30096c8848a282ddb21273858, type: 3}
   - {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
   - {fileID: 1043826900, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+  _playerSpriteRenderer: {fileID: 0}
+  _spriteIndex: 0
 --- !u!1001 &1163591932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6198,7 +6204,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d910dda9772f8a247a6677844a5a7403, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -6858,6 +6864,10 @@ PrefabInstance:
     - target: {fileID: -251421061092482226, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -251421061092482226, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1260564834851368239, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_RootOrder
@@ -8090,6 +8100,10 @@ PrefabInstance:
     - target: {fileID: -251421061092482226, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -251421061092482226, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1260564834851368239, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_RootOrder
