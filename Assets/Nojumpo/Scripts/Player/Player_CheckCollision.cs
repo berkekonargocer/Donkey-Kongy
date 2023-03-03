@@ -97,7 +97,7 @@ namespace Nojumpo
 
             _playerCollisionCheckSettings.IsGrounded = _isGrounded;
             _playerAnimator.SetBool("IsClimbing", _playerCollisionCheckSettings.IsClimbing);
-            _playerAnimator.SetBool("IsGrounded", _isGrounded);
+            _playerAnimator.SetBool("IsGrounded", _playerCollisionCheckSettings.IsGrounded);
         }
 
         #endregion
