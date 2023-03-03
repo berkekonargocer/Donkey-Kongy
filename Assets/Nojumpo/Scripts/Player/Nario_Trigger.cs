@@ -15,7 +15,7 @@ namespace Nojumpo
             {
                 collectable.Collect();
             }
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Fireball"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
                 Player_Controller.OnPlayerDie.Invoke();
             }
