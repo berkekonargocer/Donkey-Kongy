@@ -33,6 +33,12 @@ namespace Nojumpo
 
         #endregion
 
+        #region Audio Components
+
+        private AudioSource _playerAudioSource;
+
+        #endregion
+
         #region Inputs
 
         private Vector2 _moveInput = Vector2.zero;
@@ -110,6 +116,7 @@ namespace Nojumpo
             _playerMoveVelocity = GetComponent<IMoveVelocity2D>();
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _playerAnimator = GetComponent<Animator>();
+            _playerAudioSource = GetComponent<AudioSource>();
             _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
         }
 
@@ -166,6 +173,13 @@ namespace Nojumpo
         {
             _playerMoveVelocity.VelocityPlusEquals(Physics2D.gravity * 2.25f * Time.deltaTime);
             _jumpInput = false;
+        }
+
+        private void PlayAudio(AudioClip audio)
+        {
+            _playerAudioSource.Stop();
+            _playerAudioSource.clip = audio;
+            _playerAudioSource.Play();
         }
 
         private void PlayDyingAnimation()
