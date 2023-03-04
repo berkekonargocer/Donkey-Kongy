@@ -3,9 +3,21 @@ using UnityEngine;
 
 namespace Nojumpo
 {
-    public class Nario_Trigger : MonoBehaviour
+    public class Nario_Collision : MonoBehaviour
     {
         #region Unity Methods
+
+        #region Collision Enter
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
+            {
+                Player_Controller.OnPlayerDie.Invoke();
+            }
+        }
+
+        #endregion
 
         #region Trigger Enter
 
@@ -14,10 +26,6 @@ namespace Nojumpo
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();
-            }
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
-            {
-                Player_Controller.OnPlayerDie.Invoke();
             }
         }
 

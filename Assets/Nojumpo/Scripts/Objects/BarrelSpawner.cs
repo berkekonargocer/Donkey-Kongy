@@ -52,7 +52,7 @@ namespace Nojumpo
 
         private void OnReleaseBarrel(Barrel obj)
         {
-            obj.gameObject.SetActive(true);
+            obj.gameObject.SetActive(false);
         }
 
         private void OnDestroyBarrel(Barrel obj)

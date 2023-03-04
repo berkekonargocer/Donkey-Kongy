@@ -703,6 +703,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Size.y
+      value: 4.218989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.1094947
+      objectReference: {fileID: 0}
     - target: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1523,6 +1531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2694,7 +2706,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.3499537}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2705,7 +2717,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.3000926}
   m_EdgeRadius: 0
 --- !u!1 &606016718
 GameObject:
@@ -3972,6 +3984,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5776,6 +5792,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Size.y
+      value: 4.193483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.0967419
+      objectReference: {fileID: 0}
     - target: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6056,7 +6080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422401738}
   - component: {fileID: 1422401739}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6723,6 +6747,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Size.y
+      value: 5.239213
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.6196065
+      objectReference: {fileID: 0}
     - target: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7130,14 +7162,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704943718}
-  m_LocalRotation: {x: -0, y: -0, z: -0.012390811, w: 0.9999232}
-  m_LocalPosition: {x: -13.11, y: -1.455, z: -0.0071434975}
-  m_LocalScale: {x: 0.8012889, y: 9.526123, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.86, y: 2.9, z: -0.0071434975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 150689632}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.42}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1704943720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7151,7 +7183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07651758, y: 0.08926964}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7162,7 +7194,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.69393253, y: 0.51539326}
   m_EdgeRadius: 0
 --- !u!4 &1715926888 stripped
 Transform:
@@ -7262,6 +7294,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7980,6 +8016,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Size.y
+      value: 11.4625845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762188311684253940, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
+      propertyPath: m_Offset.y
+      value: 4.731293
+      objectReference: {fileID: 0}
     - target: {fileID: 6442915743868997488, guid: f6dc16e28ab27e84e9c335a1d98c332c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8510,6 +8554,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
