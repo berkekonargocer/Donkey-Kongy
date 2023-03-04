@@ -30,7 +30,7 @@ namespace Nojumpo
         private Transform _nextStepGroundDetectionPosition;
         private Transform _isGroundedDetectionPosition;
 
-        RaycastHit2D[] _nextStepGroundDetectionRay = new RaycastHit2D[1];
+        RaycastHit2D[] _nextStepGroundDetectionRay = new RaycastHit2D[2];
         RaycastHit2D[] _wallDetectionRay = new RaycastHit2D[1];
         RaycastHit2D[] _isGroundedDetectionSphereRay = new RaycastHit2D[1];
 
@@ -124,13 +124,12 @@ namespace Nojumpo
 
         private void NextStepGroundAndWallDetectionRays()
         {
-            var groundLayerMask = ~0;
             var wallLayerMask = ~_ignoreWallDetectionRay;
 
-            int groundedHit = Physics2D.RaycastNonAlloc(_nextStepGroundDetectionPosition.position, Vector2.down, _nextStepGroundDetectionRay, _nextStepGroundDetectionRayDistance, groundLayerMask);
+            int groundedHit = Physics2D.RaycastNonAlloc(_nextStepGroundDetectionPosition.position, Vector2.down, _nextStepGroundDetectionRay, _nextStepGroundDetectionRayDistance, _groundLayer);
             int wallHit = Physics2D.RaycastNonAlloc(transform.position, transform.right, _wallDetectionRay, _wallDetectionRayDistance, wallLayerMask);
 
-            if (groundedHit != 1 || wallHit == 1)
+            if (groundedHit == 0 || wallHit != 0)
             {
                 if (_isMovingRight)
                 {

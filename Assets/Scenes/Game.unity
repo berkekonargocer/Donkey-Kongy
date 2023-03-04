@@ -4983,18 +4983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedec56d26d03ae4a851eff4a4d677da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1149954547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149954534}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 492766e59bd495f42835866f7c57d44a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1163591932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7479,7 +7467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_Offset.x
-      value: 0.35796022
+      value: 0.35795975
       objectReference: {fileID: 0}
     - target: {fileID: 6844638138250587284, guid: c2f8e3a3b5d7125438c615c49a37769f, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
