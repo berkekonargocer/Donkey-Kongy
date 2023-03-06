@@ -63,6 +63,11 @@ namespace Nojumpo.Managers
             SceneManager.LoadScene(level);
         }
 
+        public void RestartLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         #endregion
     }
 }

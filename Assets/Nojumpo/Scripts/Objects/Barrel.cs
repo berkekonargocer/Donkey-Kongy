@@ -19,10 +19,10 @@ namespace Nojumpo
 
         #endregion
 
-        #region First Momentum
-        [Header("First Momentum")]
+        #region Momentum
+        [Header("Momentum")]
 
-        [SerializeField] private float _firstMomentum;
+        [SerializeField] private float _barrellRollVelocity;
 
         #endregion
 
@@ -48,9 +48,16 @@ namespace Nojumpo
             _barrelPool?.Release(this);
         }
 
-        private void OnBecameVisible()
+        #endregion
+
+        #region OnCollisionEnter2D
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            ApplyMomentum();
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                ApplyMomentum(collision.gameObject.transform.right, _barrellRollVelocity);
+            }
         }
 
         #endregion
@@ -64,9 +71,9 @@ namespace Nojumpo
             _barrelRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        private void ApplyMomentum()
+        private void ApplyMomentum(Vector3 direction, float velocity)
         {
-            _barrelRigidbody2D.AddForce(Vector2.right * _firstMomentum);
+            _barrelRigidbody2D.velocity = direction * velocity;
         }
 
         #endregion
