@@ -1,5 +1,7 @@
 using Cinemachine;
 using UnityEngine;
+using DG.Tweening;
+using System.Collections;
 
 namespace Nojumpo.Managers
 {
@@ -82,7 +84,7 @@ namespace Nojumpo.Managers
 
         private void CalculateShakeTime()
         {
-            _shakeTimer -= Time.deltaTime;
+            _shakeTimer -= Time.unscaledDeltaTime;
 
             if (_shakeTimer <= 0.0f)
             {
@@ -90,9 +92,15 @@ namespace Nojumpo.Managers
             }
         }
 
+        //private IEnumerator ChangeLensOrtographicSizeOverTime(float size, float changeTime)
+        //{
+        //    _cinemachineVirtualCamera.m_Lens.OrthographicSize = size;
+        //}
+
         #endregion
 
         #region Custom Public Methods
+
 
         public void ShakeCamera(float intensity)
         {
@@ -104,6 +112,21 @@ namespace Nojumpo.Managers
         {
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
             _shakeTimer = time;
+        }
+
+        public void SetAFollowTarget(Transform followTarget)
+        {
+            _cinemachineVirtualCamera.Follow = followTarget;
+        }
+
+        public void SetLensOrthographicSize(float size)
+        {
+            _cinemachineVirtualCamera.m_Lens.OrthographicSize = size;
+        }
+
+        public void ChangeLensOrtographicSize(float size, float translateSpeed)
+        {
+
         }
 
         #endregion

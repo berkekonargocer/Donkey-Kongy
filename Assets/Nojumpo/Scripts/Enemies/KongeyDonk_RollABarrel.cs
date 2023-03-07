@@ -1,3 +1,4 @@
+using Nojumpo.Managers;
 using System.Collections;
 using UnityEngine;
 
@@ -15,6 +16,24 @@ namespace Nojumpo
 
 
         #region Unity Methods
+
+        #region OnEnable
+
+        private void OnEnable()
+        {
+            GameManager.StartTheGame += StartRollingBarrels;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable()
+        {
+            GameManager.StartTheGame -= StartRollingBarrels;
+        }
+
+        #endregion
 
         #region Awake
 

@@ -1334,6 +1334,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: dc702ae5eedfb0b4bbf575db6f605954, type: 2}
+    - {fileID: 11400000, guid: 0698d9687f6a9544caffe12c77dd4243, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1346,6 +1347,20 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0.05
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 307541999}
+          m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+          m_MethodName: StopAllCoroutines
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -1663,6 +1678,10 @@ PrefabInstance:
       propertyPath: _nextStepGroundDetectionRayDistance
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5039964132033666386, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5616456864453894145, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1673,7 +1692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsTrigger
@@ -1714,7 +1733,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357456655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
@@ -1970,6 +1989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384619736}
   - component: {fileID: 384619735}
+  - component: {fileID: 384619737}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2004,6 +2024,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384619737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384619734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 2a7bd5b96cc395349beedbfcb233ea28, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 384619735}
+          m_TargetAssemblyTypeName: Nojumpo.Managers.GameManager, Assembly-CSharp
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &386353828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2622,7 +2672,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.25
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2646,7 +2696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.21, z: -10}
+  m_LocalPosition: {x: -15.41, y: -9.51, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4212,6 +4262,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1911410179451664771, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911410179451664771, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: _moveSpeed
       value: 280
       objectReference: {fileID: 0}
@@ -4235,6 +4289,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5039964132033666386, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5616456864453894145, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Icon
       value: 
@@ -4245,7 +4303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsTrigger
@@ -4286,7 +4344,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811617031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
@@ -6976,12 +7034,6 @@ PlayableDirector:
     value: {fileID: 307542001}
   - key: {fileID: 3786443165464856277, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 1642424566}
-  - key: {fileID: 6662904675975061592, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 2126371857}
-  - key: {fileID: -5824822622011056409, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 811617031}
-  - key: {fileID: -5305743383625914927, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 1729132971}
   - key: {fileID: -7117363471177662120, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 2126371856}
   - key: {fileID: 7027478326232089226, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
@@ -7004,14 +7056,14 @@ PlayableDirector:
     value: {fileID: 1729132976}
   - key: {fileID: -5583303812482055750, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 357456656}
-  - key: {fileID: -2522183704500053762, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
-    value: {fileID: 357456655}
   - key: {fileID: -5546636192733281736, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 357456657}
   - key: {fileID: 3329919549845812557, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 2129942084}
   - key: {fileID: -7062272355790634052, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 2062083816}
+  - key: {fileID: -7448333632062046349, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
+    value: {fileID: 384619737}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1618795858
@@ -7083,7 +7135,7 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 67
+            m_FloatArgument: 72.7
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -7730,6 +7782,10 @@ PrefabInstance:
       propertyPath: _nextStepGroundDetectionRayDistance
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5039964132033666386, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5616456864453894145, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Icon
       value: 
@@ -7740,7 +7796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsTrigger
@@ -7781,7 +7837,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729132971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
@@ -8667,8 +8723,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2062083812}
   - component: {fileID: 2062083813}
-  - component: {fileID: 2062083814}
   - component: {fileID: 2062083815}
+  - component: {fileID: 2062083814}
   - component: {fileID: 2062083816}
   m_Layer: 0
   m_Name: Cinemachine Virtual Camera 1
@@ -8685,7 +8741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062083811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.21, z: -10}
+  m_LocalPosition: {x: -15.41, y: -9.51, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8715,7 +8771,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8.25
+    OrthographicSize: 3
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8778,6 +8834,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: f6407f22920550d4894e118debcdb558, type: 2}
+    - {fileID: 11400000, guid: 0197edb721d77d446b58922710b58f41, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -8790,6 +8847,20 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 1.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2062083815}
+          m_TargetAssemblyTypeName: Nojumpo.Managers.CinemachineCameraManager, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -9005,6 +9076,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1911410179451664771, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911410179451664771, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: _jumpPower
       value: 5
       objectReference: {fileID: 0}
@@ -9036,6 +9111,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5039964132033666386, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5616456864453894145, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_Icon
       value: 
@@ -9046,7 +9125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380497211856573492, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9076242673945944446, guid: 1b127541adc23414ea375929b9d3b587, type: 3}
       propertyPath: m_IsTrigger
@@ -9087,7 +9166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126371857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 

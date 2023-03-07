@@ -1,3 +1,4 @@
+using Nojumpo.Managers;
 using UnityEngine;
 
 namespace Nojumpo
@@ -49,6 +50,24 @@ namespace Nojumpo
 
 
         #region Unity Methods
+
+        #region OnEnable
+
+        private void OnEnable()
+        {
+            GameManager.StartTheGame += AddRigidbody2D;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable()
+        {
+            GameManager.StartTheGame -= AddRigidbody2D;
+        }
+
+        #endregion
 
         #region Awake 
 
@@ -142,16 +161,6 @@ namespace Nojumpo
                     _isMovingRight = true;
                 }
             }
-        }
-
-        #endregion
-
-        #region Custom Public Methods
-
-        public void ActivateFireballPatrol()
-        {
-            AddRigidbody2D();
-            enabled = true;
         }
 
         #endregion

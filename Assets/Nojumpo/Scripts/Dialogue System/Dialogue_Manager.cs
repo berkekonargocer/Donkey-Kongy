@@ -43,6 +43,8 @@ namespace Nojumpo.Managers
 
         #region Unity Methods
 
+        #endregion
+
         #region Awake 
 
         private void Awake()
@@ -50,8 +52,6 @@ namespace Nojumpo.Managers
             InitializeSingleton();
             SetComponents();
         }
-
-        #endregion
 
         #endregion
 

@@ -16,6 +16,12 @@ namespace Nojumpo.Managers
 
         #region Fields
 
+        #region Events
+
+        public static Action StartTheGame;
+
+        #endregion
+
         #region Cutscene Skip Settings
 
         private PlayableDirector _currentDirector;
@@ -101,6 +107,11 @@ namespace Nojumpo.Managers
         #endregion
 
         #region Custom Public Methods
+
+        public void StartGame()
+        {
+            StartTheGame?.Invoke();
+        }
 
         public void GetDirector(PlayableDirector director)
         {

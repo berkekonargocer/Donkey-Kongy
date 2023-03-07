@@ -28,7 +28,9 @@ namespace Nojumpo
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
                 _deadlyObjectHitSFXSource.Play();
-                CinemachineCameraManager.Instance.ShakeCamera(1.0f, 0.2f);
+                CinemachineCameraManager.Instance.ShakeCamera(2f, 0.35f);
+                //CinemachineCameraManager.Instance.SetAFollowTarget(transform);
+                //CinemachineCameraManager.Instance.TranslateLensOrtographicSize(3.0f, 1.0f);
                 Player_Controller.OnPlayerDie.Invoke();
             }
         }
