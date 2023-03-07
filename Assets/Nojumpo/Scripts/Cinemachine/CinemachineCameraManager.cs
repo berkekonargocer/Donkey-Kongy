@@ -1,12 +1,8 @@
 using Cinemachine;
 using UnityEngine;
-using DG.Tweening;
-using System.Collections;
 
-namespace Nojumpo.Managers
-{
-    public class CinemachineCameraManager : MonoBehaviour
-    {
+namespace Nojumpo.Managers {
+    public class CinemachineCameraManager : MonoBehaviour {
         #region Instance
 
         private static CinemachineCameraManager _instance;
@@ -38,8 +34,7 @@ namespace Nojumpo.Managers
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             InitializeSingleton();
             SetComponents();
         }
@@ -48,10 +43,8 @@ namespace Nojumpo.Managers
 
         #region Update
 
-        private void Update()
-        {
-            if (_shakeTimer > 0)
-            {
+        private void Update() {
+            if (_shakeTimer > 0) {
                 CalculateShakeTime();
             }
         }
@@ -63,31 +56,25 @@ namespace Nojumpo.Managers
 
         #region Custom Private Methods
 
-        private void InitializeSingleton()
-        {
-            if (_instance == null)
-            {
+        private void InitializeSingleton() {
+            if (_instance == null) {
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            else
-            {
+            else {
                 Destroy(gameObject);
             }
         }
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
             _cinemachineBasicMultiChannelPerlin = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         }
 
-        private void CalculateShakeTime()
-        {
+        private void CalculateShakeTime() {
             _shakeTimer -= Time.unscaledDeltaTime;
 
-            if (_shakeTimer <= 0.0f)
-            {
+            if (_shakeTimer <= 0.0f) {
                 _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0.0f;
             }
         }
@@ -102,30 +89,25 @@ namespace Nojumpo.Managers
         #region Custom Public Methods
 
 
-        public void ShakeCamera(float intensity)
-        {
+        public void ShakeCamera(float intensity) {
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
             _shakeTimer = 0.2f;
         }
 
-        public void ShakeCamera(float intensity, float time)
-        {
+        public void ShakeCamera(float intensity, float time) {
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
             _shakeTimer = time;
         }
 
-        public void SetAFollowTarget(Transform followTarget)
-        {
+        public void SetAFollowTarget(Transform followTarget) {
             _cinemachineVirtualCamera.Follow = followTarget;
         }
 
-        public void SetLensOrthographicSize(float size)
-        {
+        public void SetLensOrthographicSize(float size) {
             _cinemachineVirtualCamera.m_Lens.OrthographicSize = size;
         }
 
-        public void ChangeLensOrtographicSize(float size, float translateSpeed)
-        {
+        public void ChangeLensOrtographicSize(float size, float translateSpeed) {
 
         }
 
