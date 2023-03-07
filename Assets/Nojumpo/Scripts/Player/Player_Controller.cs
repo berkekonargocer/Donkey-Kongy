@@ -1,3 +1,4 @@
+using Nojumpo.Managers;
 using Nojumpo.Interfaces;
 using Nojumpo.ScriptableObjects;
 using System;
@@ -33,7 +34,9 @@ namespace Nojumpo
 
         #endregion
 
-        #region Audio Components
+        #region Audio Settings
+        [Header("Audio Settings")]
+        [SerializeField] private AudioSource _jumpSFXSource;
 
         private AudioSource _playerAudioSource;
 
@@ -160,6 +163,7 @@ namespace Nojumpo
             if (_playerCollisionCheckSettings.IsGrounded && _jumpInput)
             {
                 _jumpInput = false;
+                _jumpSFXSource.Play();
                 _playerMoveVelocity.SetVelocity(Vector2.up * _playerMovementSettings.JumpVelocity);
             }
 
@@ -177,7 +181,6 @@ namespace Nojumpo
 
         private void PlayAudio(AudioClip audio)
         {
-            _playerAudioSource.Stop();
             _playerAudioSource.clip = audio;
             _playerAudioSource.Play();
         }

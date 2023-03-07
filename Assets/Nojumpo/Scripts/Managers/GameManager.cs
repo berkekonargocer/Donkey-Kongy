@@ -48,7 +48,7 @@ namespace Nojumpo.Managers
 
         #endregion
 
-        #region Awake and Start
+        #region Awake
 
         private void Awake()
         {
@@ -61,7 +61,7 @@ namespace Nojumpo.Managers
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !_sceneSkipped)
+            if (Input.GetKeyDown(KeyCode.Return) && !_sceneSkipped)
             {
                 SkipCutscene();
             }

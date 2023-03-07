@@ -2,6 +2,7 @@ using DG.Tweening;
 using Nojumpo.Interfaces;
 using UnityEngine;
 using Nojumpo.ScriptableObjects;
+using Nojumpo.Managers;
 
 namespace Nojumpo
 {
@@ -34,12 +35,6 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void PlayCollectAudio()
-        {
-            _collectAudioSource.clip = _collectSFXAudio;
-            _collectAudioSource.Play();
-        }
-
         private void PlayCollectAnimation()
         {
             transform.parent = _uiPositionObject.transform;
@@ -53,7 +48,7 @@ namespace Nojumpo
         public void Collect()
         {
             CollectedItems.ItemsCollection.Add(_itemType);
-            PlayCollectAudio();
+            AudioManager.Instance.PlayAudio(_collectAudioSource, _collectSFXAudio);
             PlayCollectAnimation();
         }
 

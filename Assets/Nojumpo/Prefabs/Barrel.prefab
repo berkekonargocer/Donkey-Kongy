@@ -136,5 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b43a15dc7da1b4a917bbeb7a4d9368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstVelocity: 0
-  _onGroundHitVelocity: 6
+  _barrellRollVelocity: 6
