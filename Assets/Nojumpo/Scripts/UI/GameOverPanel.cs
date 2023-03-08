@@ -6,14 +6,6 @@ namespace Nojumpo
 {
     public class GameOverPanel : MonoBehaviour
     {
-        #region Fields
-
-
-
-        #endregion
-
-
-
         #region Unity Methods
 
         #region OnEnable
@@ -32,40 +24,14 @@ namespace Nojumpo
 
         #endregion
 
-        #region Awake and Start
-
-        private void Awake() {
-
-        }
-
-        private void Start() {
-
-        }
-
-        #endregion
-
-        #region Update
-
-        private void Update() {
-
-        }
-
-        #endregion
-
         #endregion
 
 
         #region Custom Private Methods
 
         private void ScaleUpAnimation() {
-            transform.DOScale(Vector3.one, 2f).SetUpdate(true);
+            transform.DOScale(Vector3.one, 1.5f).SetUpdate(true);
         }
-
-        #endregion
-
-        #region Custom Public Methods
-
-
 
         #endregion
     }

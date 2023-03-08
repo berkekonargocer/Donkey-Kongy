@@ -1,19 +1,12 @@
 using Cinemachine;
 using System.Collections;
 using UnityEngine;
+using Nojumpo.Managers;
 
-namespace Nojumpo.Managers
+namespace Nojumpo
 {
-    public class CinemachineCameraManager : MonoBehaviour
+    public class CinemachineCamera : MonoBehaviour
     {
-
-        #region Instance
-
-        private static CinemachineCameraManager _instance;
-
-        public static CinemachineCameraManager Instance { get { return _instance; } }
-
-        #endregion
 
         #region Fields
 
@@ -38,16 +31,17 @@ namespace Nojumpo.Managers
 
         private void OnEnable() {
             GameManager.OnPlayerDie += StartChangeOrtographicSizeCoroutine;
+            GameManager.RestartLevel += ResetOrtographicSize;
         }
 
         private void OnDisable() {
             GameManager.OnPlayerDie -= StartChangeOrtographicSizeCoroutine;
+            GameManager.RestartLevel -= ResetOrtographicSize;
         }
 
         #region Awake
 
         private void Awake() {
-            InitializeSingleton();
             SetComponents();
         }
 
@@ -69,18 +63,6 @@ namespace Nojumpo.Managers
 
         #region Custom Private Methods
 
-        private void InitializeSingleton() {
-            if (_instance == null)
-            {
-                _instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-
         private void SetComponents() {
             _cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
             _cinemachineBasicMultiChannelPerlin = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -93,6 +75,14 @@ namespace Nojumpo.Managers
             {
                 _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0.0f;
             }
+        }
+
+        private void ResetOrtographicSize(int timeScale) {
+            _cinemachineVirtualCamera.m_Lens.OrthographicSize = 8.25f;
+        }
+
+        private void StartChangeOrtographicSizeCoroutine(int timeScale) {
+            StartCoroutine(ChangeOrtographicSizeSmoothlyCoroutine(0.05f, 35f));
         }
 
         private IEnumerator ChangeOrtographicSizeSmoothlyCoroutine(float endValue, float duration) {
@@ -122,9 +112,6 @@ namespace Nojumpo.Managers
             _shakeTimer = time;
         }
 
-        public void StartChangeOrtographicSizeCoroutine(int timeScale) {
-            StartCoroutine(ChangeOrtographicSizeSmoothlyCoroutine(0.05f, 35f));
-        }
 
         #endregion
     }

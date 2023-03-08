@@ -14,7 +14,8 @@ namespace Nojumpo
         #region Custom Public Methods
 
         public void StartDialogue(int dialogueNumber) {
-            Dialogue_Manager.Instance.OpenDialogue(_dialoguesToTrigger[dialogueNumber]);
+            Dialogue_Manager dialogue_Manager = FindObjectOfType<Dialogue_Manager>();
+            dialogue_Manager.OpenDialogue(_dialoguesToTrigger[dialogueNumber]);
         }
 
         #endregion

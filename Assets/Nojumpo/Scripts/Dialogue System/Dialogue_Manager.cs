@@ -8,6 +8,7 @@ namespace Nojumpo.Managers
     [RequireComponent(typeof(AudioSource))]
     public class Dialogue_Manager : MonoBehaviour
     {
+
         #region Fields
 
         #region Dialogue UI

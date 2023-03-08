@@ -18,18 +18,9 @@ namespace Nojumpo.Managers
 
         #region Events
 
-        public static Action StartTheGame;
         public static Action<int> RestartLevel;
         public static Action<int> OnPlayerDie;
         public static Action Deadge;
-
-        #endregion
-
-        #region Cutscene Skip Settings
-
-        private PlayableDirector _currentDirector;
-        private bool _sceneSkipped = false;
-        private float _timeToSkipTo;
 
         #endregion
 
@@ -65,17 +56,6 @@ namespace Nojumpo.Managers
 
         #endregion
 
-        #region Update
-
-        private void Update() {
-            if (Input.GetKeyDown(KeyCode.Return) && !_sceneSkipped)
-            {
-                SkipCutscene();
-            }
-        }
-
-        #endregion
-
         #endregion
 
 
@@ -93,11 +73,6 @@ namespace Nojumpo.Managers
             }
         }
 
-        private void SkipCutscene() {
-            _currentDirector.time = _timeToSkipTo;
-            _sceneSkipped = true;
-        }
-
         private void SetTimeScale(int timeScale) {
             Time.timeScale = timeScale;
         }
@@ -106,16 +81,8 @@ namespace Nojumpo.Managers
 
         #region Custom Public Methods
 
-        public void StartGame() {
-            StartTheGame?.Invoke();
-        }
-
-        public void GetDirector(PlayableDirector director) {
-            _sceneSkipped = false;
-            _currentDirector = director;
-        }
-        public void GetSkipTime(float skipTime) {
-            _timeToSkipTo = skipTime;
+        public void InvokeRestartLevel() {
+            RestartLevel?.Invoke(1);
         }
 
         #endregion

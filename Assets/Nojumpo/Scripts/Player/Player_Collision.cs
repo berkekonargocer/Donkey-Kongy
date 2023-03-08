@@ -26,7 +26,9 @@ namespace Nojumpo
         private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
-                CinemachineCameraManager.Instance.ShakeCamera(3f, 1.0f);
+                CinemachineCamera cinemachineCamera = FindObjectOfType<CinemachineCamera>();
+                cinemachineCamera.ShakeCamera(3f, 1.0f);
+
                 _deadlyObjectHitSFXSource.Play();
                 GameManager.OnPlayerDie.Invoke(0);
             }

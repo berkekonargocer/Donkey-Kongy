@@ -20,7 +20,7 @@ namespace Nojumpo
         #region OnEnable
 
         private void OnEnable() {
-            GameManager.StartTheGame += StartRollingBarrels;
+            Timeline.StartTheGame += StartRollingBarrels;
         }
 
         #endregion
@@ -28,7 +28,7 @@ namespace Nojumpo
         #region OnDisable
 
         private void OnDisable() {
-            GameManager.StartTheGame -= StartRollingBarrels;
+            Timeline.StartTheGame -= StartRollingBarrels;
         }
 
         #endregion

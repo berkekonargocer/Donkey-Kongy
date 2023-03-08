@@ -54,7 +54,7 @@ namespace Nojumpo
         #region OnEnable
 
         private void OnEnable() {
-            GameManager.StartTheGame += AddRigidbody2D;
+            Timeline.StartTheGame += AddRigidbody2D;
         }
 
         #endregion
@@ -62,7 +62,7 @@ namespace Nojumpo
         #region OnDisable
 
         private void OnDisable() {
-            GameManager.StartTheGame -= AddRigidbody2D;
+            Timeline.StartTheGame -= AddRigidbody2D;
         }
 
         #endregion
