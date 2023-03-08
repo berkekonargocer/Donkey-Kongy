@@ -10,7 +10,7 @@ namespace Nojumpo
         #region Custom Public Methods
 
         public void Play() {
-            GameManager gameManager = FindObjectOfType<GameManager>();
+            GameManager gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
             gameManager.LoadScene(1);
         }
 

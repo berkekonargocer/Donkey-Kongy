@@ -26,7 +26,7 @@ namespace Nojumpo
         private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
-                CinemachineCamera cinemachineCamera = FindObjectOfType<CinemachineCamera>();
+                CinemachineCamera cinemachineCamera = GameObject.Find("Cinemachine Virtual Camera 1").GetComponent<CinemachineCamera>();
                 cinemachineCamera.ShakeCamera(3f, 1.0f);
 
                 _deadlyObjectHitSFXSource.Play();
