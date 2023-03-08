@@ -1,9 +1,9 @@
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
 namespace Nojumpo
 {
-    public class PlayButton : MonoBehaviour
+    public class ButtonBase : MonoBehaviour
     {
         #region Field
 

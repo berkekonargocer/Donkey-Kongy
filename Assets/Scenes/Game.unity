@@ -315,7 +315,7 @@ Transform:
   - {fileID: 1149954533}
   - {fileID: 1503473319}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40331810
 GameObject:
@@ -765,7 +765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &193974288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1217,7 +1217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &270123778
 MonoBehaviour:
@@ -2412,81 +2412,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a8d07d7e8ce5940bdf75da176d8086, type: 3}
---- !u!1 &384619734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 384619736}
-  - component: {fileID: 384619735}
-  - component: {fileID: 384619737}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &384619735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384619734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1df37dd1b1e3e74696eb34b4083bf62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &384619736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384619734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &384619737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384619734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 2a7bd5b96cc395349beedbfcb233ea28, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 384619735}
-          m_TargetAssemblyTypeName: Nojumpo.Managers.GameManager, Assembly-CSharp
-          m_MethodName: StartGame
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &386353828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2772,7 +2697,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426904237 stripped
 GameObject:
@@ -3105,7 +3030,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.05
+  orthographic size: 8.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4159,7 +4084,7 @@ Transform:
   - {fileID: 1618795858}
   - {fileID: 2062083812}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &740417808
 PrefabInstance:
@@ -5444,6 +5369,7 @@ GameObject:
   - component: {fileID: 1097400921}
   - component: {fileID: 1097400920}
   - component: {fileID: 1097400919}
+  - component: {fileID: 1097400922}
   m_Layer: 0
   m_Name: Retry
   m_TagString: Untagged
@@ -5516,9 +5442,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: c58b72f3142d27c4bb3d09bbb4cbec77, type: 2}
-        m_TargetAssemblyTypeName: Nojumpo.ScriptableObjects.LevelManager, Assembly-CSharp
-        m_MethodName: RestartLevel
+      - m_Target: {fileID: 1097400922}
+        m_TargetAssemblyTypeName: Nojumpo.RetryButton, Assembly-CSharp
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5566,6 +5492,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097400917}
   m_CullTransparentMesh: 1
+--- !u!114 &1097400922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097400917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4341bb6e8412e74fbca73b46e041ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _endScale: 0.75
 --- !u!1001 &1114683803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5792,7 +5732,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1134060664 stripped
 Transform:
@@ -6398,7 +6338,7 @@ Transform:
   - {fileID: 766741159}
   - {fileID: 1712808436}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240290441
 GameObject:
@@ -7672,7 +7612,7 @@ Transform:
   m_Children:
   - {fileID: 359844629}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1603067431
 PrefabInstance:
@@ -7901,7 +7841,7 @@ PlayableDirector:
   - key: {fileID: -7062272355790634052, guid: 3d1bf36cdd06f1e48953704ecd3b3238, type: 2}
     value: {fileID: 2062083816}
   - key: {fileID: 0}
-    value: {fileID: 384619737}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1618795858
@@ -9723,7 +9663,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 0.05
+    OrthographicSize: 8.25
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -9966,7 +9906,7 @@ Transform:
   m_Children:
   - {fileID: 6356183}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2126371854
 PrefabInstance:

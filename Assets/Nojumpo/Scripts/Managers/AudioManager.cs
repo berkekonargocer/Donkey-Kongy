@@ -15,7 +15,7 @@ namespace Nojumpo.Managers
 
         #region Fields
 
-
+        private AudioSource _bgmAudioSource;
 
         #endregion
 
@@ -23,10 +23,27 @@ namespace Nojumpo.Managers
 
         #region Unity Methods
 
+        #region OnEnable
+
+        private void OnEnable() {
+            GameManager.OnPlayerDie += StopBGM;
+        }
+
+        #endregion
+
+        #region OnDisable
+
+        private void OnDisable() {
+            GameManager.OnPlayerDie -= StopBGM;
+        }
+
+        #endregion
+
         #region Awake 
 
         private void Awake() {
             InitializeSingleton();
+            SetComponents();
         }
 
         #endregion
@@ -48,10 +65,18 @@ namespace Nojumpo.Managers
             }
         }
 
+        private void SetComponents() {
+            _bgmAudioSource = GetComponent<AudioSource>();
+        }
+
+        private void StopBGM(int timeScale) {
+            _bgmAudioSource.Stop();
+        }
+
         #endregion
 
-
         #region Custom Public Methods
+
         public void PlayAudio(AudioSource audioSource) {
             audioSource.Play();
         }

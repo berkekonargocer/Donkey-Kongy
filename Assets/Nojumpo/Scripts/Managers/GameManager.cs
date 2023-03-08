@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace Nojumpo.Managers
 {
@@ -35,6 +35,7 @@ namespace Nojumpo.Managers
         private void OnEnable() {
             OnPlayerDie += SetTimeScale;
             RestartLevel += SetTimeScale;
+            RestartLevel += ReloadScene;
         }
 
         #endregion
@@ -44,6 +45,7 @@ namespace Nojumpo.Managers
         private void OnDisable() {
             OnPlayerDie -= SetTimeScale;
             RestartLevel -= SetTimeScale;
+            RestartLevel -= ReloadScene;
         }
 
         #endregion
@@ -77,14 +79,14 @@ namespace Nojumpo.Managers
             Time.timeScale = timeScale;
         }
 
-        #endregion
-
-        #region Custom Public Methods
-
-        public void InvokeRestartLevel() {
-            RestartLevel?.Invoke(1);
+        private void ReloadScene(int timeScale) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         #endregion
+
+        public void LoadScene(int level) {
+            SceneManager.LoadScene(level);
+        }
     }
 }
