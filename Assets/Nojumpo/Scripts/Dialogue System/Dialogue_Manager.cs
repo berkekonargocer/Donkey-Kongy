@@ -8,14 +8,6 @@ namespace Nojumpo.Managers
     [RequireComponent(typeof(AudioSource))]
     public class Dialogue_Manager : MonoBehaviour
     {
-        #region Instance
-
-        private static Dialogue_Manager _instance;
-
-        public static Dialogue_Manager Instance { get { return _instance; } }
-
-        #endregion
-
         #region Fields
 
         #region Dialogue UI
@@ -47,9 +39,7 @@ namespace Nojumpo.Managers
 
         #region Awake 
 
-        private void Awake()
-        {
-            InitializeSingleton();
+        private void Awake() {
             SetComponents();
         }
 
@@ -58,26 +48,11 @@ namespace Nojumpo.Managers
 
         #region Custom Private Methods
 
-        private void InitializeSingleton()
-        {
-            if (_instance == null)
-            {
-                _instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _dialogueAudio = GetComponent<AudioSource>();
         }
 
-        private void DisplayMessage()
-        {
+        private void DisplayMessage() {
             Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
 
             Dialogue_Character characterToDisplay = _currentDialogue.dialogueCharacters[messageToDisplay.characterId];
@@ -90,8 +65,7 @@ namespace Nojumpo.Managers
             IsDialogueActive = true;
         }
 
-        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float waitTimeBetweenChars)
-        {
+        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float waitTimeBetweenChars) {
             _dialogueText.text = "";
 
             foreach (char letter in sentence.ToCharArray())
@@ -109,16 +83,14 @@ namespace Nojumpo.Managers
 
         #region Custom Public Methods
 
-        public void OpenDialogue(Dialogue_Dialogue dialogue)
-        {
+        public void OpenDialogue(Dialogue_Dialogue dialogue) {
             _currentDialogue = dialogue;
             _activeMessage = 0;
 
             DisplayMessage();
         }
 
-        public void NextMessage()
-        {
+        public void NextMessage() {
             _activeMessage++;
             if (_activeMessage < _currentDialogue.dialogueMessages.Length)
             {
@@ -130,8 +102,7 @@ namespace Nojumpo.Managers
             }
         }
 
-        public void EndDialogue()
-        {
+        public void EndDialogue() {
             IsDialogueActive = false;
         }
 

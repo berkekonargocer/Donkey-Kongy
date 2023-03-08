@@ -4,7 +4,7 @@ using Nojumpo.Managers;
 
 namespace Nojumpo
 {
-    public class Nario_Collision : MonoBehaviour
+    public class Player_Collision : MonoBehaviour
     {
         #region Fields
 
@@ -23,15 +23,12 @@ namespace Nojumpo
 
         #region Collision Enter
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
+        private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
+                CinemachineCameraManager.Instance.ShakeCamera(3f, 1.0f);
                 _deadlyObjectHitSFXSource.Play();
-                CinemachineCameraManager.Instance.ShakeCamera(2f, 0.35f);
-                //CinemachineCameraManager.Instance.SetAFollowTarget(transform);
-                //CinemachineCameraManager.Instance.TranslateLensOrtographicSize(3.0f, 1.0f);
-                Player_Controller.OnPlayerDie.Invoke();
+                GameManager.OnPlayerDie.Invoke(0);
             }
         }
 
@@ -39,8 +36,7 @@ namespace Nojumpo
 
         #region Trigger Enter
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
+        private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();

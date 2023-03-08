@@ -27,8 +27,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             _barrelPool = new ObjectPool<Barrel>(CreateBarrel, OnGetBarrel, OnReleaseBarrel, OnDestroyBarrel, _checkCollection, _defaultCapacity, _maxCapacity);
         }
 
@@ -36,27 +35,23 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private Barrel CreateBarrel()
-        {
-            Barrel spawnBarrel = Instantiate (_barrelPrefab, transform.position, Quaternion.identity);
+        private Barrel CreateBarrel() {
+            Barrel spawnBarrel = Instantiate(_barrelPrefab, transform.position, Quaternion.identity);
             spawnBarrel.SetPool(_barrelPool);
 
             return spawnBarrel; // return the object
         }
 
-        private void OnGetBarrel(Barrel obj)
-        {
+        private void OnGetBarrel(Barrel obj) {
             obj.gameObject.SetActive(true);
             obj.transform.position = transform.position;
         }
 
-        private void OnReleaseBarrel(Barrel obj)
-        {
+        private void OnReleaseBarrel(Barrel obj) {
             obj.gameObject.SetActive(false);
         }
 
-        private void OnDestroyBarrel(Barrel obj)
-        {
+        private void OnDestroyBarrel(Barrel obj) {
             Destroy(obj.gameObject);
         }
 
@@ -64,8 +59,7 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void RollABarrel()
-        {
+        public void RollABarrel() {
             _barrelPool.Get();
         }
 

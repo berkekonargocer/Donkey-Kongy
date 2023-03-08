@@ -13,8 +13,7 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void StartDialogue(int dialogueNumber)
-        {
+        public void StartDialogue(int dialogueNumber) {
             Dialogue_Manager.Instance.OpenDialogue(_dialoguesToTrigger[dialogueNumber]);
         }
 

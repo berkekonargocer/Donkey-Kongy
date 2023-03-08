@@ -34,8 +34,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
@@ -43,8 +42,7 @@ namespace Nojumpo
 
         #region OnBecameInvisible
 
-        private void OnBecameInvisible()
-        {
+        private void OnBecameInvisible() {
             _barrelPool?.Release(this);
         }
 
@@ -52,8 +50,7 @@ namespace Nojumpo
 
         #region OnCollisionEnter2D
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
+        private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 ApplyMomentum(collision.gameObject.transform.right, _barrellRollVelocity);
@@ -66,13 +63,11 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _barrelRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        private void ApplyMomentum(Vector3 direction, float velocity)
-        {
+        private void ApplyMomentum(Vector3 direction, float velocity) {
             _barrelRigidbody2D.velocity = direction * velocity;
         }
 
@@ -80,8 +75,7 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void SetPool(IObjectPool<Barrel> barrelPool)
-        {
+        public void SetPool(IObjectPool<Barrel> barrelPool) {
             _barrelPool = barrelPool;
         }
 

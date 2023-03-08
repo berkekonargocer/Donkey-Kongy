@@ -25,8 +25,7 @@ namespace Nojumpo.Managers
 
         #region Awake 
 
-        private void Awake()
-        {
+        private void Awake() {
             InitializeSingleton();
         }
 
@@ -37,8 +36,7 @@ namespace Nojumpo.Managers
 
         #region Custom Private Methods
 
-        private void InitializeSingleton()
-        {
+        private void InitializeSingleton() {
             if (_instance == null)
             {
                 _instance = this;
@@ -54,13 +52,11 @@ namespace Nojumpo.Managers
 
 
         #region Custom Public Methods
-        public void PlayAudio(AudioSource audioSource)
-        {
+        public void PlayAudio(AudioSource audioSource) {
             audioSource.Play();
         }
 
-        public void PlayAudio(AudioSource audioSource, AudioClip audioClip)
-        {
+        public void PlayAudio(AudioSource audioSource, AudioClip audioClip) {
             audioSource.clip = audioClip;
             audioSource.Play();
         }

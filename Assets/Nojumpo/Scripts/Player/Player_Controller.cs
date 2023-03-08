@@ -11,12 +11,6 @@ namespace Nojumpo
     {
         #region Fields
 
-        #region Events
-
-        public static Action OnPlayerDie;
-
-        #endregion
-
         #region Movement Settings
         [Header("Movement Settings")]
 
@@ -58,28 +52,25 @@ namespace Nojumpo
 
         #region OnEnable
 
-        private void OnEnable()
-        {
-            OnPlayerDie += PlayDyingAnimation;
-            OnPlayerDie += DisableController;
+        private void OnEnable() {
+            GameManager.OnPlayerDie += PlayDyingAnimation;
+            GameManager.OnPlayerDie += DisableController;
         }
 
         #endregion
 
         #region OnDisable
 
-        private void OnDisable()
-        {
-            OnPlayerDie -= PlayDyingAnimation;
-            OnPlayerDie -= DisableController;
+        private void OnDisable() {
+            GameManager.OnPlayerDie -= PlayDyingAnimation;
+            GameManager.OnPlayerDie -= DisableController;
         }
 
         #endregion
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
@@ -87,8 +78,7 @@ namespace Nojumpo
 
         #region Update
 
-        private void Update()
-        {
+        private void Update() {
             HandlePlayerJump();
             HandlePlayerMovement();
         }
@@ -102,20 +92,17 @@ namespace Nojumpo
 
         #region Input Methods
 
-        private void OnMove(InputValue inputValue)
-        {
+        private void OnMove(InputValue inputValue) {
             _moveInput = inputValue.Get<Vector2>();
         }
 
-        private void OnJump(InputValue inputValue)
-        {
+        private void OnJump(InputValue inputValue) {
             _jumpInput = inputValue.isPressed;
         }
 
         #endregion
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _playerMoveVelocity = GetComponent<IMoveVelocity2D>();
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _playerAnimator = GetComponent<Animator>();
@@ -123,8 +110,7 @@ namespace Nojumpo
             _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
         }
 
-        private void HandlePlayerMovement()
-        {
+        private void HandlePlayerMovement() {
             _playerMoveVelocity.SetVelocityX(_moveInput.x);
             _playerMoveVelocity.MultiplyVelocityX(_playerMovementSettings.MovementSpeed);
 
@@ -144,8 +130,7 @@ namespace Nojumpo
             }
         }
 
-        private void HandlePlayerJump()
-        {
+        private void HandlePlayerJump() {
             if (_playerCollisionCheckSettings.IsClimbing)
             {
                 _playerRigidbody2D.gravityScale = 0.0f;
@@ -173,25 +158,25 @@ namespace Nojumpo
             }
         }
 
-        private void ApplyGravity()
-        {
+        private void ApplyGravity() {
             _playerMoveVelocity.VelocityPlusEquals(Physics2D.gravity * 2.25f * Time.deltaTime);
             _jumpInput = false;
         }
 
-        private void PlayAudio(AudioClip audio)
-        {
+        private void PlayAudio(AudioClip audio) {
             _playerAudioSource.clip = audio;
             _playerAudioSource.Play();
         }
 
-        private void PlayDyingAnimation()
-        {
+        private void PlayDyingAnimation(int timeScale) {
             _playerAnimator.SetBool("IsDead", true);
         }
 
-        private void DisableController()
-        {
+        private void InvokeDeadge() {
+            GameManager.Deadge?.Invoke();
+        }
+
+        private void DisableController(int timeScale) {
             enabled = false;
         }
 

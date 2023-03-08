@@ -34,8 +34,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
             SetScrollingSpeed();
         }
@@ -44,8 +43,7 @@ namespace Nojumpo
 
         #region Update
 
-        private void Update()
-        {
+        private void Update() {
             VerticalScroll();
 
             if (_backgroundTransform.position.y < BOTTOM_LIMIT_POSITION)
@@ -61,23 +59,19 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _backgroundTransform = gameObject.transform;
         }
 
-        private void VerticalScroll()
-        {
+        private void VerticalScroll() {
             _backgroundTransform.position += _scrollDirection * Time.deltaTime;
         }
 
-        private void SetScrollingSpeed()
-        {
+        private void SetScrollingSpeed() {
             _scrollDirection = new Vector3(0, -1 * _scrollingSpeed, 0);
         }
 
-        private void ResetPosition()
-        {
+        private void ResetPosition() {
             _backgroundTransform.position = _positionAfterReset;
         }
 

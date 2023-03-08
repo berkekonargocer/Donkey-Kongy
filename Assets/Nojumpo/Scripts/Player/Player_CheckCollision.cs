@@ -38,8 +38,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
@@ -47,8 +46,7 @@ namespace Nojumpo
 
         #region Fixed Update
 
-        private void FixedUpdate()
-        {
+        private void FixedUpdate() {
             CheckCollision();
         }
 
@@ -59,8 +57,7 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _playerCollider2D = GetComponent<CapsuleCollider2D>();
             _playerAnimator = GetComponent<Animator>();
             _groundLayer = LayerMask.NameToLayer("Ground");
@@ -68,8 +65,7 @@ namespace Nojumpo
             _playerLayer = LayerMask.NameToLayer("Player");
         }
 
-        private void CheckCollision()
-        {
+        private void CheckCollision() {
             _playerCollisionCheckSettings.IsClimbing = false;
             _isGrounded = false;
 

@@ -19,6 +19,9 @@ namespace Nojumpo.Managers
         #region Events
 
         public static Action StartTheGame;
+        public static Action<int> RestartLevel;
+        public static Action<int> OnPlayerDie;
+        public static Action Deadge;
 
         #endregion
 
@@ -38,26 +41,25 @@ namespace Nojumpo.Managers
 
         #region OnEnable
 
-        private void OnEnable()
-        {
-            Player_Controller.OnPlayerDie += SetTimeScaleToZero;
+        private void OnEnable() {
+            OnPlayerDie += SetTimeScale;
+            RestartLevel += SetTimeScale;
         }
 
         #endregion
 
         #region OnDisable
 
-        private void OnDisable()
-        {
-            Player_Controller.OnPlayerDie -= SetTimeScaleToZero;
+        private void OnDisable() {
+            OnPlayerDie -= SetTimeScale;
+            RestartLevel -= SetTimeScale;
         }
 
         #endregion
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             InitializeSingleton();
         }
 
@@ -65,8 +67,7 @@ namespace Nojumpo.Managers
 
         #region Update
 
-        private void Update()
-        {
+        private void Update() {
             if (Input.GetKeyDown(KeyCode.Return) && !_sceneSkipped)
             {
                 SkipCutscene();
@@ -80,8 +81,7 @@ namespace Nojumpo.Managers
 
         #region Custom Private Methods
 
-        private void InitializeSingleton()
-        {
+        private void InitializeSingleton() {
             if (_instance == null)
             {
                 _instance = this;
@@ -93,33 +93,28 @@ namespace Nojumpo.Managers
             }
         }
 
-        private void SkipCutscene()
-        {
+        private void SkipCutscene() {
             _currentDirector.time = _timeToSkipTo;
             _sceneSkipped = true;
         }
 
-        private void SetTimeScaleToZero()
-        {
-            Time.timeScale = 0.0f;
+        private void SetTimeScale(int timeScale) {
+            Time.timeScale = timeScale;
         }
 
         #endregion
 
         #region Custom Public Methods
 
-        public void StartGame()
-        {
+        public void StartGame() {
             StartTheGame?.Invoke();
         }
 
-        public void GetDirector(PlayableDirector director)
-        {
+        public void GetDirector(PlayableDirector director) {
             _sceneSkipped = false;
             _currentDirector = director;
         }
-        public void GetSkipTime(float skipTime)
-        {
+        public void GetSkipTime(float skipTime) {
             _timeToSkipTo = skipTime;
         }
 

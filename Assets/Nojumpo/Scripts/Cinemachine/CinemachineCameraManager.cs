@@ -1,8 +1,12 @@
 using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
-namespace Nojumpo.Managers {
-    public class CinemachineCameraManager : MonoBehaviour {
+namespace Nojumpo.Managers
+{
+    public class CinemachineCameraManager : MonoBehaviour
+    {
+
         #region Instance
 
         private static CinemachineCameraManager _instance;
@@ -32,6 +36,14 @@ namespace Nojumpo.Managers {
 
         #region Unity Methods
 
+        private void OnEnable() {
+            GameManager.OnPlayerDie += StartChangeOrtographicSizeCoroutine;
+        }
+
+        private void OnDisable() {
+            GameManager.OnPlayerDie -= StartChangeOrtographicSizeCoroutine;
+        }
+
         #region Awake
 
         private void Awake() {
@@ -44,7 +56,8 @@ namespace Nojumpo.Managers {
         #region Update
 
         private void Update() {
-            if (_shakeTimer > 0) {
+            if (_shakeTimer > 0)
+            {
                 CalculateShakeTime();
             }
         }
@@ -57,11 +70,13 @@ namespace Nojumpo.Managers {
         #region Custom Private Methods
 
         private void InitializeSingleton() {
-            if (_instance == null) {
+            if (_instance == null)
+            {
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            else {
+            else
+            {
                 Destroy(gameObject);
             }
         }
@@ -72,22 +87,30 @@ namespace Nojumpo.Managers {
         }
 
         private void CalculateShakeTime() {
-            _shakeTimer -= Time.unscaledDeltaTime;
+            _shakeTimer -= Time.deltaTime;
 
-            if (_shakeTimer <= 0.0f) {
+            if (_shakeTimer <= 0.0f)
+            {
                 _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0.0f;
             }
         }
 
-        //private IEnumerator ChangeLensOrtographicSizeOverTime(float size, float changeTime)
-        //{
-        //    _cinemachineVirtualCamera.m_Lens.OrthographicSize = size;
-        //}
+        private IEnumerator ChangeOrtographicSizeSmoothlyCoroutine(float endValue, float duration) {
+
+            yield return new WaitForSecondsRealtime(2.5f);
+
+            float elapsed = 0.0f;
+            while (elapsed < duration)
+            {
+                _cinemachineVirtualCamera.m_Lens.OrthographicSize = Mathf.MoveTowards(_cinemachineVirtualCamera.m_Lens.OrthographicSize, endValue, elapsed / duration);
+                elapsed += Time.unscaledDeltaTime;
+                yield return null;
+            }
+        }
 
         #endregion
 
         #region Custom Public Methods
-
 
         public void ShakeCamera(float intensity) {
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
@@ -99,16 +122,8 @@ namespace Nojumpo.Managers {
             _shakeTimer = time;
         }
 
-        public void SetAFollowTarget(Transform followTarget) {
-            _cinemachineVirtualCamera.Follow = followTarget;
-        }
-
-        public void SetLensOrthographicSize(float size) {
-            _cinemachineVirtualCamera.m_Lens.OrthographicSize = size;
-        }
-
-        public void ChangeLensOrtographicSize(float size, float translateSpeed) {
-
+        public void StartChangeOrtographicSizeCoroutine(int timeScale) {
+            StartCoroutine(ChangeOrtographicSizeSmoothlyCoroutine(0.05f, 35f));
         }
 
         #endregion

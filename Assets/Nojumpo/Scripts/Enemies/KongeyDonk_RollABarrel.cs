@@ -19,8 +19,7 @@ namespace Nojumpo
 
         #region OnEnable
 
-        private void OnEnable()
-        {
+        private void OnEnable() {
             GameManager.StartTheGame += StartRollingBarrels;
         }
 
@@ -28,8 +27,7 @@ namespace Nojumpo
 
         #region OnDisable
 
-        private void OnDisable()
-        {
+        private void OnDisable() {
             GameManager.StartTheGame -= StartRollingBarrels;
         }
 
@@ -37,8 +35,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
@@ -49,13 +46,11 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _kongeyDonkAnimator = GetComponent<Animator>();
         }
 
-        private IEnumerator RollABarrelCoroutine()
-        {
+        private IEnumerator RollABarrelCoroutine() {
             _barrelSpawner.RollABarrel();
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", true);
 
@@ -69,8 +64,7 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void StartRollingBarrels()
-        {
+        public void StartRollingBarrels() {
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", false);
         }
 

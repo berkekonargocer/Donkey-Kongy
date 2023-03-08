@@ -25,8 +25,7 @@ namespace Nojumpo
 
         #region Awake
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
@@ -37,8 +36,7 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _initialScaleVector = transform.localScale;
             _endScaleVector = Vector3.one * _endScale;
         }
@@ -47,13 +45,11 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void ShrinkTheButton()
-        {
+        public void ShrinkTheButton() {
             transform.DOScale(_endScaleVector, _animationDuration);
         }
 
-        public void ResetButtonScale()
-        {
+        public void ResetButtonScale() {
             transform.DOScale(_initialScaleVector, _animationDuration);
         }
 

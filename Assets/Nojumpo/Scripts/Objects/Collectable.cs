@@ -35,8 +35,7 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void PlayCollectAnimation()
-        {
+        private void PlayCollectAnimation() {
             transform.parent = _uiPositionObject.transform;
             gameObject.transform.DOLocalMove(Vector3.zero, _animationTime).SetUpdate(true);
         }
@@ -45,8 +44,7 @@ namespace Nojumpo
 
         #region Custom Public Methods
 
-        public void Collect()
-        {
+        public void Collect() {
             CollectedItems.ItemsCollection.Add(_itemType);
             AudioManager.Instance.PlayAudio(_collectAudioSource, _collectSFXAudio);
             PlayCollectAnimation();

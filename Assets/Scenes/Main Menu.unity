@@ -2650,8 +2650,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910817361}
-        m_TargetAssemblyTypeName: Nojumpo.Managers.LevelManager, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: c58b72f3142d27c4bb3d09bbb4cbec77, type: 2}
+        m_TargetAssemblyTypeName: Nojumpo.ScriptableObjects.LevelManager, Assembly-CSharp
         m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:

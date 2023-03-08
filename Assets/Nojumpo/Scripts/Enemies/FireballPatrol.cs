@@ -53,8 +53,7 @@ namespace Nojumpo
 
         #region OnEnable
 
-        private void OnEnable()
-        {
+        private void OnEnable() {
             GameManager.StartTheGame += AddRigidbody2D;
         }
 
@@ -62,8 +61,7 @@ namespace Nojumpo
 
         #region OnDisable
 
-        private void OnDisable()
-        {
+        private void OnDisable() {
             GameManager.StartTheGame -= AddRigidbody2D;
         }
 
@@ -71,8 +69,7 @@ namespace Nojumpo
 
         #region Awake 
 
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
 
             // Starts disabled and gets activated in the timeline with ActivateFireballPatrol() method
@@ -83,8 +80,7 @@ namespace Nojumpo
 
         #region Fixed Update
 
-        private void FixedUpdate()
-        {
+        private void FixedUpdate() {
             NextStepGroundAndWallDetectionRays();
             HandleMovement();
         }
@@ -96,22 +92,19 @@ namespace Nojumpo
 
         #region Custom Private Methods
 
-        private void SetComponents()
-        {
+        private void SetComponents() {
             _nextStepGroundDetectionPosition = transform.GetChild(0).transform;
             _isGroundedDetectionPosition = transform.GetChild(1).transform;
         }
 
-        private void AddRigidbody2D()
-        {
+        private void AddRigidbody2D() {
             _fireballRigidbody2D = gameObject.AddComponent<Rigidbody2D>();
             _fireballRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
             _fireballRigidbody2D.gravityScale = 4.0f;
             _fireballRigidbody2D.mass = 25.0f;
         }
 
-        private void HandleMovement()
-        {
+        private void HandleMovement() {
             _movementVector = (transform.right * _moveSpeed * Time.deltaTime);
 
             if (IsGrounded() == true)
@@ -122,13 +115,11 @@ namespace Nojumpo
             _fireballRigidbody2D.velocity = _movementVector;
         }
 
-        private void HandleJump()
-        {
+        private void HandleJump() {
             _movementVector.y = _jumpVelocity;
         }
 
-        private bool IsGrounded()
-        {
+        private bool IsGrounded() {
             int groundedHit = Physics2D.RaycastNonAlloc(_isGroundedDetectionPosition.position, Vector2.down, _isGroundedDetectionSphereRay, _isGroundedCheckRayDistance, _groundLayer);
 
             if (groundedHit != 1)
@@ -141,8 +132,7 @@ namespace Nojumpo
             }
         }
 
-        private void NextStepGroundAndWallDetectionRays()
-        {
+        private void NextStepGroundAndWallDetectionRays() {
             var wallLayerMask = ~_ignoreWallDetectionRay;
 
             int groundedHit = Physics2D.RaycastNonAlloc(_nextStepGroundDetectionPosition.position, Vector2.down, _nextStepGroundDetectionRay, _nextStepGroundDetectionRayDistance, _groundLayer);
@@ -167,8 +157,7 @@ namespace Nojumpo
 
         #region Gizmos
 
-        private void OnDrawGizmos()
-        {
+        private void OnDrawGizmos() {
             Gizmos.color = Color.green;
             Gizmos.DrawRay(_nextStepGroundDetectionPosition.position, Vector2.down);
             Gizmos.DrawRay(transform.position, transform.right); // Not exactly the same distance! -0.5f

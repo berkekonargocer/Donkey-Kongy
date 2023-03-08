@@ -7,8 +7,7 @@ namespace Nojumpo.Helper
 
         private static Camera _camera;
 
-        public static Camera MainCamera
-        {
+        public static Camera MainCamera {
             get
             {
                 if (_camera == null)
@@ -17,8 +16,7 @@ namespace Nojumpo.Helper
                 return _camera;
             }
         }
-        public static Vector2 GetWorldPositionOfCanvasElement(RectTransform element)
-        {
+        public static Vector2 GetWorldPositionOfCanvasElement(RectTransform element) {
             RectTransformUtility.ScreenPointToWorldPointInRectangle(element, element.position, MainCamera, out var result);
             return result;
         }
