@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Nojumpo
+namespace Nojumpo.Buttons
 {
     public class ButtonBase : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using Nojumpo.Managers;
 
-namespace Nojumpo
+namespace Nojumpo.Buttons
 {
     public class PlayButton : ButtonBase
     {

@@ -1,6 +1,6 @@
 using Nojumpo.Managers;
 
-namespace Nojumpo
+namespace Nojumpo.Buttons
 {
     public class RetryButton : ButtonBase
     {
