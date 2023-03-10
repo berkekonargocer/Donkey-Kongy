@@ -36,6 +36,7 @@ namespace Nojumpo.Managers
             OnPlayerDie += SetTimeScale;
             RestartLevel += SetTimeScale;
             RestartLevel += ReloadScene;
+            Timeline.StartTheGame += ClearItemsCollection;
         }
 
         #endregion
@@ -46,6 +47,7 @@ namespace Nojumpo.Managers
             OnPlayerDie -= SetTimeScale;
             RestartLevel -= SetTimeScale;
             RestartLevel -= ReloadScene;
+            Timeline.StartTheGame -= ClearItemsCollection;
         }
 
         #endregion
@@ -83,10 +85,18 @@ namespace Nojumpo.Managers
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        private void ClearItemsCollection() {
+            CollectedItems.ItemsCollection.Clear();
+        }
+
         #endregion
+
+        #region Custom Public Methods
 
         public void LoadScene(int level) {
             SceneManager.LoadScene(level);
         }
+
+        #endregion
     }
 }

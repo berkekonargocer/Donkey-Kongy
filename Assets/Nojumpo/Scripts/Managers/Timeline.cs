@@ -18,7 +18,7 @@ namespace Nojumpo
 
         private PlayableDirector _currentDirector;
         private bool _sceneSkipped = false;
-        private float _timeToSkipTo;
+        private float _timeToSkipTo = 0;
 
         #endregion
 

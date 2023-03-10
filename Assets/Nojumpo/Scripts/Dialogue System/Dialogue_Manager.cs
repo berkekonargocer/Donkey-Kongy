@@ -2,6 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using System.Threading.Tasks;
 
 namespace Nojumpo.Managers
 {
@@ -14,9 +16,12 @@ namespace Nojumpo.Managers
         #region Dialogue UI
         [Header("Dialogue UI")]
 
+        [SerializeField] private GameObject _dialogueBox;
         [SerializeField] private Image _characterAvatar;
         [SerializeField] private TextMeshProUGUI _characterNameText;
         [SerializeField] private TextMeshProUGUI _dialogueText;
+
+        private RectTransform _dialogueBoxRectTransform;
 
         #endregion
 
@@ -27,6 +32,12 @@ namespace Nojumpo.Managers
         private int _activeMessage = 0;
 
         public static bool IsDialogueActive { get; private set; } = false;
+
+        #endregion
+
+        #region Dialogue Box Animation
+
+        private Vector3 _normalScale = new Vector3(0.35f, 0.15f, 1.0f);
 
         #endregion
 
@@ -51,6 +62,7 @@ namespace Nojumpo.Managers
 
         private void SetComponents() {
             _dialogueAudio = GetComponent<AudioSource>();
+            _dialogueBoxRectTransform = _dialogueBox.GetComponent<RectTransform>();
         }
 
         private void DisplayMessage() {
@@ -104,7 +116,23 @@ namespace Nojumpo.Managers
         }
 
         public void EndDialogue() {
+            StopAllCoroutines();
             IsDialogueActive = false;
+        }
+
+        public async Task DialogueBoxSetActive(bool isActive) {
+
+            if (isActive == true)
+            {
+                _dialogueBox.SetActive(isActive);
+                _dialogueBoxRectTransform.DOScale(_normalScale, 0.2f);
+            }
+            else
+            {
+                _dialogueBoxRectTransform.DOScale(Vector3.zero, 0.2f);
+                await Task.Delay(200);
+                _dialogueBox.SetActive(isActive);
+            }
         }
 
         #endregion

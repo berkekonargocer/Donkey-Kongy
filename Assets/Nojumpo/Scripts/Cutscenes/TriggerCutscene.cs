@@ -1,3 +1,4 @@
+using Nojumpo.Managers;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -7,7 +8,19 @@ namespace Nojumpo
     {
         #region Fields
 
+        #region Components
+
         private PlayableDirector _endingCutscene;
+        private Dialogue_Manager _dialogueManager;
+        private Dialogue_Trigger _dialogueTrigger;
+
+        #endregion
+
+        #region Dialogue Variables
+
+        private bool _isDialogueStarted = false;
+
+        #endregion
 
         #endregion
 
@@ -15,24 +28,56 @@ namespace Nojumpo
 
         #region Unity Methods
 
+        #region Awake
+
+        private void Awake() {
+            SetComponents();
+        }
+
+        #endregion
+
         #region OnTriggerEnter2D
 
         private void OnTriggerEnter2D(Collider2D collision) {
 
-            if (CollectedItems.ItemsCollection.Count != 2)
+            if (CollectedItems.ItemsCollection.Count == 2)
             {
-                Dialogue_Trigger dialogue_Trigger = GetComponent<Dialogue_Trigger>();
-                dialogue_Trigger.StartDialogue(1);
+                _isDialogueStarted = true;
+                _endingCutscene.Play();
             }
             else
             {
-                _endingCutscene.Play();
-                //dialogue_Trigger.StartDialogue(0);
+                _dialogueTrigger.StartDialogue(1);
+                _dialogueManager.DialogueBoxSetActive(true);
+            }
+        }
+
+        #endregion
+
+        #region OnTriggerExit2D
+
+        private void OnTriggerExit2D(Collider2D collision) {
+            if (!_isDialogueStarted)
+            {
+                _dialogueManager.StopAllCoroutines();
+                _dialogueManager.DialogueBoxSetActive(false);
             }
         }
 
         #endregion
 
         #endregion
+
+
+        #region Custom Private Methods
+
+        private void SetComponents() {
+            _endingCutscene = GetComponent<PlayableDirector>();
+            _dialogueTrigger = GetComponent<Dialogue_Trigger>();
+            _dialogueManager = GameObject.Find("Dialogue Manager").GetComponent<Dialogue_Manager>();
+        }
+
+        #endregion
+
     }
 }
