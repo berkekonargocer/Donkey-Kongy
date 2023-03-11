@@ -50,7 +50,7 @@ namespace Nojumpo
             else
             {
                 _dialogueTrigger.StartDialogue(1);
-                _dialogueManager.DialogueBoxSetActive(true);
+                _dialogueManager.StartDialogueBoxSetActiveCoroutine(true);
             }
         }
 
@@ -62,7 +62,7 @@ namespace Nojumpo
             if (!_isDialogueStarted)
             {
                 _dialogueManager.StopAllCoroutines();
-                _dialogueManager.DialogueBoxSetActive(false);
+                _dialogueManager.StartDialogueBoxSetActiveCoroutine(false);
             }
         }
 

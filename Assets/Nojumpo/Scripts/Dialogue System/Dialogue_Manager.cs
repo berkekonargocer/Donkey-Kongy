@@ -92,6 +92,21 @@ namespace Nojumpo.Managers
             }
         }
 
+        private IEnumerator DialogueBoxSetActive(bool isActive) {
+
+            if (isActive == true)
+            {
+                _dialogueBox.SetActive(isActive);
+                _dialogueBoxRectTransform.DOScale(_normalScale, 0.2f);
+            }
+            else
+            {
+                _dialogueBoxRectTransform.DOScale(Vector3.zero, 0.2f);
+                yield return new WaitForSeconds(0.2f);
+                _dialogueBox.SetActive(isActive);
+            }
+        }
+
         #endregion
 
         #region Custom Public Methods
@@ -120,19 +135,8 @@ namespace Nojumpo.Managers
             IsDialogueActive = false;
         }
 
-        public async Task DialogueBoxSetActive(bool isActive) {
-
-            if (isActive == true)
-            {
-                _dialogueBox.SetActive(isActive);
-                _dialogueBoxRectTransform.DOScale(_normalScale, 0.2f);
-            }
-            else
-            {
-                _dialogueBoxRectTransform.DOScale(Vector3.zero, 0.2f);
-                await Task.Delay(200);
-                _dialogueBox.SetActive(isActive);
-            }
+        public void StartDialogueBoxSetActiveCoroutine(bool isActive) {
+            StartCoroutine(DialogueBoxSetActive(isActive));
         }
 
         #endregion

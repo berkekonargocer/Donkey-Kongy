@@ -1620,6 +1620,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: dc702ae5eedfb0b4bbf575db6f605954, type: 2}
     - {fileID: 11400000, guid: 0698d9687f6a9544caffe12c77dd4243, type: 2}
+    - {fileID: 11400000, guid: 01684ff823b2ae84db6e33955da7300a, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1644,6 +1645,20 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 307541998}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -8892,6 +8907,7 @@ GameObject:
   - component: {fileID: 1712808440}
   - component: {fileID: 1712808441}
   - component: {fileID: 1712808439}
+  - component: {fileID: 1712808442}
   m_Layer: 0
   m_Name: Ending Cutscene
   m_TagString: Untagged
@@ -9054,6 +9070,10 @@ PlayableDirector:
     value: {fileID: 256070658}
   - key: {fileID: -7886842333395386136, guid: c06bcb68b17d9be44b8acb54bd4197eb, type: 2}
     value: {fileID: 2062083814}
+  - key: {fileID: 3352702259755763275, guid: c06bcb68b17d9be44b8acb54bd4197eb, type: 2}
+    value: {fileID: 307542001}
+  - key: {fileID: -1794314917107033390, guid: c06bcb68b17d9be44b8acb54bd4197eb, type: 2}
+    value: {fileID: 1712808442}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1712808441
@@ -9068,6 +9088,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6542212f1b9404f4b8bdbbf8ca4975ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1712808442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712808435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 01684ff823b2ae84db6e33955da7300a, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1712808439}
+          m_TargetAssemblyTypeName: Nojumpo.Dialogue_Trigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1715926888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 744810018683660922, guid: 627357c38b650db44af81ca243d8a15c, type: 3}
@@ -10973,6 +11023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5051293502813526961, guid: 49f49b45138ffa44cb6d17f0d0c1ef21, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -742423899, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     - target: {fileID: 5051293502813526962, guid: 49f49b45138ffa44cb6d17f0d0c1ef21, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
