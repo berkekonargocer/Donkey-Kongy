@@ -49,7 +49,7 @@ namespace Nojumpo
             _bgmAudioSource = GetComponent<AudioSource>();
         }
 
-        private void StopBGM(int timeScale) {
+        private void StopBGM(int timeScale, bool isDead) {
             _bgmAudioSource.Stop();
         }
 

@@ -62,6 +62,17 @@ namespace Nojumpo.Managers
 
         #endregion
 
+        #region Update
+
+        private void Update() {
+            if (_isDead && Input.GetKeyDown(KeyCode.Return))
+            {
+                RestartLevel?.Invoke(1, false);
+            }
+        }
+
+        #endregion
+
         #endregion
 
 
@@ -79,21 +90,6 @@ namespace Nojumpo.Managers
             }
         }
 
-        private void SetTimeScale(int timeScale, bool isDead) {
-            Time.timeScale = timeScale;
-        }
-
-        private void ReloadScene(int timeScale, bool isDead) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        private void ClearItemsCollection() {
-            CollectedItems.ItemsCollection.Clear();
-        }
-
-        private void SetIsDead(int timeScale, bool isDead) {
-            _isDead = isDead;
-        }
         private void EventSubscriptions() {
             OnPlayerDie += SetTimeScale;
             OnPlayerDie += SetIsDead;
@@ -110,6 +106,22 @@ namespace Nojumpo.Managers
             RestartLevel -= ReloadScene;
             RestartLevel -= SetIsDead;
             Timeline.StartTheGame -= ClearItemsCollection;
+        }
+
+        private void SetTimeScale(int timeScale, bool isDead) {
+            Time.timeScale = timeScale;
+        }
+
+        private void ReloadScene(int timeScale, bool isDead) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void ClearItemsCollection() {
+            CollectedItems.ItemsCollection.Clear();
+        }
+
+        private void SetIsDead(int timeScale, bool isDead) {
+            _isDead = isDead;
         }
 
         #endregion

@@ -77,11 +77,11 @@ namespace Nojumpo
             }
         }
 
-        private void ResetOrtographicSize(int timeScale) {
+        private void ResetOrtographicSize(int timeScale, bool isDead) {
             _cinemachineVirtualCamera.m_Lens.OrthographicSize = 8.25f;
         }
 
-        private void StartChangeOrtographicSizeCoroutine(int timeScale) {
+        private void StartChangeOrtographicSizeCoroutine(int timeScale, bool isDead) {
             StartCoroutine(ChangeOrtographicSizeSmoothlyCoroutine(0.05f, 35f));
         }
 
