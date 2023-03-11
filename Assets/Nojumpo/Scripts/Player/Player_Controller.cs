@@ -1,7 +1,6 @@
-using Nojumpo.Managers;
 using Nojumpo.Interfaces;
+using Nojumpo.Managers;
 using Nojumpo.ScriptableObjects;
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,17 +52,16 @@ namespace Nojumpo
         #region OnEnable
 
         private void OnEnable() {
-            GameManager.OnPlayerDie += PlayDyingAnimation;
-            GameManager.OnPlayerDie += DisableController;
+            EventSubscriptions();
         }
+
 
         #endregion
 
         #region OnDisable
 
         private void OnDisable() {
-            GameManager.OnPlayerDie -= PlayDyingAnimation;
-            GameManager.OnPlayerDie -= DisableController;
+            EventUnsubscriptions();
         }
 
         #endregion
@@ -108,6 +106,16 @@ namespace Nojumpo
             _playerAnimator = GetComponent<Animator>();
             _playerAudioSource = GetComponent<AudioSource>();
             _playerCollisionCheckSettings = _playerMovementSettings.CollCheckSettings;
+        }
+
+        private void EventSubscriptions() {
+            GameManager.OnPlayerDie += PlayDyingAnimation;
+            GameManager.OnPlayerDie += DisableController;
+        }
+
+        private void EventUnsubscriptions() {
+            GameManager.OnPlayerDie -= PlayDyingAnimation;
+            GameManager.OnPlayerDie -= DisableController;
         }
 
         private void HandlePlayerMovement() {
@@ -168,7 +176,7 @@ namespace Nojumpo
             _playerAudioSource.Play();
         }
 
-        private void PlayDyingAnimation(int timeScale) {
+        private void PlayDyingAnimation(int timeScale, bool isDead) {
             _playerAnimator.SetBool("IsDead", true);
         }
 
@@ -176,7 +184,7 @@ namespace Nojumpo
             GameManager.Deadge?.Invoke();
         }
 
-        private void DisableController(int timeScale) {
+        private void DisableController(int timeScale, bool isDead) {
             enabled = false;
         }
 

@@ -18,9 +18,15 @@ namespace Nojumpo.Managers
 
         #region Events
 
-        public static Action<int> RestartLevel;
-        public static Action<int> OnPlayerDie;
+        public static Action<int, bool> RestartLevel;
+        public static Action<int, bool> OnPlayerDie;
         public static Action Deadge;
+
+        #endregion
+
+        #region State Bools
+
+        private bool _isDead = false;
 
         #endregion
 
@@ -33,22 +39,18 @@ namespace Nojumpo.Managers
         #region OnEnable
 
         private void OnEnable() {
-            OnPlayerDie += SetTimeScale;
-            RestartLevel += SetTimeScale;
-            RestartLevel += ReloadScene;
-            Timeline.StartTheGame += ClearItemsCollection;
+            EventSubscriptions();
         }
+
 
         #endregion
 
         #region OnDisable
 
         private void OnDisable() {
-            OnPlayerDie -= SetTimeScale;
-            RestartLevel -= SetTimeScale;
-            RestartLevel -= ReloadScene;
-            Timeline.StartTheGame -= ClearItemsCollection;
+            EventUnsubscriptions();
         }
+
 
         #endregion
 
@@ -77,16 +79,37 @@ namespace Nojumpo.Managers
             }
         }
 
-        private void SetTimeScale(int timeScale) {
+        private void SetTimeScale(int timeScale, bool isDead) {
             Time.timeScale = timeScale;
         }
 
-        private void ReloadScene(int timeScale) {
+        private void ReloadScene(int timeScale, bool isDead) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void ClearItemsCollection() {
             CollectedItems.ItemsCollection.Clear();
+        }
+
+        private void SetIsDead(int timeScale, bool isDead) {
+            _isDead = isDead;
+        }
+        private void EventSubscriptions() {
+            OnPlayerDie += SetTimeScale;
+            OnPlayerDie += SetIsDead;
+            RestartLevel += SetTimeScale;
+            RestartLevel += ReloadScene;
+            RestartLevel += SetIsDead;
+            Timeline.StartTheGame += ClearItemsCollection;
+        }
+
+        private void EventUnsubscriptions() {
+            OnPlayerDie -= SetTimeScale;
+            OnPlayerDie -= SetIsDead;
+            RestartLevel -= SetTimeScale;
+            RestartLevel -= ReloadScene;
+            RestartLevel -= SetIsDead;
+            Timeline.StartTheGame -= ClearItemsCollection;
         }
 
         #endregion

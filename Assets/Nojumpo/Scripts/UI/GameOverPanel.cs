@@ -17,8 +17,7 @@ namespace Nojumpo
         #region OnEnable
 
         private void OnEnable() {
-            GameManager.Deadge += ScaleUpAnimation;
-            GameManager.Deadge += CanvasAnimation;
+            EventSubscriptions();
         }
 
         #endregion
@@ -26,8 +25,7 @@ namespace Nojumpo
         #region OnDisable
 
         private void OnDisable() {
-            GameManager.Deadge -= ScaleUpAnimation;
-            GameManager.Deadge -= CanvasAnimation;
+            EventUnsubscriptions();
         }
 
         #endregion
@@ -57,6 +55,16 @@ namespace Nojumpo
             _canvasGroup.DOFade(1, 2.5f).SetUpdate(true);
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
+        }
+
+        private void EventSubscriptions() {
+            GameManager.Deadge += ScaleUpAnimation;
+            GameManager.Deadge += CanvasAnimation;
+        }
+
+        private void EventUnsubscriptions() {
+            GameManager.Deadge -= ScaleUpAnimation;
+            GameManager.Deadge -= CanvasAnimation;
         }
 
         #endregion

@@ -7,7 +7,7 @@ namespace Nojumpo.Buttons
         #region Custom Public Methods
 
         public void Retry() {
-            GameManager.RestartLevel?.Invoke(1);
+            GameManager.RestartLevel?.Invoke(1, false);
         }
 
         #endregion

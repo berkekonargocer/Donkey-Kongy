@@ -30,7 +30,7 @@ namespace Nojumpo
                 cinemachineCamera.ShakeCamera(3f, 1.0f);
 
                 _deadlyObjectHitSFXSource.Play();
-                GameManager.OnPlayerDie.Invoke(0);
+                GameManager.OnPlayerDie.Invoke(0, true);
             }
         }
 
