@@ -11,6 +11,7 @@ namespace Nojumpo
         #region Events
 
         public static Action StartTheGame;
+        public static Action GameFinishedAnimationStart;
 
         #endregion
 
@@ -55,6 +56,10 @@ namespace Nojumpo
 
         public void StartGame() {
             StartTheGame?.Invoke();
+        }
+
+        public void InvokeGameFinishedAnimationStart() {
+            GameFinishedAnimationStart?.Invoke();
         }
 
         public void GetDirector(PlayableDirector director) {

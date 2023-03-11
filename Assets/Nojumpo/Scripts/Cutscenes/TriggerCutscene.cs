@@ -1,3 +1,4 @@
+using Nojumpo.Interfaces;
 using Nojumpo.Managers;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -42,6 +43,7 @@ namespace Nojumpo
 
             if (CollectedItems.ItemsCollection.Count == 2)
             {
+                collision.GetComponent<IMoveVelocity2D>().SetVelocity(Vector2.zero);
                 _isDialogueStarted = true;
                 _endingCutscene.Play();
             }

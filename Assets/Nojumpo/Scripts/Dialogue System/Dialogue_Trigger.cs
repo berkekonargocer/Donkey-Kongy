@@ -14,7 +14,7 @@ namespace Nojumpo
         #region Custom Public Methods
 
         public void StartDialogue(int dialogueNumber) {
-            Dialogue_Manager dialogue_Manager = FindObjectOfType<Dialogue_Manager>();
+            Dialogue_Manager dialogue_Manager = GameObject.Find("Dialogue Manager").GetComponent<Dialogue_Manager>();
             dialogue_Manager.OpenDialogue(_dialoguesToTrigger[dialogueNumber]);
         }
 
