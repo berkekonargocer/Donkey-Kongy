@@ -1621,6 +1621,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: dc702ae5eedfb0b4bbf575db6f605954, type: 2}
     - {fileID: 11400000, guid: 0698d9687f6a9544caffe12c77dd4243, type: 2}
     - {fileID: 11400000, guid: 01684ff823b2ae84db6e33955da7300a, type: 2}
+    - {fileID: 11400000, guid: feb43da76ba207e4bade1e3c410b0f24, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1663,6 +1664,20 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 307541999}
+          m_TargetAssemblyTypeName: Nojumpo.Managers.Dialogue_Manager, Assembly-CSharp
+          m_MethodName: StartDialogueBoxSetActiveCoroutine
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!82 &307542002
 AudioSource:
@@ -3133,7 +3148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.24, y: -7.79, z: -10}
+  m_LocalPosition: {x: -1.945, y: 6.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9042,8 +9057,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialoguesToTrigger:
   - dialogueName: Collected And Finished
-    dialogueMessages: []
-    dialogueCharacters: []
+    dialogueMessages:
+    - characterId: 2
+      message: Finally! what took you so long!
+      waitTimeBetweenChars: 0.04
+    - characterId: 0
+      message: Uhm..
+      waitTimeBetweenChars: 0.08
+    - characterId: 0
+      message: Sorry i guess?
+      waitTimeBetweenChars: 0.06
+    - characterId: 2
+      message: Sorry i guess?
+      waitTimeBetweenChars: 0.06
+    dialogueCharacters:
+    - characterName: Viby Nario
+      characterSprite: {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: ffd82408581049849930937d3933a318, type: 3}
+      - {fileID: 8300000, guid: 63a589b1ef2b9bc42b0795b8146b1e7c, type: 3}
+      - {fileID: 8300000, guid: 8963407f92b82ef48a5c25d0e6c08998, type: 3}
+      - {fileID: 8300000, guid: 3e2b8ab4c7ea16f47b2cb2f44378936a, type: 3}
+      - {fileID: 8300000, guid: f47723169ce12144299f832b487825e7, type: 3}
+      - {fileID: 8300000, guid: 6654fa08cefe98a40977e2e79cb6fc7e, type: 3}
+      - {fileID: 8300000, guid: 76ac4a0403885104e8c8f27c4f5a14ef, type: 3}
+    - characterName: Kongey Donk
+      characterSprite: {fileID: 788010134, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: 1f87ba5565925cd47b70fa2c8f896ef7, type: 3}
+      - {fileID: 8300000, guid: fd8826c6b50302444b93ef72974cd63c, type: 3}
+      - {fileID: 8300000, guid: d0d2a95cac260dc48bfc3289c075c5a8, type: 3}
+      - {fileID: 8300000, guid: d472260c29aacc2459ece5c190c9c0c4, type: 3}
+      - {fileID: 8300000, guid: 9d24f2608c5340d49a32a3b6cdec7bfa, type: 3}
+      - {fileID: 8300000, guid: 3cb97c5a93be67645b4d7332001b4c93, type: 3}
+      - {fileID: 8300000, guid: dda43529195209e4f9210d141d38f9e7, type: 3}
+    - characterName: Princess
+      characterSprite: {fileID: -482426938, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+      talkingSFX:
+      - {fileID: 8300000, guid: 4fdb558588c44dd4b83d5df3e75c68b4, type: 3}
+      - {fileID: 8300000, guid: bf5b7b4875e3df6448ce1a965ba7ec68, type: 3}
+      - {fileID: 8300000, guid: 901f26190851e584ab75f47863da881e, type: 3}
+      - {fileID: 8300000, guid: 7db163b38c677624e92dae56a263e4ec, type: 3}
+      - {fileID: 8300000, guid: 3ffe8c6617530ac419cdc07cb4392656, type: 3}
+      - {fileID: 8300000, guid: 1cf9a6ddb38d6f04ba2a5da6be9d761b, type: 3}
+      - {fileID: 8300000, guid: 89660ff3c1fc8b049a351304289ece82, type: 3}
   - dialogueName: Not Collected
     dialogueMessages:
     - characterId: 0
