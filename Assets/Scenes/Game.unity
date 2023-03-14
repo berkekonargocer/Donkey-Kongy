@@ -9068,8 +9068,44 @@ MonoBehaviour:
       message: Sorry i guess?
       waitTimeBetweenChars: 0.06
     - characterId: 2
-      message: Sorry i guess?
+      message: Anyways
+      waitTimeBetweenChars: 0.05
+    - characterId: 2
+      message: Im sick of this monkey its time for him to go
+      waitTimeBetweenChars: 0.05
+    - characterId: 0
+      message: 'He just wants to hang around with me again
+
+        but you don''t
+        let us have some time not even a bit'
       waitTimeBetweenChars: 0.06
+    - characterId: 2
+      message: I DONT CARE! HE IS GOING!
+      waitTimeBetweenChars: 0.03
+    - characterId: 0
+      message: But, he is my bestfriend
+      waitTimeBetweenChars: 0.07
+    - characterId: 2
+      message: THEN I AM!
+      waitTimeBetweenChars: 0.03
+    - characterId: 2
+      message: Give those to me!
+      waitTimeBetweenChars: 0.04
+    - characterId: 2
+      message: BYE!
+      waitTimeBetweenChars: 0.04
+    - characterId: 1
+      message: OH YES! WE ARE FREE!
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: OH YES! WE ARE FREE!
+      waitTimeBetweenChars: 0.04
+    - characterId: 1
+      message: N.. Nario..?
+      waitTimeBetweenChars: 0.07
+    - characterId: 1
+      message: Uhh..
+      waitTimeBetweenChars: 0.07
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
