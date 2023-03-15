@@ -9098,14 +9098,60 @@ MonoBehaviour:
       message: OH YES! WE ARE FREE!
       waitTimeBetweenChars: 0.05
     - characterId: 1
-      message: OH YES! WE ARE FREE!
-      waitTimeBetweenChars: 0.04
-    - characterId: 1
       message: N.. Nario..?
-      waitTimeBetweenChars: 0.07
+      waitTimeBetweenChars: 0.08
     - characterId: 1
       message: Uhh..
+      waitTimeBetweenChars: 0.08
+    - characterId: 0
+      message: Don't get me wrong im happy that we can rock together just like old
+        times but..
       waitTimeBetweenChars: 0.07
+    - characterId: 1
+      message: 'Hey i got you Nario it''s ok '
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: Uhmm..
+      waitTimeBetweenChars: 0.07
+    - characterId: 1
+      message: You hungry?
+      waitTimeBetweenChars: 0.07
+    - characterId: 1
+      message: Oh wait.. it's cold lemme just..
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: '*Pst, come here*'
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: That's better
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: Here
+      waitTimeBetweenChars: 0.05
+    - characterId: 0
+      message: Thank you Kongey
+      waitTimeBetweenChars: 0.07
+    - characterId: 0
+      message: Thank you Kongey
+      waitTimeBetweenChars: 0.07
+    - characterId: 1
+      message: Hey we're bestfriends
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: Cmon Nario we're bestfriends
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: Hey! what was that moves down there!
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: What about teach me some huh?
+      waitTimeBetweenChars: 0.05
+    - characterId: 1
+      message: Let me see them moves!
+      waitTimeBetweenChars: 0.05
+    - characterId: 0
+      message: Allright allright..
+      waitTimeBetweenChars: 0.06
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
