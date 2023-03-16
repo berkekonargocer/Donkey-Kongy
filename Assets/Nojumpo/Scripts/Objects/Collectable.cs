@@ -45,6 +45,7 @@ namespace Nojumpo
         #region Custom Public Methods
 
         public void Collect() {
+            GetComponent<BoxCollider2D>().enabled = false;
             CollectedItems.ItemsCollection.Add(_itemType);
             AudioManager.Instance.PlayAudio(_collectAudioSource, _collectSFXAudio);
             PlayCollectAnimation();

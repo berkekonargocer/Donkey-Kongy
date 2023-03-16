@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nojumpo
 {
-    public class KongeyDonk_RollABarrel : MonoBehaviour
+    public class KongeyDonk_RollBarrels : MonoBehaviour
     {
         #region Fields
 
@@ -65,7 +65,12 @@ namespace Nojumpo
         #region Custom Public Methods
 
         public void StartRollingBarrels() {
+            _kongeyDonkAnimator.SetBool("IsGameActive", true);
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", false);
+        }
+
+        public void StopRollingBarrels() {
+            _kongeyDonkAnimator.SetBool("IsGameActive", false);
         }
 
         #endregion
