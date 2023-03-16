@@ -9104,8 +9104,10 @@ MonoBehaviour:
       message: Uhh..
       waitTimeBetweenChars: 0.08
     - characterId: 0
-      message: Don't get me wrong im happy that we can rock together just like old
-        times but..
+      message: Don't get me wrong Kongey
+      waitTimeBetweenChars: 0.07
+    - characterId: 0
+      message: Im happy that we can rock together just like old times but..
       waitTimeBetweenChars: 0.07
     - characterId: 1
       message: 'Hey i got you Nario it''s ok '
@@ -9131,12 +9133,6 @@ MonoBehaviour:
     - characterId: 0
       message: Thank you Kongey
       waitTimeBetweenChars: 0.07
-    - characterId: 0
-      message: Thank you Kongey
-      waitTimeBetweenChars: 0.07
-    - characterId: 1
-      message: Hey we're bestfriends
-      waitTimeBetweenChars: 0.05
     - characterId: 1
       message: Cmon Nario we're bestfriends
       waitTimeBetweenChars: 0.05
