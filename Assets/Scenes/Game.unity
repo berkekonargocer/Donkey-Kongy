@@ -9141,8 +9141,8 @@ MonoBehaviour:
       message: I DONT CARE! HE IS GOING!
       waitTimeBetweenChars: 0.03
     - characterId: 0
-      message: But, he is my bestfriend
-      waitTimeBetweenChars: 0.11
+      message: But he is my bestfriend..
+      waitTimeBetweenChars: 0.09
     - characterId: 2
       message: THEN I AM!
       waitTimeBetweenChars: 0.03
@@ -9157,22 +9157,22 @@ MonoBehaviour:
       waitTimeBetweenChars: 0.05
     - characterId: 1
       message: N.. Nario..?
-      waitTimeBetweenChars: 0.11
+      waitTimeBetweenChars: 0.08
     - characterId: 1
       message: Uhh..
       waitTimeBetweenChars: 0.1
     - characterId: 0
       message: Don't get me wrong Kongey
-      waitTimeBetweenChars: 0.13
+      waitTimeBetweenChars: 0.1
     - characterId: 0
       message: Im happy that we can rock together just like old times but..
-      waitTimeBetweenChars: 0.13
+      waitTimeBetweenChars: 0.1
     - characterId: 1
       message: 'Hey i got you Nario it''s ok '
-      waitTimeBetweenChars: 0.08
+      waitTimeBetweenChars: 0.07
     - characterId: 1
       message: Uhmm..
-      waitTimeBetweenChars: 0.08
+      waitTimeBetweenChars: 0.07
     - characterId: 1
       message: You hungry?
       waitTimeBetweenChars: 0.07
@@ -9190,7 +9190,7 @@ MonoBehaviour:
       waitTimeBetweenChars: 0.05
     - characterId: 0
       message: Thank you Kongey
-      waitTimeBetweenChars: 0.13
+      waitTimeBetweenChars: 0.1
     - characterId: 1
       message: Cmon Nario we're bestfriends
       waitTimeBetweenChars: 0.05
@@ -9205,7 +9205,7 @@ MonoBehaviour:
       waitTimeBetweenChars: 0.05
     - characterId: 0
       message: Allright allright..
-      waitTimeBetweenChars: 0.06
+      waitTimeBetweenChars: 0.07
     dialogueCharacters:
     - characterName: Viby Nario
       characterSprite: {fileID: 42266695, guid: 5b287de30096c8848a282ddb21273858, type: 3}
