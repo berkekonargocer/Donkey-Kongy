@@ -155,6 +155,15 @@ namespace Nojumpo
 
         #endregion
 
+        #region Custom Public Methods
+
+        public void SetVelocitiesToZero() {
+            _moveSpeed = 0;
+            _jumpVelocity = 0;
+        }
+
+        #endregion
+
         #region Gizmos
 
         private void OnDrawGizmos() {
