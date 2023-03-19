@@ -839,6 +839,8 @@ AnimationClip:
       value: {fileID: 2072110027, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     - time: 43
       value: {fileID: -493835341, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+    - time: 74.066666
+      value: {fileID: 788010134, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -872,12 +874,13 @@ AnimationClip:
     - {fileID: -315541103, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     - {fileID: 2072110027, guid: 5b287de30096c8848a282ddb21273858, type: 3}
     - {fileID: -493835341, guid: 5b287de30096c8848a282ddb21273858, type: 3}
+    - {fileID: 788010134, guid: 5b287de30096c8848a282ddb21273858, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 43.016666
+    m_StopTime: 74.083336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -1036,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 68.93333333333334
+  m_Time: 69.75
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: dc702ae5eedfb0b4bbf575db6f605954, type: 2}
