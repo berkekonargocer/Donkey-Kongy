@@ -3183,7 +3183,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 8.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3207,7 +3207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.945, y: 6.68, z: -10}
+  m_LocalPosition: {x: 0, y: -1.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9434,13 +9434,19 @@ MonoBehaviour:
       message: Cmon Nario we're bestfriends
       waitTimeBetweenChars: 0.05
     - characterId: 1
-      message: Hey! what was that moves down there!
+      message: Hey! do you remember Legend of Selda?
+      waitTimeBetweenChars: 0.05
+    - characterId: 0
+      message: Yeah the game we loved playing
+      waitTimeBetweenChars: 0.075
+    - characterId: 1
+      message: Exactly!
       waitTimeBetweenChars: 0.05
     - characterId: 1
-      message: What about teach me some huh?
+      message: The second game of it released yesterday!
       waitTimeBetweenChars: 0.05
     - characterId: 1
-      message: Let me see them moves!
+      message: Let's go and play some!
       waitTimeBetweenChars: 0.05
     - characterId: 0
       message: Allright allright..
