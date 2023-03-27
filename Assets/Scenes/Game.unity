@@ -3207,7 +3207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.09, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9437,10 +9437,10 @@ MonoBehaviour:
       message: Hey! do you remember Legend of Selda?
       waitTimeBetweenChars: 0.05
     - characterId: 0
-      message: Yeah the game we loved playing
+      message: You mean the game which main character is blonde and has green costume?
       waitTimeBetweenChars: 0.075
     - characterId: 1
-      message: Exactly!
+      message: Exactly! that was fun right?
       waitTimeBetweenChars: 0.05
     - characterId: 1
       message: The second game of it released yesterday!
