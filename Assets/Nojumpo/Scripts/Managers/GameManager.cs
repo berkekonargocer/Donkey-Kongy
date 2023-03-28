@@ -97,6 +97,7 @@ namespace Nojumpo.Managers
             RestartLevel += ReloadScene;
             RestartLevel += SetIsDead;
             Timeline.StartTheGame += ClearItemsCollection;
+            SceneManager.sceneLoaded += SetVariables;
         }
 
         private void EventUnsubscriptions() {
@@ -106,6 +107,11 @@ namespace Nojumpo.Managers
             RestartLevel -= ReloadScene;
             RestartLevel -= SetIsDead;
             Timeline.StartTheGame -= ClearItemsCollection;
+            SceneManager.sceneLoaded -= SetVariables;
+        }
+
+        private void SetVariables(Scene scene, LoadSceneMode loadSceneMode) {
+            _isDead = false;
         }
 
         private void SetTimeScale(int timeScale, bool isDead) {

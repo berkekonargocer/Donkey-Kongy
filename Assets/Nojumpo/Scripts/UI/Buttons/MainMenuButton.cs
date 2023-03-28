@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Nojumpo.Buttons
@@ -7,6 +8,7 @@ namespace Nojumpo.Buttons
         #region Custom Public Methods
 
         public void MainMenu() {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene(0);
         }
 
