@@ -7,37 +7,19 @@ namespace Nojumpo
 {
     public class TriggerCutscene : MonoBehaviour
     {
-        #region Fields
-
-        #region Components
-
+        [Header("COMPONENTS")]
         private PlayableDirector _endingCutscene;
         private Dialogue_Manager _dialogueManager;
         private Dialogue_Trigger _dialogueTrigger;
 
-        #endregion
-
-        #region Dialogue Variables
-
+        [Header("DIALOGUE SETTINGS")]
         private bool _isDialogueStarted = false;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
-
-        #endregion
-
-        #region OnTriggerEnter2D
 
         private void OnTriggerEnter2D(Collider2D collision) {
 
@@ -54,10 +36,6 @@ namespace Nojumpo
             }
         }
 
-        #endregion
-
-        #region OnTriggerExit2D
-
         private void OnTriggerExit2D(Collider2D collision) {
             if (!_isDialogueStarted)
             {
@@ -66,20 +44,12 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _endingCutscene = GetComponent<PlayableDirector>();
             _dialogueTrigger = GetComponent<Dialogue_Trigger>();
             _dialogueManager = GameObject.Find("Dialogue Manager").GetComponent<Dialogue_Manager>();
         }
-
-        #endregion
-
     }
 }

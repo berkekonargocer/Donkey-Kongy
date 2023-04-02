@@ -7,28 +7,15 @@ namespace Nojumpo
 {
     public class CinemachineCamera : MonoBehaviour
     {
-
-        #region Fields
-
-        #region Components
-
+        [Header("COMPONENTS")]
         private CinemachineVirtualCamera _cinemachineVirtualCamera;
         private CinemachineBasicMultiChannelPerlin _cinemachineBasicMultiChannelPerlin;
 
-        #endregion
-
-        #region Camera Shake Settings
-
+        [Header("CAMERA SHAKE SETTINGS")]
         private float _shakeTimer;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             GameManager.OnPlayerDie += StartChangeOrtographicSizeCoroutine;
             GameManager.RestartLevel += ResetOrtographicSize;
@@ -39,15 +26,9 @@ namespace Nojumpo
             GameManager.RestartLevel -= ResetOrtographicSize;
         }
 
-        #region Awake
-
         private void Awake() {
             SetComponents();
         }
-
-        #endregion
-
-        #region Update
 
         private void Update() {
             if (_shakeTimer > 0)
@@ -56,13 +37,8 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
             _cinemachineBasicMultiChannelPerlin = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -98,10 +74,8 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void ShakeCamera(float intensity) {
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
             _shakeTimer = 0.2f;
@@ -111,8 +85,5 @@ namespace Nojumpo
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
             _shakeTimer = time;
         }
-
-
-        #endregion
     }
 }

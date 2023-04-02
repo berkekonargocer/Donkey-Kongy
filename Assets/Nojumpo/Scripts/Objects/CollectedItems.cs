@@ -1,6 +1,6 @@
+using Nojumpo.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
-using Nojumpo.ScriptableObjects;
 
 namespace Nojumpo
 {

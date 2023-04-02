@@ -5,36 +5,21 @@ namespace Nojumpo
 {
     public class BarrelSpawner : MonoBehaviour
     {
-        #region Fields
-
-        #region Spawn Barrel Object Pool
-
-        [Header("Spawn Barrel Object Pool")]
+        [Header("BARREL OBJECT POOL SETTINGS")]
         [SerializeField] private Barrel _barrelPrefab;
-
         [SerializeField] private bool _checkCollection;
         [SerializeField] private int _defaultCapacity;
         [SerializeField] private int _maxCapacity;
-
         private IObjectPool<Barrel> _barrelPool;
 
-        #endregion
 
-        #endregion
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
-            _barrelPool = new ObjectPool<Barrel>(CreateBarrel, OnGetBarrel, OnReleaseBarrel, OnDestroyBarrel, _checkCollection, _defaultCapacity, _maxCapacity);
+            SetBarrelPool();
         }
 
-        #endregion
 
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private Barrel CreateBarrel() {
             Barrel spawnBarrel = Instantiate(_barrelPrefab, transform.position, Quaternion.identity);
             spawnBarrel.SetPool(_barrelPool);
@@ -55,16 +40,13 @@ namespace Nojumpo
             Destroy(obj.gameObject);
         }
 
-        #endregion
+        private void SetBarrelPool() {
+            _barrelPool = new ObjectPool<Barrel>(CreateBarrel, OnGetBarrel, OnReleaseBarrel, OnDestroyBarrel, _checkCollection, _defaultCapacity, _maxCapacity);
+        }
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void RollABarrel() {
             _barrelPool.Get();
         }
-
-        #endregion
-
-        #endregion
     }
 }

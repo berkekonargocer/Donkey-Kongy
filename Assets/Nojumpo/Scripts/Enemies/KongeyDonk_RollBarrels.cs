@@ -1,4 +1,3 @@
-using Nojumpo.Managers;
 using System.Collections;
 using UnityEngine;
 
@@ -6,46 +5,26 @@ namespace Nojumpo
 {
     public class KongeyDonk_RollBarrels : MonoBehaviour
     {
-        #region Fields
-
+        [Header("ROLL BARREL SETTINGS")]
         [SerializeField] private BarrelSpawner _barrelSpawner;
         private Animator _kongeyDonkAnimator;
 
-        #endregion
 
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             Timeline.StartTheGame += StartRollingBarrels;
         }
-
-        #endregion
-
-        #region OnDisable
 
         private void OnDisable() {
             Timeline.StartTheGame -= StartRollingBarrels;
         }
 
-        #endregion
-
-        #region Awake
-
         private void Awake() {
             SetComponents();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _kongeyDonkAnimator = GetComponent<Animator>();
         }
@@ -60,10 +39,8 @@ namespace Nojumpo
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", false);
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void StartRollingBarrels() {
             _kongeyDonkAnimator.SetBool("IsGameActive", true);
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", false);
@@ -72,7 +49,5 @@ namespace Nojumpo
         public void StopRollingBarrels() {
             _kongeyDonkAnimator.SetBool("IsGameActive", false);
         }
-
-        #endregion
     }
 }

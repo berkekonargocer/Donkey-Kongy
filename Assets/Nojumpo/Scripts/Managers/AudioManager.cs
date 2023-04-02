@@ -1,35 +1,21 @@
-using System;
 using UnityEngine;
 
 namespace Nojumpo.Managers
 {
     public class AudioManager : MonoBehaviour
     {
-        #region Instance
-
+        [Header("SINGLETON")]
         private static AudioManager _instance;
-
         public static AudioManager Instance { get { return _instance; } }
 
-        #endregion
 
-
-
-        #region Unity Methods
-
-        #region Awake 
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             InitializeSingleton();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void InitializeSingleton() {
             if (_instance == null)
             {
@@ -42,10 +28,8 @@ namespace Nojumpo.Managers
             }
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void PlayAudio(AudioSource audioSource) {
             audioSource.Play();
         }
@@ -54,7 +38,5 @@ namespace Nojumpo.Managers
             audioSource.clip = audioClip;
             audioSource.Play();
         }
-
-        #endregion
     }
 }

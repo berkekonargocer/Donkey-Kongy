@@ -1,73 +1,37 @@
-using Nojumpo.Managers;
 using UnityEngine;
 
 namespace Nojumpo
 {
     public class FireballPatrol : MonoBehaviour
     {
-        #region Fields
-
-        #region Movement Settings
-        [Header("Movement Settings")]
-
+        [Header("MOVEMENT SETTINGS")]
         [SerializeField] private float _moveSpeed = 2f;
         [SerializeField] private float _jumpVelocity = 12.0f;
-
+        private bool _isMovingRight = false;
         private Rigidbody2D _fireballRigidbody2D;
-
         private Vector3 _movementVector = Vector3.zero;
 
-        private bool _isMovingRight = false;
-
-        #endregion
-
-        #region Grounded Check and Wall Detection Settings
-
-        [Header("Grounded Check and Wall Detection Settings")]
+        [Header("GROUNDED CHECK AND WALL DETECTION SETTINGS")]
         [SerializeField] private float _nextStepGroundDetectionRayDistance = 0.8f;
         [SerializeField] private float _wallDetectionRayDistance = 0.5f;
         [SerializeField] private float _isGroundedCheckRayDistance = 0.5f;
-
         private Transform _nextStepGroundDetectionPosition;
         private Transform _isGroundedDetectionPosition;
-
-        RaycastHit2D[] _nextStepGroundDetectionRay = new RaycastHit2D[2];
-        RaycastHit2D[] _wallDetectionRay = new RaycastHit2D[1];
-        RaycastHit2D[] _isGroundedDetectionSphereRay = new RaycastHit2D[1];
-
-        #endregion
-
-        #region Layer Settings
-        [Header("Layer Settings")]
-
+        private RaycastHit2D[] _nextStepGroundDetectionRay = new RaycastHit2D[2];
+        private RaycastHit2D[] _wallDetectionRay = new RaycastHit2D[1];
+        private RaycastHit2D[] _isGroundedDetectionSphereRay = new RaycastHit2D[1];
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private LayerMask _ignoreWallDetectionRay;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             Timeline.StartTheGame += AddRigidbody2D;
         }
 
-        #endregion
-
-        #region OnDisable
-
         private void OnDisable() {
             Timeline.StartTheGame -= AddRigidbody2D;
         }
-
-        #endregion
-
-        #region Awake 
 
         private void Awake() {
             SetComponents();
@@ -76,22 +40,13 @@ namespace Nojumpo
             enabled = false;
         }
 
-        #endregion
-
-        #region Fixed Update
-
         private void FixedUpdate() {
             NextStepGroundAndWallDetectionRays();
             HandleMovement();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _nextStepGroundDetectionPosition = transform.GetChild(0).transform;
             _isGroundedDetectionPosition = transform.GetChild(1).transform;
@@ -153,26 +108,11 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void SetVelocitiesToZero() {
             _moveSpeed = 0;
             _jumpVelocity = 0;
         }
-
-        #endregion
-
-        #region Gizmos
-
-        private void OnDrawGizmos() {
-            Gizmos.color = Color.green;
-            Gizmos.DrawRay(_nextStepGroundDetectionPosition.position, Vector2.down);
-            Gizmos.DrawRay(transform.position, transform.right); // Not exactly the same distance! -0.5f
-            Gizmos.DrawRay(_isGroundedDetectionPosition.position, new Vector2(0, -_isGroundedCheckRayDistance));
-        }
-
-        #endregion
     }
 }

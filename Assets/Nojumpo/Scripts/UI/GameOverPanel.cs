@@ -1,48 +1,30 @@
-using UnityEngine;
 using DG.Tweening;
 using Nojumpo.Managers;
+using UnityEngine;
 
 namespace Nojumpo
 {
     public class GameOverPanel : MonoBehaviour
     {
-        #region Fields
-
+        [Header("COMPONENTS")]
         private CanvasGroup _canvasGroup;
 
-        #endregion
 
-        #region Unity Methods
-
-        #region OnEnable
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             EventSubscriptions();
         }
-
-        #endregion
-
-        #region OnDisable
 
         private void OnDisable() {
             EventUnsubscriptions();
         }
 
-        #endregion
-
-        #region Awake
-
         private void Awake() {
             SetComponents();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _canvasGroup = GetComponent<CanvasGroup>();
         }
@@ -66,7 +48,5 @@ namespace Nojumpo
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
         }
-
-        #endregion
     }
 }

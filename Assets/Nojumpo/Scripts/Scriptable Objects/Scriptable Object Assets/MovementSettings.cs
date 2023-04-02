@@ -5,8 +5,7 @@ namespace Nojumpo.ScriptableObjects
     [CreateAssetMenu(fileName = "NewPlayerMovementSettings", menuName = "Nojumpo/Scriptable Objects/Player/New Player Movement Settings")]
     public class MovementSettings : ScriptableObject
     {
-        #region Fields
-
+        
 #if UNITY_EDITOR
 
         [TextArea]
@@ -26,6 +25,6 @@ namespace Nojumpo.ScriptableObjects
         [SerializeField] private CollisionCheckSettings _collisionCheckSettings;
         public CollisionCheckSettings CollCheckSettings { get { return _collisionCheckSettings; } }
 
-        #endregion
+        
     }
 }

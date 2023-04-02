@@ -5,50 +5,24 @@ namespace Nojumpo
 {
     public class Barrel : MonoBehaviour
     {
-        #region Fields
-
-        #region Object Pooling
-
+        [Header("OBJECT POOLING")]
         private IObjectPool<Barrel> _barrelPool;
 
-        #endregion
-
-        #region Components
-
+        [Header("COMPONENTS")]
         private Rigidbody2D _barrelRigidbody2D;
 
-        #endregion
-
-        #region Momentum
-        [Header("Momentum")]
-
+        [Header("BARREL ROLL SETTINGS")]
         [SerializeField] private float _barrellRollVelocity;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
 
-        #endregion
-
-        #region OnBecameInvisible
-
         private void OnBecameInvisible() {
             _barrelPool?.Release(this);
         }
-
-        #endregion
-
-        #region OnCollisionEnter2D
 
         private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
@@ -57,12 +31,8 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #endregion
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _barrelRigidbody2D = GetComponent<Rigidbody2D>();
         }
@@ -71,14 +41,10 @@ namespace Nojumpo
             _barrelRigidbody2D.velocity = direction * velocity;
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void SetPool(IObjectPool<Barrel> barrelPool) {
             _barrelPool = barrelPool;
         }
-
-        #endregion
     }
 }

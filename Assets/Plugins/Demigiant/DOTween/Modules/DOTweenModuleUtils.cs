@@ -27,8 +27,7 @@ namespace DG.Tweening
     {
         static bool _initialized;
 
-        #region Reflection
-
+        
         /// <summary>
         /// Called via Reflection by DOTweenComponent on Awake
         /// </summary>
@@ -63,7 +62,7 @@ namespace DG.Tweening
 #pragma warning restore
 #endif
 
-        #endregion
+        
 
 #if UNITY_EDITOR
         // Fires OnApplicationPause in DOTweenComponent even when Editor is paused (otherwise it's only fired at runtime)
@@ -105,8 +104,7 @@ namespace DG.Tweening
 #endif
             }
 
-            #region Called via Reflection
-
+            
 
             // Called via Reflection by DOTweenPathInspector
             // Returns FALSE if the DOTween's Physics Module is disabled, or if there's no rigidbody attached
@@ -161,7 +159,7 @@ namespace DG.Tweening
                 return t;
             }
 
-            #endregion
+            
         }
     }
 }

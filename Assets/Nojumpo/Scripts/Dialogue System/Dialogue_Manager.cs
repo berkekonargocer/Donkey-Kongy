@@ -1,65 +1,36 @@
+using DG.Tweening;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
-using System.Threading.Tasks;
 
 namespace Nojumpo.Managers
 {
     [RequireComponent(typeof(AudioSource))]
     public class Dialogue_Manager : MonoBehaviour
     {
-
-        #region Fields
-
-        #region Dialogue UI
-        [Header("Dialogue UI")]
-
+        [Header("DIALOGUE UI")]
         [SerializeField] private GameObject _dialogueBox;
         [SerializeField] private Image _characterAvatar;
         [SerializeField] private TextMeshProUGUI _characterNameText;
         [SerializeField] private TextMeshProUGUI _dialogueText;
-
         private RectTransform _dialogueBoxRectTransform;
 
-        #endregion
-
-        #region Dialogue
-
+        [Header("DIALOGUE SETTINGS")]
         private AudioSource _dialogueAudio;
         private Dialogue_Dialogue _currentDialogue;
         private int _activeMessage = 0;
-
+        private Vector3 _normalScale = new Vector3(0.35f, 0.15f, 1.0f);
         public static bool IsDialogueActive { get; private set; } = false;
 
-        #endregion
 
-        #region Dialogue Box Animation
-
-        private Vector3 _normalScale = new Vector3(0.35f, 0.15f, 1.0f);
-
-        #endregion
-
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #endregion
-
-        #region Awake 
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
 
-        #endregion
 
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _dialogueAudio = GetComponent<AudioSource>();
             _dialogueBoxRectTransform = _dialogueBox.GetComponent<RectTransform>();
@@ -107,10 +78,8 @@ namespace Nojumpo.Managers
             }
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void OpenDialogue(Dialogue_Dialogue dialogue) {
             _currentDialogue = dialogue;
             _activeMessage = 0;
@@ -138,7 +107,5 @@ namespace Nojumpo.Managers
         public void StartDialogueBoxSetActiveCoroutine(bool isActive) {
             StartCoroutine(DialogueBoxSetActive(isActive));
         }
-
-        #endregion
     }
 }

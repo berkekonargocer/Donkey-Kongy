@@ -8,88 +8,42 @@ namespace Nojumpo
 {
     public class Player_Controller : MonoBehaviour
     {
-        #region Fields
-
-        #region Movement Settings
-        [Header("Movement Settings")]
-
+        [Header("MOVEMENT SETTINGS")]
         [SerializeField] private MovementSettings _playerMovementSettings;
-
-        private IMoveVelocity2D _playerMoveVelocity;
         private CollisionCheckSettings _playerCollisionCheckSettings;
         private Rigidbody2D _playerRigidbody2D;
-
-        #endregion
-
-        #region Animation Components
-
         private Animator _playerAnimator;
+        private IMoveVelocity2D _playerMoveVelocity;
 
-        #endregion
-
-        #region Audio Settings
-        [Header("Audio Settings")]
+        [Header("AUDIO SETTINGS")]
         [SerializeField] private AudioSource _jumpSFXSource;
-
         private AudioSource _playerAudioSource;
 
-        #endregion
-
-        #region Inputs
-
+        [Header("INPUT SETTINGS")]
         private Vector2 _moveInput = Vector2.zero;
-
         private bool _jumpInput = false;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
+        // --------------------- UNITY BUILT-IN METHODS ---------------------
         private void OnEnable() {
             EventSubscriptions();
         }
-
-
-        #endregion
-
-        #region OnDisable
 
         private void OnDisable() {
             EventUnsubscriptions();
         }
 
-        #endregion
-
-        #region Awake
-
         private void Awake() {
             SetComponents();
         }
-
-        #endregion
-
-        #region Update
 
         private void Update() {
             HandlePlayerJump();
             HandlePlayerMovement();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
-        #region Input Methods
-
+        // ------------------------ INPUT METHODS ------------------------
         private void OnMove(InputValue inputValue) {
             _moveInput = inputValue.Get<Vector2>();
         }
@@ -98,8 +52,8 @@ namespace Nojumpo
             _jumpInput = inputValue.isPressed;
         }
 
-        #endregion
 
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _playerMoveVelocity = GetComponent<IMoveVelocity2D>();
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
@@ -188,6 +142,5 @@ namespace Nojumpo
             enabled = false;
         }
 
-        #endregion
     }
 }

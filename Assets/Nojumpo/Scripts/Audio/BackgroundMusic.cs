@@ -5,46 +5,25 @@ namespace Nojumpo
 {
     public class BackgroundMusic : MonoBehaviour
     {
-        #region Fields
-
+        [Header("COMPONENTS")]
         private AudioSource _bgmAudioSource;
 
-        #endregion
 
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             GameManager.OnPlayerDie += StopBGM;
         }
-
-        #endregion
-
-        #region OnDisable
 
         private void OnDisable() {
             GameManager.OnPlayerDie -= StopBGM;
         }
 
-        #endregion
-
-        #region Awake
-
-        private void Awake()
-        {
+        private void Awake() {
             SetComponents();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _bgmAudioSource = GetComponent<AudioSource>();
         }
@@ -52,7 +31,5 @@ namespace Nojumpo
         private void StopBGM(int timeScale, bool isDead) {
             _bgmAudioSource.Stop();
         }
-
-        #endregion
     }
 }

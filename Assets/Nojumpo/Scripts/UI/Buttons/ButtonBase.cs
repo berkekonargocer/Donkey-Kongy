@@ -5,46 +5,27 @@ namespace Nojumpo.Buttons
 {
     public class ButtonBase : MonoBehaviour
     {
-        #region Field
-
-        #region Animation Settings
-
+        [Header("ANIMATION SETTINGS")]
         [SerializeField] private float _animationDuration;
         [SerializeField] private float _endScale;
-
         private Vector3 _initialScaleVector;
         private Vector3 _endScaleVector;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _initialScaleVector = transform.localScale;
             _endScaleVector = Vector3.one * _endScale;
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void ShrinkTheButton() {
             transform.DOScale(_endScaleVector, _animationDuration);
         }
@@ -52,7 +33,5 @@ namespace Nojumpo.Buttons
         public void ResetButtonScale() {
             transform.DOScale(_initialScaleVector, _animationDuration);
         }
-
-        #endregion
     }
 }

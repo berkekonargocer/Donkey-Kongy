@@ -5,7 +5,6 @@ namespace Nojumpo.ScriptableObjects
     [CreateAssetMenu(fileName = "NewCollisionCheckSettings", menuName = "Nojumpo/Scriptable Objects/Collision Check/New Collision Check Settings")]
     public class CollisionCheckSettings : ScriptableObject
     {
-        #region Fields
 
 #if UNITY_EDITOR
 
@@ -25,7 +24,5 @@ namespace Nojumpo.ScriptableObjects
 
         [SerializeField] private bool _isClimbing = false;
         public bool IsClimbing { get { return _isClimbing; } set { _isClimbing = value; } }
-
-        #endregion
     }
 }

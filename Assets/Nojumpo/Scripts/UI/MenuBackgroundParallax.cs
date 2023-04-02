@@ -4,44 +4,22 @@ namespace Nojumpo
 {
     public class MenuBackgroundParallax : MonoBehaviour
     {
-        #region Fields
-
-        #region Components
-
+        [Header("COMPONENTS")]
         private Transform _backgroundTransform;
 
-        #endregion
-
-        #region Scrolling Settings
-
-        [Header("Scrolling Settings")]
-
+        [Header("PARALLAX SETTINGS")]
         [SerializeField] private float _scrollingSpeed = 2.75f;
-
         private const float BOTTOM_LIMIT_POSITION = -11.55f;
         private const float Y_POSITION_FOR_RESET = 16.58f;
-
         private Vector3 _scrollDirection = Vector3.down;
         private Vector3 _positionAfterReset = new Vector3(0f, Y_POSITION_FOR_RESET, 0f);
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
             SetScrollingSpeed();
         }
-
-        #endregion
-
-        #region Update
 
         private void Update() {
             VerticalScroll();
@@ -52,13 +30,8 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _backgroundTransform = gameObject.transform;
         }
@@ -74,7 +47,5 @@ namespace Nojumpo
         private void ResetPosition() {
             _backgroundTransform.position = _positionAfterReset;
         }
-
-        #endregion
     }
 }

@@ -5,58 +5,28 @@ namespace Nojumpo
 {
     public class Player_CheckCollision : MonoBehaviour
     {
-        #region Fields
-
-        #region Collision Check Settings
-
-        [Header("Collision Check Settings")]
-
+        [Header("COLLISION CHECK SETTINGS")]
         [SerializeField] private CollisionCheckSettings _playerCollisionCheckSettings;
-
         private LayerMask _groundLayer;
         private LayerMask _ladderLayer;
         private LayerMask _playerLayer;
         private CapsuleCollider2D _playerCollider2D;
-
-        Collider2D[] _collisionCheckResults = new Collider2D[4];
-
+        private Collider2D[] _collisionCheckResults = new Collider2D[4];
+        private Animator _playerAnimator;
         private bool _isGrounded = true;
 
-        #endregion
 
-        #region Animator Settings
-
-        private Animator _playerAnimator;
-
-        #endregion
-
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
-
-        #endregion
-
-        #region Fixed Update
 
         private void FixedUpdate() {
             CheckCollision();
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _playerCollider2D = GetComponent<CapsuleCollider2D>();
             _playerAnimator = GetComponent<Animator>();
@@ -95,7 +65,5 @@ namespace Nojumpo
             _playerAnimator.SetBool("IsClimbing", _playerCollisionCheckSettings.IsClimbing);
             _playerAnimator.SetBool("IsGrounded", _playerCollisionCheckSettings.IsGrounded);
         }
-
-        #endregion
     }
 }

@@ -6,63 +6,30 @@ namespace Nojumpo.Managers
 {
     public class GameManager : MonoBehaviour
     {
-        #region Instance
-
+        [Header("SINGLETON")]
         private static GameManager _instance;
-
         public static GameManager Instance { get { return _instance; } }
 
-        #endregion
-
-        #region Fields
-
-        #region Events
-
+        [Header("EVENTS")]
         public static Action<int, bool> RestartLevel;
         public static Action<int, bool> OnPlayerDie;
         public static Action Deadge;
 
-        #endregion
-
-        #region State Bools
-
         private bool _isDead = false;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region OnEnable
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnEnable() {
             EventSubscriptions();
         }
-
-
-        #endregion
-
-        #region OnDisable
 
         private void OnDisable() {
             EventUnsubscriptions();
         }
 
-
-        #endregion
-
-        #region Awake
-
         private void Awake() {
             InitializeSingleton();
         }
-
-        #endregion
-
-        #region Update
 
         private void Update() {
             if (_isDead && Input.GetKeyDown(KeyCode.Return))
@@ -71,13 +38,8 @@ namespace Nojumpo.Managers
             }
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void InitializeSingleton() {
             if (_instance == null)
             {
@@ -130,14 +92,10 @@ namespace Nojumpo.Managers
             _isDead = isDead;
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void LoadScene(int level) {
             SceneManager.LoadScene(level);
         }
-
-        #endregion
     }
 }

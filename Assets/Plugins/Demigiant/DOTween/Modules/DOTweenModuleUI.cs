@@ -19,10 +19,8 @@ namespace DG.Tweening
 {
 	public static class DOTweenModuleUI
     {
-        #region Shortcuts
-
-        #region CanvasGroup
-
+        
+        
         /// <summary>Tweens a CanvasGroup's alpha color to the given value.
         /// Also stores the canvasGroup as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -33,10 +31,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region Graphic
-
+        
         /// <summary>Tweens an Graphic's color to the given value.
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -57,10 +54,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region Image
-
+        
         /// <summary>Tweens an Image's color to the given value.
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -117,10 +113,9 @@ namespace DG.Tweening
             return s;
         }
 
-        #endregion
+        
 
-        #region LayoutElement
-
+        
         /// <summary>Tweens an LayoutElement's flexibleWidth/Height to the given value.
         /// Also stores the LayoutElement as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -163,10 +158,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region Outline
-
+        
         /// <summary>Tweens a Outline's effectColor to the given value.
         /// Also stores the Outline as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -197,10 +191,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region RectTransform
-
+        
         /// <summary>Tweens a RectTransform's anchoredPosition to the given value.
         /// Also stores the RectTransform as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -381,8 +374,7 @@ namespace DG.Tweening
                 .SetTarget(target).SetSpecialStartupMode(SpecialStartupMode.SetShake).SetOptions(snapping);
         }
 
-        #region Special
-
+        
         /// <summary>Tweens a RectTransform's anchoredPosition to the given value, while also applying a jump effect along the Y axis.
         /// Returns a Sequence instead of a Tweener.
         /// Also stores the RectTransform as the tween's target so it can be used for filtered operations</summary>
@@ -421,12 +413,11 @@ namespace DG.Tweening
             return s;
         }
 
-        #endregion
+        
 
-        #endregion
+        
 
-        #region ScrollRect
-
+        
         /// <summary>Tweens a ScrollRect's horizontal/verticalNormalizedPosition to the given value.
         /// Also stores the ScrollRect as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -459,10 +450,9 @@ namespace DG.Tweening
                 .SetOptions(snapping).SetTarget(target);
         }
 
-        #endregion
+        
 
-        #region Slider
-
+        
         /// <summary>Tweens a Slider's value to the given value.
         /// Also stores the Slider as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -474,10 +464,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region Text
-
+        
         /// <summary>Tweens a Text's color to the given value.
         /// Also stores the Text as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
@@ -542,12 +531,10 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region Blendables
-
-        #region Graphic
-
+        
+        
         /// <summary>Tweens a Graphic's color to the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
         /// instead than fight each other as multiple DOColor would do.
@@ -565,10 +552,9 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+        
 
-        #region Image
-
+        
         /// <summary>Tweens a Image's color to the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
         /// instead than fight each other as multiple DOColor would do.
@@ -586,10 +572,9 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+        
 
-        #region Text
-
+        
         /// <summary>Tweens a Text's color BY the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
         /// instead than fight each other as multiple DOColor would do.
@@ -607,12 +592,11 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+        
 
-        #endregion
+        
 
-        #region Shapes
-
+        
         /// <summary>Tweens a RectTransform's anchoredPosition so that it draws a circle around the given center.
         /// Also stores the RectTransform as the tween's target so it can be used for filtered operations.<para/>
         /// IMPORTANT: SetFrom(value) requires a <see cref="Vector2"/> instead of a float, where the X property represents the "from degrees value"</summary>
@@ -632,9 +616,9 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #endregion
+        
 
         // █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
         // ███ INTERNAL CLASSES ████████████████████████████████████████████████████████████████████████████████████████████████

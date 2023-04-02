@@ -6,23 +6,11 @@ namespace Nojumpo
 {
     public class Player_Collision : MonoBehaviour
     {
-        #region Fields
-
-        #region Audios
-
-        [Header("Hiy By Deadly Object SFX")]
+        [Header("COMPONENTS")]
         [SerializeField] private AudioSource _deadlyObjectHitSFXSource;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Collision Enter
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
@@ -34,19 +22,11 @@ namespace Nojumpo
             }
         }
 
-        #endregion
-
-        #region Trigger Enter
-
         private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();
             }
         }
-
-        #endregion
-
-        #endregion
     }
 }

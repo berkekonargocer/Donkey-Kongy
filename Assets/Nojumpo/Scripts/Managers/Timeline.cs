@@ -6,31 +6,17 @@ namespace Nojumpo
 {
     public class Timeline : MonoBehaviour
     {
-        #region Fields
-
-        #region Events
-
+        [Header("EVENTS")]
         public static Action StartTheGame;
         public static Action GameFinishedAnimationStart;
 
-        #endregion
-
-        #region Cutscene Skip Settings
-
+        [Header("CUTSCENE SKIP SETTINGS")]
         private PlayableDirector _currentDirector;
         private bool _sceneSkipped = false;
         private float _timeToSkipTo = 0;
 
-        #endregion
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Update
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Return) && !_sceneSkipped)
             {
@@ -38,22 +24,15 @@ namespace Nojumpo
             }
         }
 
-        #endregion
 
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SkipCutscene() {
             _currentDirector.time = _timeToSkipTo;
             _sceneSkipped = true;
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public void StartGame() {
             StartTheGame?.Invoke();
         }
@@ -70,7 +49,5 @@ namespace Nojumpo
         public void GetSkipTime(float skipTime) {
             _timeToSkipTo = skipTime;
         }
-
-        #endregion
     }
 }

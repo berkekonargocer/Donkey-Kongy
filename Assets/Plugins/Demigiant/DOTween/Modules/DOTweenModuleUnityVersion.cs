@@ -19,10 +19,8 @@ namespace DG.Tweening
 	public static class DOTweenModuleUnityVersion
     {
 #if UNITY_4_3 || UNITY_4_4 || UNITY_4_5 || UNITY_4_6 || UNITY_5 || UNITY_2017_1_OR_NEWER
-        #region Unity 4.3 or Newer
-
-        #region Material
-
+        
+        
         /// <summary>Tweens a Material's color using the given gradient
         /// (NOTE 1: only uses the colors of the gradient, not the alphas - NOTE 2: creates a Sequence, not a Tweener).
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
@@ -72,16 +70,14 @@ namespace DG.Tweening
             return s;
         }
 
-        #endregion
+        
 
-        #endregion
+        
 #endif
 
 #if UNITY_5_3_OR_NEWER || UNITY_2017_1_OR_NEWER
-        #region Unity 5.3 or Newer
-
-        #region CustomYieldInstructions
-
+        
+        
         /// <summary>
         /// Returns a <see cref="CustomYieldInstruction"/> that waits until the tween is killed or complete.
         /// It can be used inside a coroutine as a yield.
@@ -170,16 +166,14 @@ namespace DG.Tweening
             return new DOTweenCYInstruction.WaitForStart(t);
         }
 
-        #endregion
+        
 
-        #endregion
+        
 #endif
 
 #if UNITY_2018_1_OR_NEWER
-        #region Unity 2018.1 or Newer
-
-        #region Material
-
+        
+        
         /// <summary>Tweens a Material's named texture offset property with the given ID to the given value.
         /// Also stores the material as the tween's target so it can be used for filtered operations</summary>
         /// <param name="endValue">The end value to reach</param>
@@ -212,14 +206,12 @@ namespace DG.Tweening
             return t;
         }
 
-        #endregion
+        
 
-        #region .NET 4.6 or Newer
-
+        
 #if UNITY_2018_1_OR_NEWER && (NET_4_6 || NET_STANDARD_2_0)
 
-        #region Async Instructions
-
+        
         /// <summary>
         /// Returns an async <see cref="System.Threading.Tasks.Task"/> that waits until the tween is killed or complete.
         /// It can be used inside an async operation.
@@ -307,12 +299,12 @@ namespace DG.Tweening
             while (t.active && !t.playedOnce) await System.Threading.Tasks.Task.Yield();
         }
 
-        #endregion
+        
 #endif
 
-        #endregion
+        
 
-        #endregion
+        
 #endif
     }
 

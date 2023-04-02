@@ -1,46 +1,29 @@
-using UnityEngine;
 using Nojumpo.Interfaces;
+using UnityEngine;
 
 namespace Nojumpo
 {
     public class MoveVelocity_Rigidbody2D : MonoBehaviour, IMoveVelocity2D
     {
-        #region Fields
-
+        [Header("COMPONENTS")]
         private Rigidbody2D _rigidbody2D;
         private Animator _animator;
 
+        [Header("MOVE VELOCITY SETTINGS")]
         private Vector2 _moveVelocity = Vector2.zero;
 
 
-        #endregion
-
-
-
-        #region Unity Methods
-
-        #region Awake
-
+        // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
             SetComponents();
         }
-
-        #endregion
-
-        #region Fixed Update
 
         private void FixedUpdate() {
             ApplyPlayerMovement();
         }
 
 
-        #endregion
-
-        #endregion
-
-
-        #region Custom Private Methods
-
+        // ------------------------ CUSTOM PRIVATE METHODS ------------------------
         private void SetComponents() {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
@@ -52,10 +35,8 @@ namespace Nojumpo
             _animator.SetFloat("MoveY", _moveVelocity.y);
         }
 
-        #endregion
 
-        #region Custom Public Methods
-
+        // ------------------------ CUSTOM PUBLIC METHODS ------------------------
         public Vector2 GetVelocity() {
             return _moveVelocity;
         }
@@ -83,7 +64,5 @@ namespace Nojumpo
         public void MultiplyVelocityY(float moveVelocityY) {
             _moveVelocity.y *= moveVelocityY;
         }
-
-        #endregion
     }
 }
