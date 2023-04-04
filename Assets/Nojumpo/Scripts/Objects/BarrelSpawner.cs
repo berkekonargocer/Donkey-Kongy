@@ -15,7 +15,7 @@ namespace Nojumpo
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
         private void Awake() {
-            SetBarrelPool();
+            CreateBarrelPool();
         }
 
 
@@ -24,7 +24,7 @@ namespace Nojumpo
             Barrel spawnBarrel = Instantiate(_barrelPrefab, transform.position, Quaternion.identity);
             spawnBarrel.SetPool(_barrelPool);
 
-            return spawnBarrel; // return the object
+            return spawnBarrel;
         }
 
         private void OnGetBarrel(Barrel obj) {
@@ -40,7 +40,7 @@ namespace Nojumpo
             Destroy(obj.gameObject);
         }
 
-        private void SetBarrelPool() {
+        private void CreateBarrelPool() {
             _barrelPool = new ObjectPool<Barrel>(CreateBarrel, OnGetBarrel, OnReleaseBarrel, OnDestroyBarrel, _checkCollection, _defaultCapacity, _maxCapacity);
         }
 
