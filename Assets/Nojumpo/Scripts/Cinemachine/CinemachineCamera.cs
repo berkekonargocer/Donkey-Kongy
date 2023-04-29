@@ -68,6 +68,8 @@ namespace Nojumpo
             float elapsed = 0.0f;
             while (elapsed < duration)
             {
+                Vector3 position = transform.position;
+                _cinemachineVirtualCamera.transform.position = Vector3.MoveTowards(position, new Vector3(position.x, -1.09f, position.z), elapsed / duration);
                 _cinemachineVirtualCamera.m_Lens.OrthographicSize = Mathf.MoveTowards(_cinemachineVirtualCamera.m_Lens.OrthographicSize, endValue, elapsed / duration);
                 elapsed += Time.unscaledDeltaTime;
                 yield return null;
