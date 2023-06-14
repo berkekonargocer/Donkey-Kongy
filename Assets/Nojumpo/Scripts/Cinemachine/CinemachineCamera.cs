@@ -8,29 +8,29 @@ namespace Nojumpo
     public class CinemachineCamera : MonoBehaviour
     {
         [Header("COMPONENTS")]
-        private CinemachineVirtualCamera _cinemachineVirtualCamera;
-        private CinemachineBasicMultiChannelPerlin _cinemachineBasicMultiChannelPerlin;
+        CinemachineVirtualCamera _cinemachineVirtualCamera;
+        CinemachineBasicMultiChannelPerlin _cinemachineBasicMultiChannelPerlin;
 
         [Header("CAMERA SHAKE SETTINGS")]
-        private float _shakeTimer;
+        float _shakeTimer;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void OnEnable() {
+        void OnEnable() {
             GameManager.OnPlayerDie += StartChangeOrtographicSizeCoroutine;
             GameManager.RestartLevel += ResetOrtographicSize;
         }
 
-        private void OnDisable() {
+        void OnDisable() {
             GameManager.OnPlayerDie -= StartChangeOrtographicSizeCoroutine;
             GameManager.RestartLevel -= ResetOrtographicSize;
         }
 
-        private void Awake() {
+        void Awake() {
             SetComponents();
         }
 
-        private void Update() {
+        void Update() {
             if (_shakeTimer > 0)
             {
                 CalculateShakeTime();
@@ -39,12 +39,12 @@ namespace Nojumpo
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+        void SetComponents() {
             _cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
             _cinemachineBasicMultiChannelPerlin = _cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         }
 
-        private void CalculateShakeTime() {
+        void CalculateShakeTime() {
             _shakeTimer -= Time.deltaTime;
 
             if (_shakeTimer <= 0.0f)
@@ -53,15 +53,15 @@ namespace Nojumpo
             }
         }
 
-        private void ResetOrtographicSize(int timeScale, bool isDead) {
+        void ResetOrtographicSize(int timeScale, bool isDead) {
             _cinemachineVirtualCamera.m_Lens.OrthographicSize = 8.25f;
         }
 
-        private void StartChangeOrtographicSizeCoroutine(int timeScale, bool isDead) {
+        void StartChangeOrtographicSizeCoroutine(int timeScale, bool isDead) {
             StartCoroutine(ChangeOrtographicSizeSmoothlyCoroutine(0.05f, 35f));
         }
 
-        private IEnumerator ChangeOrtographicSizeSmoothlyCoroutine(float endValue, float duration) {
+        IEnumerator ChangeOrtographicSizeSmoothlyCoroutine(float endValue, float duration) {
 
             yield return new WaitForSecondsRealtime(2.5f);
 

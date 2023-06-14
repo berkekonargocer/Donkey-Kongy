@@ -7,11 +7,11 @@ namespace Nojumpo
     public class Player_Collision : MonoBehaviour
     {
         [Header("COMPONENTS")]
-        [SerializeField] private AudioSource _deadlyObjectHitSFXSource;
+        [SerializeField]  AudioSource _deadlyObjectHitSFXSource;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void OnCollisionEnter2D(Collision2D collision) {
+         void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Deadly"))
             {
                 CinemachineCamera cinemachineCamera = GameObject.Find("Cinemachine Virtual Camera 1").GetComponent<CinemachineCamera>();
@@ -22,7 +22,7 @@ namespace Nojumpo
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision) {
+         void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.TryGetComponent(out ICollectable collectable))
             {
                 collectable.Collect();

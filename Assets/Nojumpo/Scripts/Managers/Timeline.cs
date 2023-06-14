@@ -11,13 +11,13 @@ namespace Nojumpo
         public static Action GameFinishedAnimationStart;
 
         [Header("CUTSCENE SKIP SETTINGS")]
-        private PlayableDirector _currentDirector;
-        private bool _sceneSkipped = false;
-        private float _timeToSkipTo = 0;
+         PlayableDirector _currentDirector;
+         bool _sceneSkipped = false;
+         float _timeToSkipTo = 0;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Update() {
+         void Update() {
             if (Input.GetKeyDown(KeyCode.Return) && !_sceneSkipped)
             {
                 SkipCutscene();
@@ -26,7 +26,7 @@ namespace Nojumpo
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SkipCutscene() {
+         void SkipCutscene() {
             _currentDirector.time = _timeToSkipTo;
             _sceneSkipped = true;
         }

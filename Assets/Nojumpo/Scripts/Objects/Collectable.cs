@@ -9,20 +9,20 @@ namespace Nojumpo
     public class Collectable : MonoBehaviour, ICollectable
     {
         [Header("ITEM TYPE SETTINGS")]
-        [SerializeField] private ItemType _itemType;
+        [SerializeField]  ItemType _itemType;
         public ItemType ItemType { get { return _itemType; } }
 
         [Header("ANIMATION SETTINGS")]
-        [SerializeField] private GameObject _uiPositionObject;
-        [SerializeField] private float _animationTime = 2.5f;
+        [SerializeField]  GameObject _uiPositionObject;
+        [SerializeField]  float _animationTime = 2.5f;
 
         [Header("SOUND EFFECTS SETTINGS")]
-        [SerializeField] private AudioSource _collectAudioSource;
-        [SerializeField] private AudioClip _collectSFXAudio;
+        [SerializeField]  AudioSource _collectAudioSource;
+        [SerializeField]  AudioClip _collectSFXAudio;
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void PlayCollectAnimation() {
+         void PlayCollectAnimation() {
             transform.parent = _uiPositionObject.transform;
             gameObject.transform.DOLocalMove(Vector3.zero, _animationTime).SetUpdate(true);
         }

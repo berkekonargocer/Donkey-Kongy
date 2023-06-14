@@ -10,33 +10,33 @@ namespace Nojumpo.Managers
     public class Dialogue_Manager : MonoBehaviour
     {
         [Header("DIALOGUE UI")]
-        [SerializeField] private GameObject _dialogueBox;
-        [SerializeField] private Image _characterAvatar;
-        [SerializeField] private TextMeshProUGUI _characterNameText;
-        [SerializeField] private TextMeshProUGUI _dialogueText;
-        private RectTransform _dialogueBoxRectTransform;
+        [SerializeField]  GameObject _dialogueBox;
+        [SerializeField]  Image _characterAvatar;
+        [SerializeField]  TextMeshProUGUI _characterNameText;
+        [SerializeField]  TextMeshProUGUI _dialogueText;
+         RectTransform _dialogueBoxRectTransform;
 
         [Header("DIALOGUE SETTINGS")]
-        private AudioSource _dialogueAudio;
-        private Dialogue_Dialogue _currentDialogue;
-        private int _activeMessage = 0;
-        private Vector3 _normalScale = new Vector3(0.35f, 0.15f, 1.0f);
-        public static bool IsDialogueActive { get; private set; } = false;
+         AudioSource _dialogueAudio;
+         Dialogue_Dialogue _currentDialogue;
+         int _activeMessage = 0;
+         Vector3 _normalScale = new Vector3(0.35f, 0.15f, 1.0f);
+        public static bool IsDialogueActive { get;  set; } = false;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+         void Awake() {
             SetComponents();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+         void SetComponents() {
             _dialogueAudio = GetComponent<AudioSource>();
             _dialogueBoxRectTransform = _dialogueBox.GetComponent<RectTransform>();
         }
 
-        private void DisplayMessage() {
+         void DisplayMessage() {
             Dialogue_Message messageToDisplay = _currentDialogue.dialogueMessages[_activeMessage];
 
             Dialogue_Character characterToDisplay = _currentDialogue.dialogueCharacters[messageToDisplay.characterId];
@@ -49,7 +49,7 @@ namespace Nojumpo.Managers
             IsDialogueActive = true;
         }
 
-        private IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float waitTimeBetweenChars) {
+         IEnumerator TypeSentence(Dialogue_Character dialogueCharacter, string sentence, float waitTimeBetweenChars) {
             _dialogueText.text = "";
 
             foreach (char letter in sentence.ToCharArray())
@@ -63,7 +63,7 @@ namespace Nojumpo.Managers
             }
         }
 
-        private IEnumerator DialogueBoxSetActive(bool isActive) {
+         IEnumerator DialogueBoxSetActive(bool isActive) {
 
             if (isActive == true)
             {

@@ -5,26 +5,26 @@ namespace Nojumpo.ScriptableObjects
     [CreateAssetMenu(fileName = "NewPlayerMovementSettings", menuName = "Nojumpo/Scriptable Objects/Player/New Player Movement Settings")]
     public class MovementSettings : ScriptableObject
     {
-        
+
 #if UNITY_EDITOR
 
         [TextArea]
-        [SerializeField] private string _developerDescription;
+        [SerializeField] string _developerDescription;
 
 #endif
 
-        [SerializeField] private float _movementSpeed = 15.0f;
-        public float MovementSpeed { get { return _movementSpeed; } private set { _movementSpeed = value; } }
+        [SerializeField] float _movementSpeed = 15.0f;
+        public float MovementSpeed { get { return _movementSpeed; } set { _movementSpeed = value; } }
 
-        [SerializeField] private float _jumpVelocity = 10.0f;
-        public float JumpVelocity { get { return _jumpVelocity; } private set { _jumpVelocity = value; } }
+        [SerializeField] float _jumpVelocity = 10.0f;
+        public float JumpVelocity { get { return _jumpVelocity; } set { _jumpVelocity = value; } }
 
-        [SerializeField] private float _climbingSpeedOffset = 0.5f;
-        public float ClimbingSpeedOffset { get { return _climbingSpeedOffset; } private set { _climbingSpeedOffset = value; } }
+        [SerializeField] float _climbingSpeedOffset = 0.5f;
+        public float ClimbingSpeedOffset { get { return _climbingSpeedOffset; } set { _climbingSpeedOffset = value; } }
 
-        [SerializeField] private CollisionCheckSettings _collisionCheckSettings;
+        [SerializeField] CollisionCheckSettings _collisionCheckSettings;
         public CollisionCheckSettings CollCheckSettings { get { return _collisionCheckSettings; } }
 
-        
+
     }
 }

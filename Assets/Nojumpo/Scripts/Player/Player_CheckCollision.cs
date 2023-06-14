@@ -6,28 +6,28 @@ namespace Nojumpo
     public class Player_CheckCollision : MonoBehaviour
     {
         [Header("COLLISION CHECK SETTINGS")]
-        [SerializeField] private CollisionCheckSettings _playerCollisionCheckSettings;
-        private LayerMask _groundLayer;
-        private LayerMask _ladderLayer;
-        private LayerMask _playerLayer;
-        private CapsuleCollider2D _playerCollider2D;
-        private Collider2D[] _collisionCheckResults = new Collider2D[4];
-        private Animator _playerAnimator;
-        private bool _isGrounded = true;
+        [SerializeField]  CollisionCheckSettings _playerCollisionCheckSettings;
+         LayerMask _groundLayer;
+         LayerMask _ladderLayer;
+         LayerMask _playerLayer;
+         CapsuleCollider2D _playerCollider2D;
+         Collider2D[] _collisionCheckResults = new Collider2D[4];
+         Animator _playerAnimator;
+         bool _isGrounded = true;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+         void Awake() {
             SetComponents();
         }
 
-        private void FixedUpdate() {
+         void FixedUpdate() {
             CheckCollision();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+         void SetComponents() {
             _playerCollider2D = GetComponent<CapsuleCollider2D>();
             _playerAnimator = GetComponent<Animator>();
             _groundLayer = LayerMask.NameToLayer("Ground");
@@ -35,7 +35,7 @@ namespace Nojumpo
             _playerLayer = LayerMask.NameToLayer("Player");
         }
 
-        private void CheckCollision() {
+         void CheckCollision() {
             _playerCollisionCheckSettings.IsClimbing = false;
             _isGrounded = false;
 

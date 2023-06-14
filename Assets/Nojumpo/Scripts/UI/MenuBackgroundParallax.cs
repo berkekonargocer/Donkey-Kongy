@@ -5,23 +5,23 @@ namespace Nojumpo
     public class MenuBackgroundParallax : MonoBehaviour
     {
         [Header("COMPONENTS")]
-        private Transform _backgroundTransform;
+         Transform _backgroundTransform;
 
         [Header("PARALLAX SETTINGS")]
-        [SerializeField] private float _scrollingSpeed = 2.75f;
-        private const float BOTTOM_LIMIT_POSITION = -11.55f;
-        private const float Y_POSITION_FOR_RESET = 16.58f;
-        private Vector3 _scrollDirection = Vector3.down;
-        private Vector3 _positionAfterReset = new Vector3(0f, Y_POSITION_FOR_RESET, 0f);
+        [SerializeField]  float _scrollingSpeed = 2.75f;
+         const float BOTTOM_LIMIT_POSITION = -11.55f;
+         const float Y_POSITION_FOR_RESET = 16.58f;
+         Vector3 _scrollDirection = Vector3.down;
+         Vector3 _positionAfterReset = new Vector3(0f, Y_POSITION_FOR_RESET, 0f);
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+         void Awake() {
             SetComponents();
             SetScrollingSpeed();
         }
 
-        private void Update() {
+         void Update() {
             VerticalScroll();
 
             if (_backgroundTransform.position.y < BOTTOM_LIMIT_POSITION)
@@ -32,19 +32,19 @@ namespace Nojumpo
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+         void SetComponents() {
             _backgroundTransform = gameObject.transform;
         }
 
-        private void VerticalScroll() {
+         void VerticalScroll() {
             _backgroundTransform.position += _scrollDirection * Time.deltaTime;
         }
 
-        private void SetScrollingSpeed() {
+         void SetScrollingSpeed() {
             _scrollDirection = new Vector3(0, -1 * _scrollingSpeed, 0);
         }
 
-        private void ResetPosition() {
+         void ResetPosition() {
             _backgroundTransform.position = _positionAfterReset;
         }
     }

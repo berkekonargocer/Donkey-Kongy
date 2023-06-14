@@ -5,7 +5,7 @@ namespace Nojumpo.Helper
     public static class Helpers
     {
 
-        private static Camera _camera;
+         static Camera _camera;
 
         public static Camera MainCamera {
             get

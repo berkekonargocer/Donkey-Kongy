@@ -9,7 +9,7 @@ namespace Nojumpo.ScriptableObjects
 #if UNITY_EDITOR
 
         [TextArea]
-        [SerializeField] private string _developerDescription;
+        [SerializeField]  string _developerDescription;
 
 #endif 
 

@@ -9,20 +9,20 @@ namespace Nojumpo.ScriptableObjects
 #if UNITY_EDITOR
 
         [TextArea]
-        [SerializeField] private string _developerDescription;
+        [SerializeField]  string _developerDescription;
 
 #endif
 
-        [SerializeField] private float _colliderXSizeOffset = 0.1f;
-        public float ColliderXSizeOffset { get { return _colliderXSizeOffset; } private set { _colliderXSizeOffset = value; } }
+        [SerializeField]  float _colliderXSizeOffset = 0.1f;
+        public float ColliderXSizeOffset { get { return _colliderXSizeOffset; }  set { _colliderXSizeOffset = value; } }
 
-        [SerializeField] private float _colliderYSizeOffset = 2f;
-        public float ColliderYSizeOffset { get { return _colliderYSizeOffset; } private set { _colliderYSizeOffset = value; } }
+        [SerializeField]  float _colliderYSizeOffset = 2f;
+        public float ColliderYSizeOffset { get { return _colliderYSizeOffset; }  set { _colliderYSizeOffset = value; } }
 
-        [SerializeField] private bool _isGrounded = true;
+        [SerializeField]  bool _isGrounded = true;
         public bool IsGrounded { get { return _isGrounded; } set { _isGrounded = value; } }
 
-        [SerializeField] private bool _isClimbing = false;
+        [SerializeField]  bool _isClimbing = false;
         public bool IsClimbing { get { return _isClimbing; } set { _isClimbing = value; } }
     }
 }

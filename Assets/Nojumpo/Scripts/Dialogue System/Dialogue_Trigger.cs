@@ -6,7 +6,7 @@ namespace Nojumpo
     public class Dialogue_Trigger : MonoBehaviour
     {
         [Header("COMPONENTS")]
-        [SerializeField] private Dialogue_Dialogue[] _dialoguesToTrigger;
+        [SerializeField]  Dialogue_Dialogue[] _dialoguesToTrigger;
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------

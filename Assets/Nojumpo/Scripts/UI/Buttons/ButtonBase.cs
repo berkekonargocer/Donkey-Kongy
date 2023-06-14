@@ -6,20 +6,20 @@ namespace Nojumpo.Buttons
     public class ButtonBase : MonoBehaviour
     {
         [Header("ANIMATION SETTINGS")]
-        [SerializeField] private float _animationDuration;
-        [SerializeField] private float _endScale;
-        private Vector3 _initialScaleVector;
-        private Vector3 _endScaleVector;
+        [SerializeField] float _animationDuration;
+        [SerializeField] float _endScale;
+        Vector3 _initialScaleVector;
+        Vector3 _endScaleVector;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+        void Awake() {
             SetComponents();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+        void SetComponents() {
             _initialScaleVector = transform.localScale;
             _endScaleVector = Vector3.one * _endScale;
         }

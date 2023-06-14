@@ -6,30 +6,30 @@ namespace Nojumpo
     public class MoveVelocity_Rigidbody2D : MonoBehaviour, IMoveVelocity2D
     {
         [Header("COMPONENTS")]
-        private Rigidbody2D _rigidbody2D;
-        private Animator _animator;
+        Rigidbody2D _rigidbody2D;
+        Animator _animator;
 
         [Header("MOVE VELOCITY SETTINGS")]
-        private Vector2 _moveVelocity = Vector2.zero;
+        Vector2 _moveVelocity = Vector2.zero;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+        void Awake() {
             SetComponents();
         }
 
-        private void FixedUpdate() {
+        void FixedUpdate() {
             ApplyPlayerMovement();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+        void SetComponents() {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
         }
 
-        private void ApplyPlayerMovement() {
+        void ApplyPlayerMovement() {
             _rigidbody2D.MovePosition(_rigidbody2D.position + _moveVelocity * Time.fixedDeltaTime);
             _animator.SetFloat("MoveX", _moveVelocity.x);
             _animator.SetFloat("MoveY", _moveVelocity.y);

@@ -5,18 +5,18 @@ namespace Nojumpo.Managers
     public class AudioManager : MonoBehaviour
     {
         [Header("SINGLETON")]
-        private static AudioManager _instance;
+         static AudioManager _instance;
         public static AudioManager Instance { get { return _instance; } }
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void Awake() {
+         void Awake() {
             InitializeSingleton();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void InitializeSingleton() {
+         void InitializeSingleton() {
             if (_instance == null)
             {
                 _instance = this;

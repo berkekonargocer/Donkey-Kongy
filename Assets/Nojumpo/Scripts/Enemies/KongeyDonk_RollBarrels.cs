@@ -6,30 +6,30 @@ namespace Nojumpo
     public class KongeyDonk_RollBarrels : MonoBehaviour
     {
         [Header("ROLL BARREL SETTINGS")]
-        [SerializeField] private BarrelSpawner _barrelSpawner;
-        private Animator _kongeyDonkAnimator;
+        [SerializeField]  BarrelSpawner _barrelSpawner;
+         Animator _kongeyDonkAnimator;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void OnEnable() {
+         void OnEnable() {
             Timeline.StartTheGame += StartRollingBarrels;
         }
 
-        private void OnDisable() {
+         void OnDisable() {
             Timeline.StartTheGame -= StartRollingBarrels;
         }
 
-        private void Awake() {
+         void Awake() {
             SetComponents();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+         void SetComponents() {
             _kongeyDonkAnimator = GetComponent<Animator>();
         }
 
-        private IEnumerator RollABarrelCoroutine() {
+         IEnumerator RollABarrelCoroutine() {
             _barrelSpawner.RollABarrel();
             _kongeyDonkAnimator.SetBool("IsBarrelThrown", true);
 

@@ -7,43 +7,43 @@ namespace Nojumpo
     public class GameOverPanel : MonoBehaviour
     {
         [Header("COMPONENTS")]
-        private CanvasGroup _canvasGroup;
+         CanvasGroup _canvasGroup;
 
 
         // ------------------------ UNITY BUILT-IN METHODS ------------------------
-        private void OnEnable() {
+         void OnEnable() {
             EventSubscriptions();
         }
 
-        private void OnDisable() {
+         void OnDisable() {
             EventUnsubscriptions();
         }
 
-        private void Awake() {
+         void Awake() {
             SetComponents();
         }
 
 
         // ------------------------ CUSTOM PRIVATE METHODS ------------------------
-        private void SetComponents() {
+         void SetComponents() {
             _canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        private void EventSubscriptions() {
+         void EventSubscriptions() {
             GameManager.Deadge += ScaleUpAnimation;
             GameManager.Deadge += CanvasAnimation;
         }
 
-        private void EventUnsubscriptions() {
+         void EventUnsubscriptions() {
             GameManager.Deadge -= ScaleUpAnimation;
             GameManager.Deadge -= CanvasAnimation;
         }
 
-        private void ScaleUpAnimation() {
+         void ScaleUpAnimation() {
             transform.DOScale(Vector3.one, 1.5f).SetUpdate(true);
         }
 
-        private void CanvasAnimation() {
+         void CanvasAnimation() {
             _canvasGroup.DOFade(1, 2.5f).SetUpdate(true);
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
